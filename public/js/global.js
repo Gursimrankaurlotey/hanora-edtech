@@ -7,28 +7,35 @@ const footer = document.getElementById("footer");
 const popup = document.getElementById("popup");
 
 /* =========================================
-   PAGE CHECK
+   DETECT PAGE DEPTH
 ========================================= */
 
-const isCoursePage =
-    window.location.pathname.includes("/courses/");
+const path = window.location.pathname;
+
+const ROOT =
+    path.includes("/courses/") ||
+    path.includes("/universities/")
+        ? "../"
+        : "";
 
 /* =========================================
-   ROOT PATH
+   LOAD COMPONENT FUNCTION
 ========================================= */
 
-const ROOT = isCoursePage ? "../" : "";
-
-/* =========================================
-   LOAD COMPONENT
-========================================= */
-
-function loadComponent(element, path) {
+function loadComponent(element, filePath) {
 
     if (!element) return;
 
-    fetch(path)
-        .then(res => res.text())
+    fetch(filePath)
+        .then(response => {
+
+            if (!response.ok) {
+                throw new Error(`Failed to load: ${filePath}`);
+            }
+
+            return response.text();
+
+        })
         .then(data => {
 
             data = data.replaceAll("{{ROOT}}", ROOT);
@@ -36,19 +43,35 @@ function loadComponent(element, path) {
             element.innerHTML = data;
 
         })
-        .catch(err => {
-            console.log("Component load error:", err);
+        .catch(error => {
+
+            console.error(
+                "Component load error:",
+                error
+            );
+
         });
 
 }
 
 /* =========================================
-   LOAD COMPONENTS
+   LOAD GLOBAL COMPONENTS
 ========================================= */
 
-loadComponent(popup, `${ROOT}components/popup.html`);
-loadComponent(navbar, `${ROOT}components/navbar.html`);
-loadComponent(footer, `${ROOT}components/footer.html`);
+loadComponent(
+    navbar,
+    `${ROOT}components/navbar.html`
+);
+
+loadComponent(
+    footer,
+    `${ROOT}components/footer.html`
+);
+
+loadComponent(
+    popup,
+    `${ROOT}components/popup.html`
+);
 
 /* =========================================
    GLOBAL POPUP EVENTS
@@ -62,15 +85,21 @@ document.addEventListener("click", (e) => {
     if (!popupOverlay) return;
 
     if (e.target.closest("#openPopupBtn")) {
+
         popupOverlay.classList.add("active");
+
     }
 
     if (e.target.closest("#popupClose")) {
+
         popupOverlay.classList.remove("active");
+
     }
 
     if (e.target === popupOverlay) {
+
         popupOverlay.classList.remove("active");
+
     }
 
 });
@@ -81,17 +110,52 @@ document.addEventListener("click", (e) => {
 
 document.addEventListener("click", (e) => {
 
-    const menuBtn = e.target.closest("#menuToggle");
-    const navRight = document.querySelector(".nav-right");
-    const dropdown = e.target.closest(".dropdown-link");
+    const menuBtn =
+        e.target.closest("#menuToggle");
+
+    const navRight =
+        document.querySelector(".nav-right");
+
+    const dropdown =
+        e.target.closest(".dropdown-link");
 
     if (menuBtn && navRight) {
+
         navRight.classList.toggle("active");
+
     }
 
     if (dropdown && window.innerWidth <= 992) {
+
         e.preventDefault();
-        dropdown.parentElement.classList.toggle("active");
+
+        dropdown.parentElement.classList.toggle(
+            "active"
+        );
+
+    }
+
+});
+
+/* =========================================
+   STICKY NAVBAR
+========================================= */
+
+window.addEventListener("scroll", () => {
+
+    const nav =
+        document.querySelector(".navbar");
+
+    if (!nav) return;
+
+    if (window.scrollY > 50) {
+
+        nav.classList.add("scrolled");
+
+    } else {
+
+        nav.classList.remove("scrolled");
+
     }
 
 });

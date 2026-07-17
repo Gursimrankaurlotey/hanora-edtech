@@ -547,6 +547,81 @@ h4 {
 }
 
 /* =========================================
+   HERO SEARCH
+========================================= */
+
+.hero-search-box {
+    margin-top: 35px;
+
+    display: flex;
+    align-items: center;
+
+    background: #fff;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+
+    max-width: 600px;
+
+    box-shadow: var(--shadow);
+}
+
+.hero-search-box input {
+    flex: 1;
+
+    height: 65px;
+
+    border: none;
+
+    outline: none;
+
+    padding: 0 24px;
+
+    font-size: 15px;
+}
+
+.hero-search-box button {
+    height: 65px;
+
+    min-width: 160px;
+
+    border: none;
+
+    background: var(--primary);
+
+    color: #fff;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.hero-search-box button:hover {
+    background: var(--primary-light);
+}
+
+@media(max-width:768px) {
+
+    .hero-search-box {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .hero-search-box input {
+        width: 100%;
+    }
+
+    .hero-search-box button {
+        width: 100%;
+    }
+}
+
+/* =========================================
    BROCHURE BUTTON
 ========================================= */
 
@@ -3591,7 +3666,7 @@ h4 {
     border-bottom: none;
 }
 
-.comparison-row:hover {
+.comparison-row:not(.comparison-header):hover {
 
     background:
         rgba(255, 107, 0, 0.03);
@@ -4819,49 +4894,460 @@ h4 {
 
 }
 
-.form-status-modal{
+.form-status-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .55);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+.form-status-modal.active {
+    display: flex;
+}
+
+.form-status-content {
+    width: 420px;
+    max-width: 90%;
+    background: #fff;
+    border-radius: 20px;
+    padding: 35px;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .15);
+}
+
+.status-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+#statusTitle {
+    margin-bottom: 10px;
+}
+
+#statusMessage {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+#statusCloseBtn {
+    background: #ff6b00;
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* =========================================
+   UNIVERSITY SHOWCASE
+========================================= */
+
+.university-showcase {
+    background: #fff;
+}
+
+.university-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 60px;
+}
+
+.university-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    padding: 30px;
+    border-radius: 24px;
+    transition: .3s;
+    box-shadow: var(--shadow);
+}
+
+.university-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
+
+.university-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.university-card span {
+    display: block;
+    margin-bottom: 25px;
+    color: var(--text);
+}
+
+@media(max-width:992px) {
+    .university-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:768px) {
+    .university-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================
+   PLATFORM SECTION
+========================================= */
+
+.platform-section {
+
+    background: #fafafa;
+}
+
+.platform-grid {
+
+    margin-top: 70px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 30px;
+}
+
+.platform-card {
+
+    background: #fff;
+
+    padding: 40px 30px;
+
+    border-radius: 28px;
+
+    text-align: center;
+
+    border: 1px solid var(--border);
+
+    transition: .35s ease;
+
+    box-shadow: var(--shadow);
+}
+
+.platform-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: var(--shadow-hover);
+}
+
+.platform-card i {
+
+    font-size: 52px;
+
+    color: var(--primary);
+
+    margin-bottom: 22px;
+
+    display: block;
+}
+
+.platform-card h3 {
+
+    font-size: 24px;
+
+    margin-bottom: 12px;
+}
+
+.platform-card p {
+
+    color: var(--text);
+
+    line-height: 1.8;
+}
+
+@media(max-width:992px) {
+
+    .platform-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:768px) {
+
+    .platform-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================
+   UNIVERSITY COMPARISON
+========================================= */
+
+.university-comparison {
+    background: #fafafa;
+}
+
+.comparison-wrapper {
+
+    max-width: 1000px;
+
+    margin: 70px auto 0;
+
+    background: #fff;
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.06);
+}
+.comparison-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.comparison-table thead{
+    background:linear-gradient(
+        135deg,
+        #ff6b00,
+        #ff8533
+    );
+}
+
+.comparison-table th{
+
+    padding:24px;
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    text-align:center;
+}
+
+.comparison-table td{
+
+    padding:22px 24px;
+
+    border-bottom:1px solid #ececec;
+
+    text-align:center;
+
+    color:#2f3138;
+
+    font-size:15px;
+}
+
+.comparison-table td:first-child{
+
+    text-align:left;
+
+    font-weight:600;
+
+    color:#1f2937;
+}
+.comparison-table tbody tr {
+
+    transition: 0.3s ease;
+}
+
+.comparison-table tbody tr:hover {
+
+    background: #fff8f3;
+}
+
+.comparison-table tbody tr:last-child td {
+
+    border-bottom: none;
+}
+
+.status {
+
+    color: #ff6b00;
+
+    font-weight: 700;
+
+    position: relative;
+
+    padding-left: 26px;
+}
+
+.status::before {
+
+    content: "✓";
+
+    position: absolute;
+
+    left: 0;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+
+    background: rgba(255,107,0,0.12);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 992px) {
+
+    .comparison-wrapper {
+
+        overflow-x: auto;
+    }
+
+    .comparison-table {
+
+        min-width: 900px;
+    }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .comparison-wrapper {
+        margin-top: 50px;
+        border-radius: 18px;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+
+        padding: 18px;
+        font-size: 14px;
+    }
+}
+
+/* ===================================
+   THANK YOU POPUP
+=================================== */
+
+.thankyou-overlay{
     position:fixed;
     inset:0;
     background:rgba(0,0,0,.55);
-    display:none;
-    justify-content:center;
-    align-items:center;
-    z-index:99999;
-}
-
-.form-status-modal.active{
     display:flex;
+    align-items:center;
+    justify-content:center;
+
+    opacity:0;
+    visibility:hidden;
+    transition:.35s;
+
+    z-index:999999;
 }
 
-.form-status-content{
+.thankyou-overlay.active{
+    opacity:1;
+    visibility:visible;
+}
+
+.thankyou-box{
+
     width:420px;
     max-width:90%;
+
     background:#fff;
-    border-radius:20px;
-    padding:35px;
+
+    border-radius:24px;
+
+    padding:50px 40px;
+
     text-align:center;
-    box-shadow:0 20px 50px rgba(0,0,0,.15);
+
+    animation:popup .35s ease;
 }
 
-.status-icon{
-    font-size:55px;
+@keyframes popup{
+
+    from{
+        transform:translateY(30px) scale(.95);
+        opacity:0;
+    }
+
+    to{
+        transform:translateY(0) scale(1);
+        opacity:1;
+    }
+
+}
+
+.thankyou-icon{
+
+    width:90px;
+    height:90px;
+
+    margin:auto auto 25px;
+
+    border-radius:50%;
+
+    background:#fff4ec;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.thankyou-icon i{
+
+    font-size:58px;
+    color:#ff6b00;
+}
+
+.thankyou-box h2{
+
+    font-size:42px;
     margin-bottom:15px;
+    color:#2f3138;
 }
 
-#statusTitle{
-    margin-bottom:10px;
-}
+.thankyou-box p{
 
-#statusMessage{
-    margin-bottom:20px;
     color:#666;
+    line-height:1.8;
+    margin-bottom:30px;
 }
 
-#statusCloseBtn{
-    background:#ff6b00;
-    color:#fff;
+.thankyou-box button{
+
+    width:100%;
+    height:56px;
+
     border:none;
-    padding:12px 28px;
-    border-radius:10px;
+
+    background:#ff6b00;
+
+    color:#fff;
+
+    border-radius:14px;
+
+    font-size:17px;
+
+    font-weight:600;
+
     cursor:pointer;
+
+    transition:.3s;
+}
+
+.thankyou-box button:hover{
+
+    background:#ff7d22;
 }

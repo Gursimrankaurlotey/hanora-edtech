@@ -653,3 +653,11 @@
     }
 
 }
+
+.university-dropdown{
+    width: min(800px,95vw);
+}
+
+.courses-dropdown{
+    width: min(760px,95vw);
+}
