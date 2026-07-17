@@ -1,67 +1,411 @@
-.form-status-modal {
+/* =====================================================
+   THANK YOU / STATUS MODAL
+===================================================== */
 
-    position: fixed;
-    inset: 0;
-
-    background: rgba(0,0,0,0.55);
-
-    display: none;
-
-    justify-content: center;
-    align-items: center;
-
-    z-index: 99999;
+.form-status-modal{
+    position:fixed;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(17,24,39,.72);
+    backdrop-filter:blur(8px);
+    opacity:0;
+    visibility:hidden;
+    transition:.35s ease;
+    z-index:99999;
 }
 
-.form-status-modal.active {
-    display: flex;
+.form-status-modal.active{
+    opacity:1;
+    visibility:visible;
 }
 
-.form-status-content {
+/* Container */
 
-    width: 420px;
-    max-width: 90%;
+.form-status-container{
 
-    background: #fff;
+    position:relative;
 
-    border-radius: 20px;
+    width:min(1080px,92vw);
+    min-height:650px;
 
-    padding: 35px;
+    display:grid;
+    grid-template-columns:42% 58%;
 
-    text-align: center;
+    background:#ffffff;
 
-    box-shadow: 0 20px 50px rgba(0,0,0,.15);
+    border-radius:28px;
+
+    overflow:hidden;
+
+    box-shadow:0 35px 80px rgba(0,0,0,.22);
+
+    transform:translateY(30px) scale(.95);
+
+    transition:.4s ease;
 }
 
-.form-status-content h3 {
+.form-status-modal.active .form-status-container{
 
-    font-size: 28px;
-    margin-bottom: 15px;
+    transform:translateY(0) scale(1);
 
-    color: #222;
 }
 
-.form-status-content p {
+/* =====================================================
+   LEFT PANEL
+===================================================== */
 
-    color: #666;
-    line-height: 1.6;
+.status-left{
 
-    margin-bottom: 25px;
+    background:linear-gradient(160deg,#1f2937,#111827);
+
+    color:#fff;
+
+    padding:60px 48px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
 }
 
-#statusCloseBtn {
+.status-left .popup-label{
 
-    background: #ff6b00;
+    width:max-content;
 
-    color: white;
+    margin-bottom:28px;
 
-    border: none;
+    background:rgba(255,255,255,.12);
 
-    padding: 12px 28px;
+    color:#fff;
 
-    border-radius: 12px;
+    border:1px solid rgba(255,255,255,.18);
+}
 
-    cursor: pointer;
+.status-left h2{
 
-    font-weight: 600;
+    font-size:44px;
+
+    line-height:1.15;
+
+    margin-bottom:25px;
+
+    font-weight:700;
+}
+
+.status-left p{
+
+    color:rgba(255,255,255,.82);
+
+    font-size:16px;
+
+    line-height:1.9;
+
+    margin-bottom:40px;
+}
+
+.status-left .popup-features{
+
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.status-left .popup-feature{
+
+    color:#fff;
+}
+
+.status-left .popup-feature i{
+
+    color:#ff6b00;
+}
+
+/* =====================================================
+   RIGHT PANEL
+===================================================== */
+
+.status-right{
+
+    padding:65px 70px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    background:#fff;
+}
+
+/* Success Icon */
+
+.success-circle{
+
+    width:110px;
+    height:110px;
+
+    border-radius:50%;
+
+    background:#ff6b00;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-bottom:30px;
+
+    animation:popSuccess .6s ease;
+}
+
+.success-circle i{
+
+    color:#fff;
+
+    font-size:56px;
+}
+
+@keyframes popSuccess{
+
+    0%{
+        transform:scale(.2) rotate(-30deg);
+        opacity:0;
+    }
+
+    70%{
+        transform:scale(1.15);
+    }
+
+    100%{
+        transform:scale(1);
+        opacity:1;
+    }
+
+}
+
+/* Heading */
+
+#statusTitle{
+
+    font-size:42px;
+
+    color:#111827;
+
+    margin-bottom:12px;
+
+    font-weight:700;
+}
+
+.status-right h4{
+
+    color:#ff6b00;
+
+    font-size:20px;
+
+    margin-bottom:30px;
+
+    font-weight:600;
+}
+
+#statusMessage{
+
+    color:#6b7280;
+
+    font-size:16px;
+
+    line-height:1.9;
+
+    max-width:520px;
+
+    margin-bottom:35px;
+}
+
+/* Success Badge */
+
+.status-badge{
+
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    background:#fff6ef;
+
+    border:1px solid #ffd4b8;
+
+    color:#ff6b00;
+
+    padding:14px 22px;
+
+    border-radius:999px;
+
+    margin-bottom:35px;
+
+    font-weight:600;
+}
+
+.status-badge i{
+
+    font-size:22px;
+}
+
+/* Button */
+
+.status-right .popup-btn{
+
+    width:100%;
+    max-width:320px;
+
+    font-size:17px;
+
+    padding:16px 0;
+
+    border-radius:14px;
+
+    transition:.3s;
+}
+
+.status-right .popup-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 15px 35px rgba(255,107,0,.25);
+}
+
+/* Close */
+
+.status-close{
+
+    position:absolute;
+
+    right:22px;
+    top:22px;
+
+    width:46px;
+    height:46px;
+
+    border:none;
+
+    background:#f5f5f5;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.status-close:hover{
+
+    background:#ff6b00;
+
+    color:#fff;
+
+    transform:rotate(90deg);
+}
+
+.status-close i{
+
+    font-size:22px;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:991px){
+
+.form-status-container{
+
+    width:95%;
+
+    min-height:auto;
+
+    grid-template-columns:1fr;
+}
+
+.status-left{
+
+    padding:45px 35px;
+}
+
+.status-right{
+
+    padding:45px 35px;
+}
+
+.status-left h2{
+
+    font-size:34px;
+}
+
+#statusTitle{
+
+    font-size:34px;
+}
+
+}
+
+@media(max-width:600px){
+
+.form-status-container{
+
+    width:94%;
+}
+
+.status-left{
+
+    padding:35px 25px;
+}
+
+.status-right{
+
+    padding:35px 25px;
+}
+
+.success-circle{
+
+    width:85px;
+    height:85px;
+}
+
+.success-circle i{
+
+    font-size:42px;
+}
+
+.status-left h2{
+
+    font-size:28px;
+}
+
+#statusTitle{
+
+    font-size:30px;
+}
+
+.status-right h4{
+
+    font-size:18px;
+}
+
+#statusMessage{
+
+    font-size:15px;
+}
+
+.status-badge{
+
+    font-size:14px;
+}
+
+.status-right .popup-btn{
+
+    max-width:100%;
+}
+
 }

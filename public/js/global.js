@@ -22,6 +22,38 @@ const ROOT =
    LOAD COMPONENT FUNCTION
 ========================================= */
 
+// function loadComponent(element, filePath) {
+
+//     if (!element) return;
+
+//     fetch(filePath)
+//         .then(response => {
+
+//             if (!response.ok) {
+//                 throw new Error(`Failed to load: ${filePath}`);
+//             }
+
+//             return response.text();
+
+//         })
+//         .then(data => {
+
+//             data = data.replaceAll("{{ROOT}}", ROOT);
+
+//             element.innerHTML = data;
+
+//         })
+//         .catch(error => {
+
+//             console.error(
+//                 "Component load error:",
+//                 error
+//             );
+
+//         });
+
+// }
+
 function loadComponent(element, filePath) {
 
     if (!element) return;
@@ -41,6 +73,23 @@ function loadComponent(element, filePath) {
             data = data.replaceAll("{{ROOT}}", ROOT);
 
             element.innerHTML = data;
+
+            /* =====================================
+               COMPONENT LOADED EVENT
+            ===================================== */
+
+            const event = new CustomEvent("componentLoaded", {
+
+                detail: {
+
+                    element,
+                    filePath
+
+                }
+
+            });
+
+            document.dispatchEvent(event);
 
         })
         .catch(error => {
