@@ -27,11 +27,11 @@
 
     position:relative;
 
-    width:min(1080px,92vw);
-    min-height:650px;
+    width:min(920px,90vw);
+    min-height:560px;
 
     display:grid;
-    grid-template-columns:42% 58%;
+    grid-template-columns:40% 60%;
 
     background:#ffffff;
 
@@ -62,7 +62,7 @@
 
     color:#fff;
 
-    padding:60px 48px;
+    padding:42px 36px;
 
     display:flex;
     flex-direction:column;
@@ -84,7 +84,7 @@
 
 .status-left h2{
 
-    font-size:44px;
+    font-size:36px;
 
     line-height:1.15;
 
@@ -127,7 +127,7 @@
 
 .status-right{
 
-    padding:65px 70px;
+    padding:42px 48px;
 
     display:flex;
     flex-direction:column;
@@ -143,8 +143,8 @@
 
 .success-circle{
 
-    width:110px;
-    height:110px;
+    width:90px;
+    height:90px;
 
     border-radius:50%;
 
@@ -163,7 +163,7 @@
 
     color:#fff;
 
-    font-size:56px;
+    font-size:44px;
 }
 
 @keyframes popSuccess{
@@ -188,7 +188,7 @@
 
 #statusTitle{
 
-    font-size:42px;
+    font-size:34px;
 
     color:#111827;
 
@@ -218,7 +218,7 @@
 
     max-width:520px;
 
-    margin-bottom:35px;
+    margin-bottom:22px;
 }
 
 /* Success Badge */
@@ -254,11 +254,11 @@
 .status-right .popup-btn{
 
     width:100%;
-    max-width:320px;
+    max-width:260px;
 
-    font-size:17px;
+    font-size:16px;
 
-    padding:16px 0;
+    padding:14px 0;
 
     border-radius:14px;
 
@@ -408,4 +408,19 @@
     max-width:100%;
 }
 
+}
+
+.ri-spin{
+    display:inline-block;
+    animation:spin .8s linear infinite;
+    margin-right:8px;
+}
+
+@keyframes spin{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
 }

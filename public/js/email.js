@@ -6,71 +6,18 @@ emailjs.init("7IkDYH_-MbgnLD3kG");
    STATUS MODAL
 ========================================================== */
 
-let statusModal;
-let statusTitle;
-let statusMessage;
-let statusCloseBtn;
-let continueBtn;
-
-function initialiseStatusModal() {
-
-    statusModal = document.getElementById("formStatusModal");
-    statusTitle = document.getElementById("statusTitle");
-    statusMessage = document.getElementById("statusMessage");
-    statusCloseBtn = document.getElementById("statusCloseBtn");
-    continueBtn = document.getElementById("continueBtn");
-
-    if (!statusModal) {
-        console.log("Popup not loaded yet");
-        return;
-    }
-
-    if (statusCloseBtn) {
-    statusCloseBtn.onclick = closeStatusModal;
-}
-
-if (continueBtn) {
-    continueBtn.onclick = closeStatusModal;
-}
-
-    statusModal.onclick = function (e) {
-
-        if (e.target === statusModal) {
-
-            closeStatusModal();
-
-        }
-
-    };
-
-}
-
-document.addEventListener("componentLoaded", function (e) {
-
-    if (e.detail.element.id === "popup") {
-
-        console.log("Popup component loaded");
-
-        initialiseStatusModal();
-
-    }
-
-});
+const statusModal = document.getElementById("formStatusModal");
+const statusTitle = document.getElementById("statusTitle");
+const statusMessage = document.getElementById("statusMessage");
+const statusCloseBtn = document.getElementById("statusCloseBtn");
+const continueBtn = document.getElementById("continueBtn");
 
 function openStatusModal(title, message) {
 
     if (!statusModal) {
-
-        initialiseStatusModal();
-
+        console.error("formStatusModal not found.");
+        return;
     }
-
-    if (!statusModal) {
-    console.log("Popup HTML still missing");
-    return;
-}
-
-console.log("Status Modal Found");
 
     statusTitle.innerHTML = title;
     statusMessage.innerHTML = message;
@@ -79,11 +26,46 @@ console.log("Status Modal Found");
 
 }
 
+function closeStatusModal() {
+
+    if (!statusModal) return;
+
+    statusModal.classList.remove("active");
+
+}
+
+if (statusCloseBtn) {
+
+    statusCloseBtn.addEventListener("click", closeStatusModal);
+
+}
+
+if (continueBtn) {
+
+    continueBtn.addEventListener("click", closeStatusModal);
+
+}
+
+if (statusModal) {
+
+    statusModal.addEventListener("click", function (e) {
+
+        if (e.target === statusModal) {
+
+            closeStatusModal();
+
+        }
+
+    });
+
+}
 
 document.addEventListener("keydown", function (e) {
 
     if (e.key === "Escape") {
+
         closeStatusModal();
+
     }
 
 });
@@ -92,12 +74,85 @@ document.addEventListener("keydown", function (e) {
    SEND EMAIL
 ========================================================== */
 
+// function sendEnquiry(form, templateParams, popupOverlay = null) {
+
+//     emailjs.send(
+
+//         "service_nxpwhh9",
+//         "template_sawhvi8",
+//         templateParams
+
+//     )
+
+//     .then(function (response) {
+
+//     console.log("SUCCESS:", response);
+
+//     if (popupOverlay) {
+
+//         popupOverlay.classList.remove("active");
+
+//     }
+
+//     openStatusModal(
+
+//         "Thank You!",
+
+//         `
+//         Thank you for contacting <strong>Hanora EdTech</strong>.<br><br>
+
+//         We have successfully received your enquiry.
+
+//         Our admission counsellors will connect with you shortly regarding admissions, eligibility and programme details.
+
+//         <br><br>
+
+//         We look forward to supporting your academic journey.
+//         `
+
+//     );
+
+//     form.reset();
+
+// })
+
+//     .catch(function (error) {
+
+//         console.error(error);
+
+//         openStatusModal(
+
+//             "Submission Failed",
+
+//             `
+//             We couldn't submit your enquiry at the moment.
+
+//             <br><br>
+
+//             Please try again after a few minutes or contact our admission team directly.
+//             `
+
+//         );
+
+//     });
+
+// }
+
 function sendEnquiry(form, templateParams, popupOverlay = null) {
 
-    openStatusModal(
-        "Sending...",
-        "Please wait while we submit your enquiry."
-    );
+    const submitBtn = form.querySelector("button[type='submit']");
+
+    // Save original button text
+    const originalBtnText = submitBtn ? submitBtn.innerHTML : "";
+
+    // Show loading state immediately
+    if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `
+            <i class="ri-loader-4-line ri-spin"></i>
+            Submitting...
+        `;
+    }
 
     emailjs.send(
         "service_nxpwhh9",
@@ -109,12 +164,19 @@ function sendEnquiry(form, templateParams, popupOverlay = null) {
 
         console.log("SUCCESS:", response);
 
+        // Restore button
+        if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText;
+        }
+
         form.reset();
 
         if (popupOverlay) {
             popupOverlay.classList.remove("active");
         }
 
+        // Show popup immediately after success
         openStatusModal(
 
             "Thank You!",
@@ -124,12 +186,14 @@ function sendEnquiry(form, templateParams, popupOverlay = null) {
 
             We have successfully received your enquiry.
 
-            Our admission counsellors will connect with you shortly to provide personalized guidance regarding programme selection, eligibility, admissions, and the enrolment process.
+            Our admission counsellors will contact you shortly regarding admissions,
+            eligibility, programmes and fee details.
 
             <br><br>
 
-            We look forward to supporting you in achieving your academic and professional goals.
+            We look forward to supporting your academic and professional journey.
             `
+
         );
 
     })
@@ -137,6 +201,12 @@ function sendEnquiry(form, templateParams, popupOverlay = null) {
     .catch(function (error) {
 
         console.error(error);
+
+        // Restore button
+        if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText;
+        }
 
         openStatusModal(
 
@@ -149,6 +219,7 @@ function sendEnquiry(form, templateParams, popupOverlay = null) {
 
             Please try again after a few minutes or contact our admission team directly.
             `
+
         );
 
     });
@@ -162,8 +233,7 @@ function sendEnquiry(form, templateParams, popupOverlay = null) {
 document.addEventListener("submit", function (e) {
 
     const form = e.target;
-
-    /* =====================================
+        /* =====================================
        POPUP FORM
     ===================================== */
 
@@ -176,13 +246,13 @@ document.addEventListener("submit", function (e) {
 
         const templateParams = {
 
-            name: inputs[0]?.value || "",
+            name: inputs[0]?.value.trim() || "",
 
-            email: inputs[1]?.value || "",
+            email: inputs[1]?.value.trim() || "",
 
-            phone: inputs[2]?.value || "",
+            phone: inputs[2]?.value.trim() || "",
 
-            experience: inputs[3]?.value || "",
+            experience: inputs[3]?.value.trim() || "",
 
             course: select?.value || "",
 
@@ -199,6 +269,7 @@ document.addEventListener("submit", function (e) {
         );
 
         return;
+
     }
 
     /* =====================================
@@ -212,13 +283,13 @@ document.addEventListener("submit", function (e) {
         const templateParams = {
 
             name:
-                document.getElementById("contactName")?.value || "",
+                document.getElementById("contactName")?.value.trim() || "",
 
             email:
-                document.getElementById("contactEmail")?.value || "",
+                document.getElementById("contactEmail")?.value.trim() || "",
 
             phone:
-                document.getElementById("contactPhone")?.value || "",
+                document.getElementById("contactPhone")?.value.trim() || "",
 
             course:
                 document.getElementById("contactCourse")?.value || "",
@@ -230,11 +301,13 @@ document.addEventListener("submit", function (e) {
                 "Contact Page",
 
             message:
-                document.getElementById("contactMessage")?.value || ""
+                document.getElementById("contactMessage")?.value.trim() || ""
 
         };
 
         sendEnquiry(form, templateParams);
+
+        return;
 
     }
 

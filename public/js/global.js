@@ -4,7 +4,7 @@
 
 const navbar = document.getElementById("navbar");
 const footer = document.getElementById("footer");
-const popup = document.getElementById("popup");
+
 
 /* =========================================
    DETECT PAGE DEPTH
@@ -117,10 +117,7 @@ loadComponent(
     `${ROOT}components/footer.html`
 );
 
-loadComponent(
-    popup,
-    `${ROOT}components/popup.html`
-);
+
 
 /* =========================================
    GLOBAL POPUP EVENTS
