@@ -88,7 +88,7 @@
     <link rel="stylesheet" href="css/footer.css">
 
     <link rel="stylesheet" href="css/style.css">
-    
+
     <link rel="stylesheet" href="css/popup.css">
 
 </head>
@@ -104,65 +104,49 @@
         POPUP FORM
     ========================================= -->
 
-    <div class="popup-overlay active" id="popupOverlay">
+        <div id="popup"></div>
 
-        <div class="popup-box">
+    <!-- ============================
+     FORM STATUS MODAL
+============================ -->
 
-            <!-- CLOSE BUTTON -->
+    <div class="form-status-modal" id="formStatusModal">
 
-            <button class="popup-close" id="popupClose">
-
-                <i class="ri-close-line"></i>
-
-            </button>
+        <div class="form-status-container">
 
             <!-- LEFT -->
 
-            <div class="popup-left">
+            <div class="status-left">
 
                 <span class="popup-label">
-                    ADMISSIONS OPEN
+                    HANORA EDTECH
                 </span>
 
                 <h2>
-                    Start Your Online Journey Today
+                    Thank You For Your Enquiry
                 </h2>
 
                 <p>
-                    Get expert admission guidance, counselling and enrollment support
-                    for Online Programs through Hanora Edtech.
+                    Our admission counsellors have received your request and will
+                    connect with you shortly to guide you through admissions,
+                    eligibility, programmes and fee details.
                 </p>
 
                 <div class="popup-features">
 
                     <div class="popup-feature">
-
                         <i class="ri-check-line"></i>
-
-                        <span>
-                            Official Admission Guidance
-                        </span>
-
+                        <span>Admission Guidance</span>
                     </div>
 
                     <div class="popup-feature">
-
                         <i class="ri-check-line"></i>
-
-                        <span>
-                            Personalized Counselling
-                        </span>
-
+                        <span>Course Selection Assistance</span>
                     </div>
 
                     <div class="popup-feature">
-
                         <i class="ri-check-line"></i>
-
-                        <span>
-                            End-to-End Enrollment Support
-                        </span>
-
+                        <span>Dedicated Counsellor Support</span>
                     </div>
 
                 </div>
@@ -171,97 +155,48 @@
 
             <!-- RIGHT -->
 
-            <div class="popup-right">
+            <div class="status-right">
 
-                <h3>
-                    Free Counselling
-                </h3>
+                <button class="status-close" id="statusCloseBtn">
 
-                <form>
+                    <i class="ri-close-line"></i>
 
-                    <div class="popup-input">
+                </button>
 
-                        <input type="text" placeholder="Full Name" required>
+                <div class="success-circle">
 
-                    </div>
+                    <i class="ri-check-line"></i>
 
-                    <div class="popup-input">
+                </div>
 
-                        <input type="email" placeholder="Email Address" required>
+                <h2 id="statusTitle">
+                    Thank You!
+                </h2>
 
-                    </div>
+                <h4>
+                    Your enquiry has been received.
+                </h4>
 
-                    <div class="popup-input">
+                <p id="statusMessage">
 
-                        <input type="tel" placeholder="Phone Number" required>
+                    Thank you for contacting <strong>Hanora EdTech</strong>.
+                    We will contact you shortly.
 
-                    </div>
+                </p>
 
-                    <div class="popup-input">
+                <div class="status-badge">
 
-                        <input type="text" placeholder="Work Experience" required>
+                    <i class="ri-phone-line"></i>
 
-                    </div>
+                    Our Team Will Contact You Soon
 
-                    <div class="popup-input">
+                </div>
 
-                        <select required>
+                <button class="popup-btn" id="continueBtn">
 
-                            <option value="">
-                                Preferred Specialization
-                            </option>
+                    Continue Browsing
 
-                            <option>
-                                Online BBA
-                            </option>
-
-                            <option>
-                                Online B.Com
-                            </option>
-
-                            <option>
-                                MBA Specialization
-                            </option>
-
-                            <option>
-                                Marketing Management
-                            </option>
-
-                            <option>
-                                Financial Management
-                            </option>
-
-                            <option>
-                                HR Management
-                            </option>
-
-                            <option>
-                                Business Management
-                            </option>
-
-                            <option>
-                                Operations & Data Science
-                            </option>
-
-                            <option>
-                                Business Analytics
-                            </option>
-
-                            <option>
-                                IT Management
-                            </option>
-
-                        </select>
-
-                    </div>
-
-                    <button type="submit" class="popup-btn">
-
-                        Book Free Counselling
-
-                    </button>
-
-                </form>
+                </button>
 
             </div>
 
@@ -269,104 +204,6 @@
 
     </div>
 
-    <!-- ============================
-     FORM STATUS MODAL
-============================ -->
-
-<div class="form-status-modal" id="formStatusModal">
-
-    <div class="form-status-container">
-
-        <!-- LEFT -->
-
-        <div class="status-left">
-
-            <span class="popup-label">
-                HANORA EDTECH
-            </span>
-
-            <h2>
-                Thank You For Your Enquiry
-            </h2>
-
-            <p>
-                Our admission counsellors have received your request and will
-                connect with you shortly to guide you through admissions,
-                eligibility, programmes and fee details.
-            </p>
-
-            <div class="popup-features">
-
-                <div class="popup-feature">
-                    <i class="ri-check-line"></i>
-                    <span>Admission Guidance</span>
-                </div>
-
-                <div class="popup-feature">
-                    <i class="ri-check-line"></i>
-                    <span>Course Selection Assistance</span>
-                </div>
-
-                <div class="popup-feature">
-                    <i class="ri-check-line"></i>
-                    <span>Dedicated Counsellor Support</span>
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- RIGHT -->
-
-        <div class="status-right">
-
-            <button class="status-close" id="statusCloseBtn">
-
-                <i class="ri-close-line"></i>
-
-            </button>
-
-            <div class="success-circle">
-
-                <i class="ri-check-line"></i>
-
-            </div>
-
-            <h2 id="statusTitle">
-                Thank You!
-            </h2>
-
-            <h4>
-                Your enquiry has been received.
-            </h4>
-
-            <p id="statusMessage">
-
-                Thank you for contacting <strong>Hanora EdTech</strong>.
-                We will contact you shortly.
-
-            </p>
-
-            <div class="status-badge">
-
-                <i class="ri-phone-line"></i>
-
-                Our Team Will Contact You Soon
-
-            </div>
-
-            <button class="popup-btn" id="continueBtn">
-
-                Continue Browsing
-
-            </button>
-
-        </div>
-
-    </div>
-
-</div>
-    
 
     <!-- NAVBAR -->
 
@@ -398,7 +235,7 @@
 
             <!-- RANKING -->
 
-            <div class="hero-ranking">
+            <!-- <div class="hero-ranking">
 
                 <i class="ri-star-fill"></i>
 
@@ -406,7 +243,7 @@
                     Trusted UGC-Approved Online Degree Programmes
                 </span>
 
-            </div>
+            </div> -->
 
             <!-- BUTTONS -->
 
@@ -420,24 +257,12 @@
                     Free Counselling
                 </button>
 
-                <!-- <a href="assets/Brochure.pdf" class="brochure-btn" target="_blank">
-
-                    <i class="ri-download-line"></i>
-
-                    Download NMIMS Brochure
-
-                </a> -->
-
             </div>
-
-
-
-            <!-- OFFICIAL BRANDING -->
 
 
             <!-- STATS -->
 
-            <div class="hero-stats">
+            <!-- <div class="hero-stats">
 
                 <div class="stat-box">
 
@@ -469,18 +294,7 @@
 
                 </div>
 
-            </div>
-
-            <!-- SEARCH BOX-->
-            <div class="hero-search-box">
-
-                <input type="text" placeholder="Search University or Course">
-
-                <button>
-                    Search
-                </button>
-
-            </div>
+            </div> -->
 
         </div>
 
@@ -549,6 +363,79 @@
 
     </section>
 
+    <!-- =========================================
+     TRUSTED UNIVERSITIES
+========================================= -->
+
+    <section class="trusted-universities">
+
+        <div class="section-title">
+
+            <span>OUR UNIVERSITY PARTNERS</span>
+
+            <h2>
+                Learn From India's Top Universities
+            </h2>
+
+            <p>
+                Explore UGC-approved online degree programs from leading universities across India.
+            </p>
+
+        </div>
+
+        <div class="university-logos">
+
+            <div class="university-logo-card">
+                <img src="assets/universities/amity.png" alt="Amity University">
+            </div>
+
+            <div class="university-logo-card">
+                <img src="assets/universities/dypatil.png" alt="DY Patil University">
+            </div>
+
+            <div class="university-logo-card">
+                <img src="assets/universities/jain.webp" alt="Jain University">
+            </div>
+
+            <div class="university-logo-card">
+                <img src="assets/universities/lpu.svg" alt="LPU">
+            </div>
+
+            <div class="university-logo-card">
+                <img src="assets/universities/manipal.svg" alt="Manipal Jaipur">
+            </div>
+
+            <div class="university-logo-card">
+                <img src="assets/universities/noida.svg" alt="Noida International University">
+            </div>
+
+            <div class="university-logo-card">
+                <img src="assets/universities/sharda.png" alt="Sharda University">
+            </div>
+
+            <div class="university-logo-card">
+                <img src="assets/universities/shoolini.png" alt="Shoolini University">
+            </div>
+
+            <div class="university-logo-card">
+                <img src="assets/universities/manipal.svg" alt="Sikkim Manipal University">
+            </div>
+
+            <div class="university-logo-card">
+                <img src="assets/universities/utranchal.png" alt="Uttaranchal University">
+            </div>
+
+            <div class="university-logo-card">
+                <img src="assets/universities/vivakananda.png" alt="Vivekananda Global University">
+            </div>
+
+            <div class="university-logo-card">
+                <img src="assets/universities/nmims.png" alt="NMIMS">
+            </div>
+
+        </div>
+
+    </section>
 
     <!-- =========================================
     AUTHORIZED CHANNEL PARTNER
@@ -567,7 +454,7 @@
                     <i class="ri-verified-badge-fill"></i>
 
                     <span>
-                        Online Degree Programme Guidance & Support
+                        Online Degree Programm Guidance & Support
                     </span>
 
                 </div>
@@ -704,95 +591,331 @@
     </section>
 
     <!-- =========================================
-        UNIVERSITY SHOWCASE
-    ========================================= -->
-    <section class="university-showcase">
+     PROGRAM EXPLORER
+========================================= -->
+
+    <!-- PROGRAM EXPLORER -->
+    <section class="program-explorer">
 
         <div class="section-title">
-            <span>TOP ONLINE UNIVERSITIES</span>
-
-            <h2>
-                Compare India's Leading Online Universities
-            </h2>
-
+            <span>ONLINE PROGRAMS</span>
+            <h2>Explore Programs By Category</h2>
             <p>
-                Explore UGC-approved universities and find the right online degree
-                program based on fees, accreditation, rankings and career goals.
+                Discover UGC-approved online degree, MBA and diploma programs
+                from India's top universities.
             </p>
         </div>
 
-        <div class="university-grid">
+        <div class="program-layout">
 
-            <div class="university-card">
-                <h3>Amity University Online</h3>
-                <span>UGC | NAAC A+</span>
-                <a href="./universities/amity.html" class="program-btn">View Programs</a>
+            <!-- SIDEBAR -->
+
+            <div class="program-sidebar">
+
+                <button class="program-tab active" data-tab="degree">
+                    <i class="ri-graduation-cap-line"></i>
+                    Degree Programs
+                </button>
+
+                <button class="program-tab" data-tab="mba">
+                    <i class="ri-briefcase-4-line"></i>
+                    MBA Programs
+                </button>
+
+                <button class="program-tab" data-tab="specialization">
+                    <i class="ri-line-chart-line"></i>
+                    MBA Specializations
+                </button>
+
+                <button class="program-tab" data-tab="diploma">
+                    <i class="ri-award-line"></i>
+                    Diploma Programs
+                </button>
+
             </div>
 
-            <div class="university-card">
-                <h3>DY Patil University</h3>
-                <span>UGC | NAAC A++</span>
-                <a href="./universities/dy_patil.html" class="program-btn">View Programs</a>
-            </div>
+            <!-- PROGRAM CONTENT -->
 
-            <div class="university-card">
-                <h3>Jain University</h3>
-                <span>UGC | NAAC A++</span>
-                <a href="./universities/jain.html" class="program-btn">View Programs</a>
-            </div>
+            <div class="program-content-wrapper">
 
-            <div class="university-card">
-                <h3>LPU Online</h3>
-                <span>UGC | NAAC A++</span>
-                <a href="./universities/lpu.html" class="program-btn">View Programs</a>
-            </div>
+                <!-- DEGREE PROGRAMS -->
 
-            <div class="university-card">
-                <h3>Manipal University Jaipur</h3>
-                <span>UGC | NAAC A+</span>
-                <a href="./universities/manipal_university.html" class="program-btn">View Programs</a>
-            </div>
+                <div class="program-panel active" id="degree">
 
-            <div class="university-card">
-                <h3>Noida International University</h3>
-                <span>UGC Approved</span>
-                <a href="./universities/noida.html" class="program-btn">View Programs</a>
-            </div>
+                    <div class="program-cards">
 
-            <div class="university-card">
-                <h3>Sharda University</h3>
-                <span>UGC Approved</span>
-                <a href="./universities/sharda.html" class="program-btn">View Programs</a>
-            </div>
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="assets/courses/bba.png" alt="BBA">
+                            </div>
+                            <div class="program-content">
+                                <span class="program-tag">Popular</span>
+                                <h3>BBA</h3>
+                                <p>Duration: 3 Years</p>
+                            </div>
+                            <a href="courses/bba.html" class="program-readmore">
+                                Read More <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
 
-            <div class="university-card">
-                <h3>Shoolini University</h3>
-                <span>UGC | NAAC A+</span>
-                <a href="./universities/shoolini.html" class="program-btn">View Programs</a>
-            </div>
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="assets/courses/bCom.png" alt="B.Com">
+                            </div>
+                            <div class="program-content">
+                                <span class="program-tag">UGC Approved</span>
+                                <h3>B.Com</h3>
+                                <p>Duration: 3 Years</p>
+                            </div>
+                            <a href="courses/bcom.html" class="program-readmore">
+                                Read More <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
 
-            <div class="university-card">
-                <h3>Sikkim Manipal University</h3>
-                <span>UGC | NAAC A+</span>
-                <a href="./universities/sikkim.html" class="program-btn">View Programs</a>
-            </div>
+                    </div>
 
-            <div class="university-card">
-                <h3>Uttaranchal University</h3>
-                <span>UGC Approved</span>
-                <a href="./universities/uttranchal.html" class="program-btn">View Programs</a>
-            </div>
+                </div>
 
-            <div class="university-card">
-                <h3>Vivekananda Global University</h3>
-                <span>UGC Approved</span>
-                <a href="./universities/vivekanand.html" class="program-btn">View Programs</a>
-            </div>
+                <!-- MBA PROGRAMS -->
 
-            <div class="university-card">
-                <h3>NMIMS University</h3>
-                <span>Online & Executive Programs</span>
-                <a href="./universities/nmims.html" class="program-btn">View Programs</a>
+                <div class="program-panel" id="mba">
+
+                    <div class="program-cards">
+
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="assets/courses/mba.png" alt="MBA">
+                            </div>
+                            <div class="program-content">
+                                <span class="program-tag">Popular</span>
+                                <h3>MBA</h3>
+                                <p>Duration: 2 Years</p>
+                            </div>
+                            <a href="courses/mba.html" class="program-readmore">
+                                Read More <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="assets/courses/executive.png" alt="">
+                            </div>
+                            <div class="program-content">
+                                <span class="program-tag">Executive</span>
+                                <h3>Executive MBA</h3>
+                                <p>Duration: 1 Year</p>
+                            </div>
+                            <a href="courses/executive-mba.html" class="program-readmore">
+                                Read More <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="assets/courses/wx.png" alt="">
+                            </div>
+                            <div class="program-content">
+                                <span class="program-tag">Working Professionals</span>
+                                <h3>MBA (WX)</h3>
+                                <p>Duration: 2 Years</p>
+                            </div>
+                            <a href="courses/mba-wx.html" class="program-readmore">
+                                Read More <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="assets/courses/Marketing_mgm.png" alt="">
+                            </div>
+                            <div class="program-content">
+                                <span class="program-tag">Trending</span>
+                                <h3>MBA Marketing Management</h3>
+                                <p>Duration: 2 Years</p>
+                            </div>
+                            <a href="courses/marketing-management.html" class="program-readmore">
+                                Read More <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="assets/courses/finance.png" alt="">
+                            </div>
+                            <div class="program-content">
+                                <span class="program-tag">Finance</span>
+                                <h3>MBA Financial Management</h3>
+                                <p>Duration: 2 Years</p>
+                            </div>
+                            <a href="courses/financial-management.html" class="program-readmore">
+                                Read More <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="assets/courses/HR.png" alt="">
+                            </div>
+                            <div class="program-content">
+                                <span class="program-tag">HR</span>
+                                <h3>MBA HR Management</h3>
+                                <p>Duration: 2 Years</p>
+                            </div>
+                            <a href="courses/HR-management.html" class="program-readmore">
+                                Read More <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- MBA SPECIALIZATIONS -->
+
+                <div class="program-panel" id="specialization">
+
+                    <div class="program-cards">
+
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="assets/courses/business-mgm.png" alt="">
+                            </div>
+                            <div class="program-content">
+                                <span class="program-tag">Specialization</span>
+                                <h3>MBA Business Management</h3>
+                                <p>Duration: 2 Years</p>
+                            </div>
+                            <a href="courses/business-management.html" class="program-readmore">
+                                Read More <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="assets/courses/operation_and_data.png" alt="">
+                            </div>
+                            <div class="program-content">
+                                <span class="program-tag">Data Science</span>
+                                <h3>MBA Operations & Data Science</h3>
+                                <p>Duration: 2 Years</p>
+                            </div>
+                            <a href="courses/operation&data-science.html" class="program-readmore">
+                                Read More <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="assets/courses/business_analytics.png" alt="">
+                            </div>
+                            <div class="program-content">
+                                <span class="program-tag">Analytics</span>
+                                <h3>MBA Business Analytics</h3>
+                                <p>Duration: 2 Years</p>
+                            </div>
+                            <a href="courses/business-analytics.html" class="program-readmore">
+                                Read More <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="assets/courses/IT.png" alt="">
+                            </div>
+                            <div class="program-content">
+                                <span class="program-tag">Technology</span>
+                                <h3>MBA IT Management</h3>
+                                <p>Duration: 2 Years</p>
+                            </div>
+                            <a href="courses/IT-management.html" class="program-readmore">
+                                Read More <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- DIPLOMA PROGRAMS -->
+
+                <div class="program-panel" id="diploma">
+
+                    <div class="program-cards">
+
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="assets/courses/diploma/business.png" alt="">
+                            </div>
+                            <div class="program-content">
+                                <span class="program-tag">Diploma</span>
+                                <h3>Diploma in Business Management</h3>
+                                <p>Duration: 1 Year</p>
+                            </div>
+                            <a href="courses/diploma-business-management.html" class="program-readmore">
+                                Read More <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="assets/courses/diploma/Marketing.png" alt="">
+                            </div>
+                            <div class="program-content">
+                                <span class="program-tag">Diploma</span>
+                                <h3>Diploma in Marketing Management</h3>
+                                <p>Duration: 1 Year</p>
+                            </div>
+                            <a href="courses/diploma-marketing-management.html" class="program-readmore">
+                                Read More <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="assets/courses/diploma/HR.png" alt="">
+                            </div>
+                            <div class="program-content">
+                                <span class="program-tag">Diploma</span>
+                                <h3>Diploma in Human Resource Management</h3>
+                                <p>Duration: 1 Year</p>
+                            </div>
+                            <a href="courses/diploma-human-resource-management.html" class="program-readmore">
+                                Read More <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="assets/courses/diploma/Financial.png" alt="">
+                            </div>
+                            <div class="program-content">
+                                <span class="program-tag">Diploma</span>
+                                <h3>Diploma in Financial Management</h3>
+                                <p>Duration: 1 Year</p>
+                            </div>
+                            <a href="courses/diploma-financial-management.html" class="program-readmore">
+                                Read More <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="assets/courses/diploma/operation.png" alt="">
+                            </div>
+                            <div class="program-content">
+                                <span class="program-tag">Diploma</span>
+                                <h3>Diploma in Operations Management</h3>
+                                <p>Duration: 1 Year</p>
+                            </div>
+                            <a href="courses/diploma-operations-management.html" class="program-readmore">
+                                Read More <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
 
         </div>
@@ -857,7 +980,7 @@
 
             <div class="platform-card">
                 <i class="ri-building-line"></i>
-                <h3>12+ Universities</h3>
+                <h3>10+ Universities</h3>
                 <p>Compare top UGC approved universities.</p>
             </div>
 
@@ -887,7 +1010,7 @@
      UNIVERSITY COMPARISON
 ========================================= -->
 
-    <section class="university-comparison">
+    <!-- <section class="university-comparison">
 
         <div class="section-title">
 
@@ -1028,689 +1151,7 @@
 
         </div>
 
-    </section>
-
-    <!-- =========================================
-     FEATURED PROGRAMS
-    ========================================= -->
-
-    <section class="featured-programs" id="courses">
-
-
-        <div class="section-title">
-
-            <span>Programs</span>
-
-            <h2>UG & PG Online Programs</h2>
-
-            <p>
-                Explore industry-recognized online degree and MBA specialization
-                programs designed for career growth, leadership development,
-                and flexible learning.
-            </p>
-
-        </div>
-
-        <div class="program-grid">
-            <!-- EXECUTIVE MBA -->
-
-            <div class="program-card">
-
-                <div class="program-image">
-                    <img src="assets/courses/executive.png" alt="Executive MBA">
-                </div>
-
-                <div class="program-branding">
-                    <span class="brand-name">
-                        Industry-Recognized Online Degree Programmes
-                    </span>
-                </div>
-
-                <div class="program-content">
-
-                    <h3>
-                        Executive MBA
-                    </h3>
-
-                    <div class="program-meta">
-
-                        <div class="meta-badge">
-                            <i class="ri-time-line"></i>
-                            <span>15 Months</span>
-                        </div>
-
-                        <div class="meta-badge">
-                            <i class="ri-graduation-cap-line"></i>
-                            <span>Graduate + Experience</span>
-                        </div>
-
-                    </div>
-
-                    <a href="courses/executive-mba.html" class="program-btn">
-                        Apply Now
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- MBA WX -->
-
-            <div class="program-card">
-
-                <div class="program-image">
-                    <img src="assets/courses/wx.png" alt="MBA WX">
-                </div>
-
-                <div class="program-branding">
-                    <span class="brand-name">
-                        Industry-Recognized Online Degree Programmes
-                    </span>
-                </div>
-
-                <div class="program-content">
-
-                    <h3>
-                        MBA (WX)
-                    </h3>
-
-                    <div class="program-meta">
-
-                        <div class="meta-badge">
-                            <i class="ri-time-line"></i>
-                            <span>2 Years</span>
-                        </div>
-
-                        <div class="meta-badge">
-                            <i class="ri-graduation-cap-line"></i>
-                            <span>Graduate</span>
-                        </div>
-
-                    </div>
-
-                    <a href="courses/mba-wx.html" class="program-btn">
-                        Apply Now
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- MBA MARKETING -->
-
-            <div class="program-card">
-
-                <div class="program-image">
-                    <img src="assets/courses/Marketing_mgm.png" alt="Marketing Management">
-                </div>
-
-                <div class="program-branding">
-                    <span class="brand-name">
-                        Industry-Recognized Online Degree Programmes
-                    </span>
-                </div>
-
-                <div class="program-content">
-
-                    <h3>MBA – Marketing Management</h3>
-
-                    <div class="program-meta">
-
-                        <div class="meta-badge">
-                            <i class="ri-time-line"></i>
-                            <span>2 Years</span>
-                        </div>
-
-                        <div class="meta-badge">
-                            <i class="ri-graduation-cap-line"></i>
-                            <span>Graduate</span>
-                        </div>
-
-                    </div>
-
-                    <a href="courses/marketing-management.html" class="program-btn">
-                        Apply Now
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- MBA FINANCIAL MANAGEMENT -->
-
-            <div class="program-card">
-
-                <div class="program-image">
-                    <img src="assets/courses/finance.png" alt="Financial Management">
-                </div>
-
-                <div class="program-branding">
-                    <span class="brand-name">
-                        Industry-Recognized Online Degree Programmes
-                    </span>
-                </div>
-
-                <div class="program-content">
-
-                    <h3>MBA – Financial Management</h3>
-
-                    <div class="program-meta">
-
-                        <div class="meta-badge">
-                            <i class="ri-time-line"></i>
-                            <span>2 Years</span>
-                        </div>
-
-                        <div class="meta-badge">
-                            <i class="ri-graduation-cap-line"></i>
-                            <span>Graduate</span>
-                        </div>
-
-                    </div>
-
-                    <a href="courses/financial-management.html" class="program-btn">
-                        Apply Now
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- MBA HR MANAGEMENT -->
-
-            <div class="program-card">
-
-                <div class="program-image">
-                    <img src="assets/courses/HR.png" alt="HR Management">
-                </div>
-
-                <div class="program-branding">
-                    <span class="brand-name">
-                        Industry-Recognized Online Degree Programmes
-                    </span>
-                </div>
-
-                <div class="program-content">
-
-                    <h3>MBA – HR Management</h3>
-
-                    <div class="program-meta">
-
-                        <div class="meta-badge">
-                            <i class="ri-time-line"></i>
-                            <span>2 Years</span>
-                        </div>
-
-                        <div class="meta-badge">
-                            <i class="ri-graduation-cap-line"></i>
-                            <span>Graduate</span>
-                        </div>
-
-                    </div>
-
-                    <a href="courses/HR-management.html" class="program-btn">
-                        Apply Now
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- MBA BUSINESS MANAGEMENT -->
-
-            <div class="program-card">
-
-                <div class="program-image">
-                    <img src="assets/courses/business-mgm.png" alt="Business Management">
-                </div>
-
-                <div class="program-branding">
-                    <span class="brand-name">
-                        Industry-Recognized Online Degree Programmes
-                    </span>
-                </div>
-
-                <div class="program-content">
-
-                    <h3>MBA – Business Management</h3>
-
-                    <div class="program-meta">
-
-                        <div class="meta-badge">
-                            <i class="ri-time-line"></i>
-                            <span>2 Years</span>
-                        </div>
-
-                        <div class="meta-badge">
-                            <i class="ri-graduation-cap-line"></i>
-                            <span>Graduate</span>
-                        </div>
-
-                    </div>
-
-                    <a href="courses/business-management.html" class="program-btn">
-                        Apply Now
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- MBA OPERATIONS & DATA SCIENCE -->
-
-            <div class="program-card">
-
-                <div class="program-image">
-                    <img src="assets/courses/operation_and_data.png" alt="Operations and Data Science">
-                </div>
-
-                <div class="program-branding">
-                    <span class="brand-name">
-                        Industry-Recognized Online Degree Programmes
-                    </span>
-                </div>
-
-                <div class="program-content">
-
-                    <h3>MBA – Operations & Data Science</h3>
-
-                    <div class="program-meta">
-
-                        <div class="meta-badge">
-                            <i class="ri-time-line"></i>
-                            <span>2 Years</span>
-                        </div>
-
-                        <div class="meta-badge">
-                            <i class="ri-graduation-cap-line"></i>
-                            <span>Graduate</span>
-                        </div>
-
-                    </div>
-
-                    <a href="courses/operation&data-science.html" class="program-btn">
-                        Apply Now
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- MBA BUSINESS ANALYTICS -->
-
-            <div class="program-card">
-
-                <div class="program-image">
-                    <img src="assets/courses/business_analytics.png" alt="Business Analytics">
-                </div>
-
-                <div class="program-branding">
-                    <span class="brand-name">
-                        Industry-Recognized Online Degree Programmes
-                    </span>
-                </div>
-
-                <div class="program-content">
-
-                    <h3>MBA – Business Analytics</h3>
-
-                    <div class="program-meta">
-
-                        <div class="meta-badge">
-                            <i class="ri-time-line"></i>
-                            <span>2 Years</span>
-                        </div>
-
-                        <div class="meta-badge">
-                            <i class="ri-graduation-cap-line"></i>
-                            <span>Graduate</span>
-                        </div>
-
-                    </div>
-
-                    <a href="courses/business-analytics.html" class="program-btn">
-                        Apply Now
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- MBA IT MANAGEMENT -->
-
-            <div class="program-card">
-
-                <div class="program-image">
-                    <img src="assets/courses/IT.png" alt="IT Management">
-                </div>
-
-                <div class="program-branding">
-                    <span class="brand-name">
-                        Industry-Recognized Online Degree Programmes
-                    </span>
-                </div>
-
-                <div class="program-content">
-
-                    <h3>MBA – IT Management</h3>
-
-                    <div class="program-meta">
-
-                        <div class="meta-badge">
-                            <i class="ri-time-line"></i>
-                            <span>2 Years</span>
-                        </div>
-
-                        <div class="meta-badge">
-                            <i class="ri-graduation-cap-line"></i>
-                            <span>Graduate</span>
-                        </div>
-
-                    </div>
-
-                    <a href="courses/IT-management.html" class="program-btn">
-                        Apply Now
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- BBA -->
-
-            <div class="program-card">
-
-                <div class="program-image">
-                    <img src="assets/courses/bba.png" alt="BBA">
-                </div>
-
-                <div class="program-branding">
-                    <span class="brand-name">
-                        Industry-Recognized Online Degree Programmes
-                    </span>
-                </div>
-
-                <div class="program-content">
-
-                    <h3>Bachelor of Business Administration (BBA)</h3>
-
-                    <div class="program-meta">
-
-                        <div class="meta-badge">
-                            <i class="ri-time-line"></i>
-                            <span>3 Years</span>
-                        </div>
-
-                        <div class="meta-badge">
-                            <i class="ri-graduation-cap-line"></i>
-                            <span>10+2</span>
-                        </div>
-
-                    </div>
-
-                    <a href="courses/bba.html" class="program-btn">
-                        Apply Now
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- B.COM -->
-
-            <div class="program-card">
-
-                <div class="program-image">
-                    <img src="assets/courses/bCom.png" alt="BCom">
-                </div>
-
-                <div class="program-branding">
-                    <span class="brand-name">
-                        Industry-Recognized Online Degree Programmes
-                    </span>
-                </div>
-
-                <div class="program-content">
-
-                    <h3>Bachelor of Commerce (B.Com)</h3>
-
-                    <div class="program-meta">
-
-                        <div class="meta-badge">
-                            <i class="ri-time-line"></i>
-                            <span>3 Years</span>
-                        </div>
-
-                        <div class="meta-badge">
-                            <i class="ri-graduation-cap-line"></i>
-                            <span>10+2</span>
-                        </div>
-
-                    </div>
-
-                    <a href="courses/bcom.html" class="program-btn">
-                        Apply Now
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- DIPLOMA BUSINESS MANAGEMENT -->
-
-            <div class="program-card">
-
-                <div class="program-image">
-                    <img src="assets/courses/diploma/business.png" alt="Diploma in Business Management">
-                </div>
-
-                <div class="program-branding">
-                    <span class="brand-name">
-                        Industry-Recognized Online Diploma Programmes
-                    </span>
-                </div>
-
-                <div class="program-content">
-
-                    <h3>
-                        Diploma in Business Management
-                    </h3>
-
-                    <div class="program-meta">
-
-                        <div class="meta-badge">
-                            <i class="ri-time-line"></i>
-                            <span>1 Year</span>
-                        </div>
-
-                        <div class="meta-badge">
-                            <i class="ri-graduation-cap-line"></i>
-                            <span>10+2</span>
-                        </div>
-
-                    </div>
-
-                    <a href="courses/diploma-business-management.html" class="program-btn">
-                        Apply Now
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- DIPLOMA MARKETING MANAGEMENT -->
-
-            <div class="program-card">
-
-                <div class="program-image">
-                    <img src="assets/courses/diploma/Marketing.png" alt="Diploma in Marketing Management">
-                </div>
-
-                <div class="program-branding">
-                    <span class="brand-name">
-                        Industry-Recognized Online Diploma Programmes
-                    </span>
-                </div>
-
-                <div class="program-content">
-
-                    <h3>
-                        Diploma in Marketing Management
-                    </h3>
-
-                    <div class="program-meta">
-
-                        <div class="meta-badge">
-                            <i class="ri-time-line"></i>
-                            <span>1 Year</span>
-                        </div>
-
-                        <div class="meta-badge">
-                            <i class="ri-graduation-cap-line"></i>
-                            <span>10+2 </span>
-                        </div>
-
-                    </div>
-
-                    <a href="courses/diploma-marketing-management.html" class="program-btn">
-                        Apply Now
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- DIPLOMA HR MANAGEMENT -->
-
-            <div class="program-card">
-
-                <div class="program-image">
-                    <img src="assets/courses/diploma/HR.png" alt="Diploma in Human Resource Management">
-                </div>
-
-                <div class="program-branding">
-                    <span class="brand-name">
-                        Industry-Recognized Online Diploma Programmes
-                    </span>
-                </div>
-
-                <div class="program-content">
-
-                    <h3>
-                        Diploma in Human Resource Management
-                    </h3>
-
-                    <div class="program-meta">
-
-                        <div class="meta-badge">
-                            <i class="ri-time-line"></i>
-                            <span>1 Year</span>
-                        </div>
-
-                        <div class="meta-badge">
-                            <i class="ri-graduation-cap-line"></i>
-                            <span>10+2 </span>
-                        </div>
-
-                    </div>
-
-                    <a href="courses/diploma-human-resource-management.html" class="program-btn">
-                        Apply Now
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- DIPLOMA FINANCIAL MANAGEMENT -->
-
-            <div class="program-card">
-
-                <div class="program-image">
-                    <img src="assets/courses/diploma/Financial.png" alt="Diploma in Financial Management">
-                </div>
-
-                <div class="program-branding">
-                    <span class="brand-name">
-                        Industry-Recognized Online Diploma Programmes
-                    </span>
-                </div>
-
-                <div class="program-content">
-
-                    <h3>
-                        Diploma in Financial Management
-                    </h3>
-
-                    <div class="program-meta">
-
-                        <div class="meta-badge">
-                            <i class="ri-time-line"></i>
-                            <span>1 Year</span>
-                        </div>
-
-                        <div class="meta-badge">
-                            <i class="ri-graduation-cap-line"></i>
-                            <span>10+2 </span>
-                        </div>
-
-                    </div>
-
-                    <a href="courses/diploma-financial-management.html" class="program-btn">
-                        Apply Now
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- DIPLOMA OPERATIONS MANAGEMENT -->
-
-            <div class="program-card">
-
-                <div class="program-image">
-                    <img src="assets/courses/diploma/operation.png" alt="Diploma in Operations Management">
-                </div>
-
-                <div class="program-branding">
-                    <span class="brand-name">
-                        Industry-Recognized Online Diploma Programmes
-                    </span>
-                </div>
-
-                <div class="program-content">
-
-                    <h3>
-                        Diploma in Operations Management
-                    </h3>
-
-                    <div class="program-meta">
-
-                        <div class="meta-badge">
-                            <i class="ri-time-line"></i>
-                            <span>1 Year</span>
-                        </div>
-
-                        <div class="meta-badge">
-                            <i class="ri-graduation-cap-line"></i>
-                            <span>10+2 </span>
-                        </div>
-
-                    </div>
-
-                    <a href="courses/diploma-operations-management.html" class="program-btn">
-                        Apply Now
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
+    </section> -->
 
     <!-- =========================================
     FEES & EMI SECTION
@@ -2598,9 +2039,6 @@
 
         <div class="hiring-section">
 
-            <h3>
-                Learners Work At Leading Companies
-            </h3>
 
             <section class="company-section">
 
@@ -2977,55 +2415,6 @@
     </section>
 
     <!-- =========================================
-        PROFESSIONAL BANNER
-    ========================================= -->
-
-    <section class="professional-banner">
-
-        <div class="banner-content">
-
-            <h2>
-                Learn From One Of India’s Leading Online Universities
-            </h2>
-
-            <p>
-                Upgrade your future with flexible online education and expert admission support.
-            </p>
-
-            <a href="#courses" class="primary-btn">
-                Explore Programs
-            </a>
-
-        </div>
-
-    </section>
-
-    <!-- =========================================
-        CTA
-    ========================================= -->
-
-    <section class="home-cta">
-
-        <div class="cta-box">
-
-            <h2>
-                Take The Next Step Towards Your Future
-            </h2>
-
-            <p>
-                Get personalized guidance from Hanora Edtech and explore the right Online Degree Programme for your
-                academic and career goals.
-            </p>
-
-            <a href="contact.html" class="primary-btn">
-                Apply Now
-            </a>
-
-        </div>
-
-    </section>
-
-    <!-- =========================================
      ADMISSION CTA STRIP
 ========================================= -->
 
@@ -3060,7 +2449,7 @@
         </div>
 
     </section>
-    
+
 
     <!-- FOOTER -->
 
@@ -3069,6 +2458,8 @@
     <!-- JS -->
 
     <script src="js/global.js"></script>
+
+    <script src="js/script.js"></script>
 
     <script>
 

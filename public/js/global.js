@@ -4,7 +4,7 @@
 
 const navbar = document.getElementById("navbar");
 const footer = document.getElementById("footer");
-
+const popup = document.getElementById("popup");
 
 /* =========================================
    DETECT PAGE DEPTH
@@ -117,6 +117,10 @@ loadComponent(
     `${ROOT}components/footer.html`
 );
 
+loadComponent(
+    popup, 
+    `${ROOT}components/popup.html`
+);
 
 
 /* =========================================
@@ -149,6 +153,41 @@ document.addEventListener("click", (e) => {
     }
 
 });
+
+/* =========================================
+   AUTO OPEN POPUP ON HOME PAGE
+========================================= */
+
+function autoOpenHomePopup() {
+
+    const isHomePage =
+        window.location.pathname.endsWith("/") ||
+        window.location.pathname.endsWith("index.html");
+
+    if (!isHomePage) return;
+
+    const checkPopup = setInterval(() => {
+
+        const popupOverlay =
+            document.getElementById("popupOverlay");
+
+        if (popupOverlay) {
+
+            clearInterval(checkPopup);
+
+            setTimeout(() => {
+
+                popupOverlay.classList.add("active");
+
+            }, 100);
+
+        }
+
+    }, 100);
+
+}
+
+autoOpenHomePopup();
 
 /* =========================================
    MOBILE MENU

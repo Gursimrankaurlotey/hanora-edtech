@@ -248,18 +248,14 @@ h4 {
     border-radius: 20px;
 }
 
-.hero-left p {
-    max-width: 650px;
-
-    color: var(--text);
-
-    font-size: 18px;
-    line-height: 1.95;
-
-    font-weight: 400;
-
-    opacity: 0.95;
+.hero-left p{
+    font-size:18px;
+    line-height:1.9;
+    color:#5b5b5b;
+    max-width:650px;
+    margin-bottom:10px;
 }
+
 
 .hero-buttons {
     display: flex;
@@ -547,81 +543,6 @@ h4 {
 }
 
 /* =========================================
-   HERO SEARCH
-========================================= */
-
-.hero-search-box {
-    margin-top: 35px;
-
-    display: flex;
-    align-items: center;
-
-    background: #fff;
-
-    border-radius: 20px;
-
-    overflow: hidden;
-
-    border: 1px solid var(--border);
-
-    max-width: 600px;
-
-    box-shadow: var(--shadow);
-}
-
-.hero-search-box input {
-    flex: 1;
-
-    height: 65px;
-
-    border: none;
-
-    outline: none;
-
-    padding: 0 24px;
-
-    font-size: 15px;
-}
-
-.hero-search-box button {
-    height: 65px;
-
-    min-width: 160px;
-
-    border: none;
-
-    background: var(--primary);
-
-    color: #fff;
-
-    font-weight: 600;
-
-    cursor: pointer;
-
-    transition: .3s;
-}
-
-.hero-search-box button:hover {
-    background: var(--primary-light);
-}
-
-@media(max-width:768px) {
-
-    .hero-search-box {
-        flex-direction: column;
-        max-width: 100%;
-    }
-
-    .hero-search-box input {
-        width: 100%;
-    }
-
-    .hero-search-box button {
-        width: 100%;
-    }
-}
-
-/* =========================================
    BROCHURE BUTTON
 ========================================= */
 
@@ -747,97 +668,6 @@ h4 {
     justify-content: center;
 }
 
-/* =========================================
-   FEATURED PROGRAMS
-========================================= */
-
-.featured-programs {
-    background: var(--white);
-}
-
-.program-grid {
-
-    margin-top: 70px;
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-
-    gap: 30px;
-}
-
-.featured-card {
-    background: #fafafa;
-    border: 1px solid var(--border);
-
-    border-radius: 30px;
-    padding: 42px;
-
-    position: relative;
-    overflow: hidden;
-
-    transition: all 0.35s ease;
-}
-
-.featured-card::before {
-    content: '';
-
-    width: 100%;
-    height: 4px;
-
-    background: var(--primary);
-
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.featured-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-hover);
-}
-
-.featured-icon {
-    width: 90px;
-    height: 90px;
-
-    background: rgba(255, 107, 0, 0.1);
-
-    border-radius: 24px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    margin-bottom: 30px;
-}
-
-.featured-icon i {
-    color: var(--primary);
-    font-size: 40px;
-}
-
-.featured-card h3 {
-    font-size: 34px;
-    margin-bottom: 18px;
-}
-
-.featured-card p {
-    color: var(--text);
-    line-height: 1.8;
-    margin-bottom: 30px;
-}
-
-.featured-card span {
-    color: var(--primary);
-
-    display: flex;
-    align-items: center;
-    gap: 8px;
-
-    font-weight: 700;
-}
 
 /* =========================================
    WHY US
@@ -5350,4 +5180,320 @@ h4 {
 .thankyou-box button:hover{
 
     background:#ff7d22;
+}
+
+/* =========================================
+   TRUSTED UNIVERSITIES
+========================================= */
+
+.trusted-universities {
+
+    background: #ffffff;
+}
+
+.trusted-universities .section-title {
+
+    text-align: center;
+
+    max-width: 800px;
+
+    margin: 0 auto 60px;
+}
+
+.trusted-universities .section-title p {
+
+    margin-top: 18px;
+
+    color: #6d6d6d;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+/* =========================================
+   LOGO GRID
+========================================= */
+
+.university-logos {
+
+    display: grid;
+
+    grid-template-columns: repeat(6, 1fr);
+
+    gap: 24px;
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.university-logo-card {
+
+    height: 120px;
+
+    background: rgba(255, 107, 0, 0.08);
+
+    border: 1px solid #ececec;
+
+    border-radius: 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    transition: all .3s ease;
+}
+
+.university-logo-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: rgba(255,107,0,.25);
+
+    box-shadow:
+        0 15px 35px rgba(255,107,0,.08);
+}
+
+.university-logo-card img {
+
+    max-width: 160px;
+
+    max-height: 160px;
+
+    object-fit: contain;
+
+    transition: .3s ease;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:1100px){
+
+    .university-logos{
+
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+@media(max-width:768px){
+
+    .university-logos{
+
+        grid-template-columns: repeat(2,1fr);
+
+        gap:16px;
+    }
+
+    .university-logo-card{
+
+        height:100px;
+    }
+
+    .university-logo-card img{
+
+        max-width:100px;
+    }
+}
+
+
+/* ==================================
+   PROGRAM EXPLORER
+================================== */
+
+.program-explorer{
+    background:#fafafa;
+}
+
+.program-layout{
+    margin-top:60px;
+    display:grid;
+    grid-template-columns:280px 1fr;
+    gap:35px;
+    align-items:start;
+}
+
+/* SIDEBAR */
+
+.program-sidebar{
+    background:#fff;
+    border-radius:24px;
+    padding:16px;
+    border:1px solid #ececec;
+    box-shadow:0 10px 30px rgba(0,0,0,.04);
+}
+
+.program-tab{
+    width:100%;
+    border:none;
+    background:transparent;
+    padding:18px 20px;
+    border-radius:14px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:600;
+    color:#2f3138;
+    transition:.3s;
+    margin-bottom:10px;
+}
+
+.program-tab:hover{
+    background:#fff4ec;
+    color:#ff6b00;
+}
+
+.program-tab.active{
+    background:#ff6b00;
+    color:#fff;
+}
+
+/* PROGRAM GRID */
+
+.program-cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+    gap:24px;
+}
+
+/* PROGRAM CARD */
+
+.program-card{
+    background:#fff;
+    border-radius:16px;
+    overflow:hidden;
+    border:1px solid #e6e6e6;
+    transition:.35s;
+    display:flex;
+    flex-direction:column;
+}
+
+.program-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.program-image{
+    padding:12px;
+}
+
+.program-image img{
+    width:100%;
+    height:130px;
+    object-fit:cover;
+    border-radius:10px;
+    display:block;
+}
+
+.program-content{
+    padding:18px;
+    text-align:center;
+}
+
+.program-tag{
+    display:inline-block;
+    background:#e9fff0;
+    color:#00994d;
+    font-size:11px;
+    font-weight:700;
+    padding:5px 12px;
+    border-radius:20px;
+    margin-bottom:12px;
+}
+
+.program-content h3{
+    font-size:22px;
+    font-weight:700;
+    margin-bottom:8px;
+    color:#222;
+}
+
+.program-content p{
+    color:#7a7a7a;
+    font-size:14px;
+}
+
+.program-readmore{
+    margin-top:auto;
+    background:
+        linear-gradient(135deg,
+            rgba(255, 107, 0, 0.12),
+            rgba(255, 107, 0, 0.03));
+    color:#ff6b00;
+    font-weight:700;
+    text-decoration:none;
+    text-align:center;
+    padding:14px;
+    transition:.3s;
+}
+
+.program-readmore:hover{
+    background:#ff6b00;
+    color:#fff;
+}
+
+@media(max-width:1200px){
+    .program-cards{
+        grid-template-columns:repeat(3,1fr);
+    }
+}
+
+@media(max-width:991px){
+    .program-cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:768px){
+    .program-cards{
+        grid-template-columns:1fr;
+    }
+}
+
+
+.program-panel{
+    display:none;
+}
+
+.program-panel.active{
+    display:block;
+}
+
+.program-content-wrapper{
+    width:100%;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1200px){
+
+    .program-cards{
+        grid-template-columns:repeat(3,1fr);
+    }
+}
+
+@media(max-width:991px){
+
+    .program-layout{
+        grid-template-columns:1fr;
+    }
+
+    .program-cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:768px){
+
+    .program-cards{
+        grid-template-columns:1fr;
+    }
 }

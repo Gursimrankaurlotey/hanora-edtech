@@ -157,6 +157,8 @@
 
             <form class="contact-form" id="contactForm">
 
+                <!-- NAME + EMAIL -->
+
                 <div class="form-row">
 
                     <input type="text" id="contactName" placeholder="Full Name" required>
@@ -165,61 +167,181 @@
 
                 </div>
 
+                <!-- PHONE + UNIVERSITY -->
+
                 <div class="form-row">
 
                     <input type="text" id="contactPhone" placeholder="Phone Number" required>
 
-                    <select id="contactCourse" required>
+                    <select id="contactUniversity" required>
 
                         <option value="">
-                            Preferred Specialization
+                            Select University
                         </option>
 
-                        <option value="Online BBA">
-                            Online BBA
+                        <option value="Amity University">
+                            Amity University
                         </option>
 
-                        <option value="Online B.Com">
-                            Online B.Com
+                        <option value="DY Patil University Pune">
+                            DY Patil University Pune
                         </option>
 
-                        <option value="MBA Specialization">
-                            MBA Specialization
+                        <option value="Jain University">
+                            Jain University
                         </option>
 
-                        <option value="Marketing Management">
-                            Marketing Management
+                        <option value="Lovely Professional University">
+                            Lovely Professional University
                         </option>
 
-                        <option value="Financial Management">
-                            Financial Management
+                        <option value="Manipal University Jaipur">
+                            Manipal University Jaipur
                         </option>
 
-                        <option value="HR Management">
-                            HR Management
+                        <option value="Noida International University">
+                            Noida International University
                         </option>
 
-                        <option value="Business Management">
-                            Business Management
+                        <option value="Sharda University">
+                            Sharda University
                         </option>
 
-                        <option value="Operations & Data Science">
-                            Operations & Data Science
+                        <option value="Shoolini University">
+                            Shoolini University
                         </option>
 
-                        <option value="Business Analytics">
-                            Business Analytics
+                        <option value="Sikkim Manipal University">
+                            Sikkim Manipal University
                         </option>
 
-                        <option value="IT Management">
-                            IT Management
+                        <option value="Uttaranchal University">
+                            Uttaranchal University
+                        </option>
+
+                        <option value="Vivekananda Global University">
+                            Vivekananda Global University
+                        </option>
+
+                        <option value="NMIMS Online">
+                            NMIMS Online
                         </option>
 
                     </select>
 
                 </div>
 
+                <!-- COURSES -->
+
+                <div class="form-row">
+
+                    <select id="contactCourse" required>
+
+                        <option value="">
+                            Select Course
+                        </option>
+
+                        <!-- Degree Programs -->
+
+                        <optgroup label="Degree Programs">
+
+                            <option value="BBA">
+                                BBA
+                            </option>
+
+                            <option value="B.Com">
+                                B.Com
+                            </option>
+
+                        </optgroup>
+
+                        <!-- MBA Programs -->
+
+                        <optgroup label="MBA Programs">
+
+                            <option value="MBA">
+                                MBA
+                            </option>
+
+                            <option value="Executive MBA">
+                                Executive MBA
+                            </option>
+
+                            <option value="MBA (WX)">
+                                MBA (WX)
+                            </option>
+
+                            <option value="MBA Marketing Management">
+                                MBA Marketing Management
+                            </option>
+
+                            <option value="MBA Financial Management">
+                                MBA Financial Management
+                            </option>
+
+                            <option value="MBA HR Management">
+                                MBA HR Management
+                            </option>
+
+                        </optgroup>
+
+                        <!-- MBA Specializations -->
+
+                        <optgroup label="MBA Specializations">
+
+                            <option value="MBA Business Management">
+                                MBA Business Management
+                            </option>
+
+                            <option value="MBA Operations & Data Science">
+                                MBA Operations & Data Science
+                            </option>
+
+                            <option value="MBA Business Analytics">
+                                MBA Business Analytics
+                            </option>
+
+                            <option value="MBA IT Management">
+                                MBA IT Management
+                            </option>
+
+                        </optgroup>
+
+                        <!-- Diploma Programs -->
+
+                        <optgroup label="Diploma Programs">
+
+                            <option value="Diploma in Business Management">
+                                Diploma in Business Management
+                            </option>
+
+                            <option value="Diploma in Marketing Management">
+                                Diploma in Marketing Management
+                            </option>
+
+                            <option value="Diploma in Human Resource Management">
+                                Diploma in Human Resource Management
+                            </option>
+
+                            <option value="Diploma in Financial Management">
+                                Diploma in Financial Management
+                            </option>
+
+                            <option value="Diploma in Operations Management">
+                                Diploma in Operations Management
+                            </option>
+
+                        </optgroup>
+
+                    </select>
+
+                </div>
+
+                <!-- MESSAGE -->
+
                 <textarea id="contactMessage" rows="7" placeholder="Write Your Message"></textarea>
+
+                <!-- BUTTON -->
 
                 <button type="submit" class="primary-btn">
 
@@ -293,104 +415,104 @@
 
     </section>
 
-    
+
     <!-- ============================
      FORM STATUS MODAL
 ============================ -->
 
-<div class="form-status-modal" id="formStatusModal">
+    <div class="form-status-modal" id="formStatusModal">
 
-    <div class="form-status-container">
+        <div class="form-status-container">
 
-        <!-- LEFT -->
+            <!-- LEFT -->
 
-        <div class="status-left">
+            <div class="status-left">
 
-            <span class="popup-label">
-                HANORA EDTECH
-            </span>
+                <span class="popup-label">
+                    HANORA EDTECH
+                </span>
 
-            <h2>
-                Thank You For Your Enquiry
-            </h2>
+                <h2>
+                    Thank You For Your Enquiry
+                </h2>
 
-            <p>
-                Our admission counsellors have received your request and will
-                connect with you shortly to guide you through admissions,
-                eligibility, programmes and fee details.
-            </p>
+                <p>
+                    Our admission counsellors have received your request and will
+                    connect with you shortly to guide you through admissions,
+                    eligibility, programmes and fee details.
+                </p>
 
-            <div class="popup-features">
+                <div class="popup-features">
 
-                <div class="popup-feature">
-                    <i class="ri-check-line"></i>
-                    <span>Admission Guidance</span>
-                </div>
+                    <div class="popup-feature">
+                        <i class="ri-check-line"></i>
+                        <span>Admission Guidance</span>
+                    </div>
 
-                <div class="popup-feature">
-                    <i class="ri-check-line"></i>
-                    <span>Course Selection Assistance</span>
-                </div>
+                    <div class="popup-feature">
+                        <i class="ri-check-line"></i>
+                        <span>Course Selection Assistance</span>
+                    </div>
 
-                <div class="popup-feature">
-                    <i class="ri-check-line"></i>
-                    <span>Dedicated Counsellor Support</span>
+                    <div class="popup-feature">
+                        <i class="ri-check-line"></i>
+                        <span>Dedicated Counsellor Support</span>
+                    </div>
+
                 </div>
 
             </div>
 
-        </div>
+            <!-- RIGHT -->
 
-        <!-- RIGHT -->
+            <div class="status-right">
 
-        <div class="status-right">
+                <button class="status-close" id="statusCloseBtn">
 
-            <button class="status-close" id="statusCloseBtn">
+                    <i class="ri-close-line"></i>
 
-                <i class="ri-close-line"></i>
+                </button>
 
-            </button>
+                <div class="success-circle">
 
-            <div class="success-circle">
+                    <i class="ri-check-line"></i>
 
-                <i class="ri-check-line"></i>
+                </div>
+
+                <h2 id="statusTitle">
+                    Thank You!
+                </h2>
+
+                <h4>
+                    Your enquiry has been received.
+                </h4>
+
+                <p id="statusMessage">
+
+                    Thank you for contacting <strong>Hanora EdTech</strong>.
+                    We will contact you shortly.
+
+                </p>
+
+                <div class="status-badge">
+
+                    <i class="ri-phone-line"></i>
+
+                    Our Team Will Contact You Soon
+
+                </div>
+
+                <button class="popup-btn" id="continueBtn">
+
+                    Continue Browsing
+
+                </button>
 
             </div>
-
-            <h2 id="statusTitle">
-                Thank You!
-            </h2>
-
-            <h4>
-                Your enquiry has been received.
-            </h4>
-
-            <p id="statusMessage">
-
-                Thank you for contacting <strong>Hanora EdTech</strong>.
-                We will contact you shortly.
-
-            </p>
-
-            <div class="status-badge">
-
-                <i class="ri-phone-line"></i>
-
-                Our Team Will Contact You Soon
-
-            </div>
-
-            <button class="popup-btn" id="continueBtn">
-
-                Continue Browsing
-
-            </button>
 
         </div>
 
     </div>
-
-</div>
 
     <!-- FOOTER -->
 
