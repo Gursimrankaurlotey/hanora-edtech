@@ -160,63 +160,68 @@ function sendEnquiry(form, templateParams, popupOverlay = null) {
         templateParams
     )
 
-    .then(function (response) {
+        .then(function (response) {
 
-        console.log("SUCCESS:", response);
+            console.log("SUCCESS:", response);
 
-        // Restore button
-        if (submitBtn) {
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = originalBtnText;
-        }
+            // Restore button
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+            }
 
-        form.reset();
+            form.reset();
 
-        if (popupOverlay) {
-            popupOverlay.classList.remove("active");
-        }
+            if (popupOverlay) {
+                popupOverlay.classList.remove("active");
+            }
 
-        // Show popup immediately after success
-        // openStatusModal(
+            // Show popup immediately after success
+            // openStatusModal(
 
-        //     "Thank You!",
+            //     "Thank You!",
 
-        //     `
-        //     Thank you for contacting <strong>Hanora EdTech</strong>.<br><br>
+            //     `
+            //     Thank you for contacting <strong>Hanora EdTech</strong>.<br><br>
 
-        //     We have successfully received your enquiry.
+            //     We have successfully received your enquiry.
 
-        //     Our admission counsellors will contact you shortly regarding admissions,
-        //     eligibility, programmes and fee details.
+            //     Our admission counsellors will contact you shortly regarding admissions,
+            //     eligibility, programmes and fee details.
 
-        //     <br><br>
+            //     <br><br>
 
-        //     We look forward to supporting your academic and professional journey.
-        //     `
+            //     We look forward to supporting your academic and professional journey.
+            //     `
 
-        // );
+            // );
 
-        console.log("Current page:", window.location.href);
+            console.log("Current page:", window.location.href);
 
-        window.location.href = "/public/thank-you.html";
+            const isLocal =
+                window.location.hostname === "127.0.0.1" ||
+                window.location.hostname === "localhost";
 
-    })
+            window.location.href = isLocal
+                ? "/public/thank-you.html"
+                : "/thank-you.html";
+        })
 
-    .catch(function (error) {
+        .catch(function (error) {
 
-        console.error(error);
+            console.error(error);
 
-        // Restore button
-        if (submitBtn) {
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = originalBtnText;
-        }
+            // Restore button
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+            }
 
-        openStatusModal(
+            openStatusModal(
 
-            "Submission Failed",
+                "Submission Failed",
 
-            `
+                `
             We couldn't submit your enquiry at the moment.
 
             <br><br>
@@ -224,9 +229,9 @@ function sendEnquiry(form, templateParams, popupOverlay = null) {
             Please try again after a few minutes or contact our admission team directly.
             `
 
-        );
+            );
 
-    });
+        });
 
 }
 
@@ -237,9 +242,9 @@ function sendEnquiry(form, templateParams, popupOverlay = null) {
 document.addEventListener("submit", function (e) {
 
     const form = e.target;
-        /* =====================================
-       POPUP FORM
-    ===================================== */
+    /* =====================================
+   POPUP FORM
+===================================== */
 
     if (form.closest(".popup-right")) {
 
