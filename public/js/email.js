@@ -101,7 +101,7 @@ document.addEventListener("keydown", function (e) {
 //         `
 //         Thank you for contacting <strong>Hanora EdTech</strong>.<br><br>
 
-//         We have successfully received your enquiry.
+//         We have successfully received your courses/*.html.
 
 //         Our admission counsellors will connect with you shortly regarding admissions, eligibility and programme details.
 
@@ -177,24 +177,28 @@ function sendEnquiry(form, templateParams, popupOverlay = null) {
         }
 
         // Show popup immediately after success
-        openStatusModal(
+        // openStatusModal(
 
-            "Thank You!",
+        //     "Thank You!",
 
-            `
-            Thank you for contacting <strong>Hanora EdTech</strong>.<br><br>
+        //     `
+        //     Thank you for contacting <strong>Hanora EdTech</strong>.<br><br>
 
-            We have successfully received your enquiry.
+        //     We have successfully received your enquiry.
 
-            Our admission counsellors will contact you shortly regarding admissions,
-            eligibility, programmes and fee details.
+        //     Our admission counsellors will contact you shortly regarding admissions,
+        //     eligibility, programmes and fee details.
 
-            <br><br>
+        //     <br><br>
 
-            We look forward to supporting your academic and professional journey.
-            `
+        //     We look forward to supporting your academic and professional journey.
+        //     `
 
-        );
+        // );
+
+        console.log("Current page:", window.location.href);
+
+        window.location.href = "/public/thank-you.html";
 
     })
 

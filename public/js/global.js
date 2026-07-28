@@ -117,11 +117,26 @@ loadComponent(
     `${ROOT}components/footer.html`
 );
 
-loadComponent(
-    popup, 
-    `${ROOT}components/popup.html`
-);
+// loadComponent(
+//     popup, 
+//     `${ROOT}components/popup.html`
+// );
 
+/* =========================================
+   LOAD POPUP
+========================================= */
+
+const isThankYouPage =
+    window.location.pathname.includes("thank-you.html");
+
+if (!isThankYouPage && popup) {
+
+    loadComponent(
+        popup,
+        `${ROOT}components/popup.html`
+    );
+
+}
 
 /* =========================================
    GLOBAL POPUP EVENTS
