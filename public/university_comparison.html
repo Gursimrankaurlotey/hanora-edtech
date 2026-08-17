@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Compare Online Universities | Hanora</title>
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
+
+    <link rel="stylesheet" href="comparison.css">
+
+</head>
+
+<body>
+
+    <!-- =========================================
+         PAGE
+    ========================================= -->
+
+    <main class="comparison-page">
+
+        <!-- HERO -->
+
+        <section class="comparison-hero">
+
+            <div class="comparison-hero-content">
+
+                <span class="comparison-tag">
+                    University Comparison
+                </span>
+
+                <h1>
+                    Compare Online Universities
+                </h1>
+
+                <p>
+                    Compare universities based on fees, placements,
+                    accreditation, LMS, degree validity, scholarships
+                    and other important factors.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             COMPARISON TOOL
+        ========================================= -->
+
+        <section class="comparison-tool">
+
+            <div class="comparison-container">
+
+                <!-- HEADER -->
+
+                <div class="comparison-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            Compare Universities
+                        </span>
+
+                        <h2>
+                            Select Universities to Compare
+                        </h2>
+
+                        <p>
+                            Select at least two universities to compare.
+                            You can compare up to four universities at a time.
+                        </p>
+
+                    </div>
+
+
+                    <div class="comparison-actions">
+
+                        <span id="selectedCount">
+                            0 Selected
+                        </span>
+
+                        <button
+                            type="button"
+                            id="clearAllBtn"
+                            class="clear-btn">
+
+                            Clear All
+
+                        </button>
+
+                        <button
+                            type="button"
+                            id="compareBtn"
+                            class="compare-btn"
+                            disabled>
+
+                            Compare Universities
+
+                            <i class="ri-arrow-right-line"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================================
+                     UNIVERSITY GRID
+                ========================================= -->
+
+                <div class="university-grid">
+
+
+                    <!-- AMITY -->
+
+                    <div class="university-card"
+                        data-university="amity">
+
+                        <div class="university-logo">
+
+                            <img
+                                src="assets/universities/amity.png"
+                                alt="Amity University Online">
+
+                        </div>
+
+                        <div class="university-info">
+
+                            <h3>
+                                Amity University Online
+                            </h3>
+
+                            <p>
+                                Online degree programs with flexible
+                                learning and career support.
+                            </p>
+
+                        </div>
+
+                        <label class="compare-select">
+
+                            <input
+                                type="checkbox"
+                                class="university-checkbox"
+                                value="amity">
+
+                            <span>
+                                Add to Compare
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- DY PATIL -->
+
+                    <div class="university-card"
+                        data-university="dy-patil">
+
+                        <div class="university-logo">
+
+                            <img
+                                src="assets/universities/dy-patil.png"
+                                alt="DY Patil University">
+
+                        </div>
+
+                        <div class="university-info">
+
+                            <h3>
+                                DY Patil University
+                            </h3>
+
+                            <p>
+                                Flexible online programs designed for
+                                students and working professionals.
+                            </p>
+
+                        </div>
+
+                        <label class="compare-select">
+
+                            <input
+                                type="checkbox"
+                                class="university-checkbox"
+                                value="dy-patil">
+
+                            <span>
+                                Add to Compare
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- JAIN -->
+
+                    <div class="university-card"
+                        data-university="jain">
+
+                        <div class="university-logo">
+
+                            <img
+                                src="assets/universities/jain.png"
+                                alt="Jain University">
+
+                        </div>
+
+                        <div class="university-info">
+
+                            <h3>
+                                Jain University
+                            </h3>
+
+                            <p>
+                                Industry-oriented online programs with
+                                flexible study options.
+                            </p>
+
+                        </div>
+
+                        <label class="compare-select">
+
+                            <input
+                                type="checkbox"
+                                class="university-checkbox"
+                                value="jain">
+
+                            <span>
+                                Add to Compare
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- LPU -->
+
+                    <div class="university-card"
+                        data-university="lpu">
+
+                        <div class="university-logo">
+
+                            <img
+                                src="assets/universities/lpu.png"
+                                alt="Lovely Professional University">
+
+                        </div>
+
+                        <div class="university-info">
+
+                            <h3>
+                                Lovely Professional University
+                            </h3>
+
+                            <p>
+                                Online programs focused on flexible and
+                                career-oriented education.
+                            </p>
+
+                        </div>
+
+                        <label class="compare-select">
+
+                            <input
+                                type="checkbox"
+                                class="university-checkbox"
+                                value="lpu">
+
+                            <span>
+                                Add to Compare
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- MANIPAL -->
+
+                    <div class="university-card"
+                        data-university="manipal">
+
+                        <div class="university-logo">
+
+                            <img
+                                src="assets/universities/manipal.png"
+                                alt="Manipal University Jaipur">
+
+                        </div>
+
+                        <div class="university-info">
+
+                            <h3>
+                                Manipal University Jaipur
+                            </h3>
+
+                            <p>
+                                Recognized online programs with digital
+                                learning infrastructure.
+                            </p>
+
+                        </div>
+
+                        <label class="compare-select">
+
+                            <input
+                                type="checkbox"
+                                class="university-checkbox"
+                                value="manipal">
+
+                            <span>
+                                Add to Compare
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- NOIDA -->
+
+                    <div class="university-card"
+                        data-university="noida">
+
+                        <div class="university-logo">
+
+                            <img
+                                src="assets/universities/noida.png"
+                                alt="Noida International University">
+
+                        </div>
+
+                        <div class="university-info">
+
+                            <h3>
+                                Noida International University
+                            </h3>
+
+                            <p>
+                                Online education options with flexible
+                                learning opportunities.
+                            </p>
+
+                        </div>
+
+                        <label class="compare-select">
+
+                            <input
+                                type="checkbox"
+                                class="university-checkbox"
+                                value="noida">
+
+                            <span>
+                                Add to Compare
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- SHARDA -->
+
+                    <div class="university-card"
+                        data-university="sharda">
+
+                        <div class="university-logo">
+
+                            <img
+                                src="assets/universities/sharda.png"
+                                alt="Sharda University">
+
+                        </div>
+
+                        <div class="university-info">
+
+                            <h3>
+                                Sharda University
+                            </h3>
+
+                            <p>
+                                Flexible online learning with modern
+                                academic support.
+                            </p>
+
+                        </div>
+
+                        <label class="compare-select">
+
+                            <input
+                                type="checkbox"
+                                class="university-checkbox"
+                                value="sharda">
+
+                            <span>
+                                Add to Compare
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- SHOOLINI -->
+
+                    <div class="university-card"
+                        data-university="shoolini">
+
+                        <div class="university-logo">
+
+                            <img
+                                src="assets/universities/shoolini.png"
+                                alt="Shoolini University">
+
+                        </div>
+
+                        <div class="university-info">
+
+                            <h3>
+                                Shoolini University
+                            </h3>
+
+                            <p>
+                                Online programs designed for flexible
+                                higher education.
+                            </p>
+
+                        </div>
+
+                        <label class="compare-select">
+
+                            <input
+                                type="checkbox"
+                                class="university-checkbox"
+                                value="shoolini">
+
+                            <span>
+                                Add to Compare
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- SIKKIM MANIPAL -->
+
+                    <div class="university-card"
+                        data-university="sikkim">
+
+                        <div class="university-logo">
+
+                            <img
+                                src="assets/universities/sikkim.png"
+                                alt="Sikkim Manipal University">
+
+                        </div>
+
+                        <div class="university-info">
+
+                            <h3>
+                                Sikkim Manipal University
+                            </h3>
+
+                            <p>
+                                Online programs with flexible learning
+                                and digital resources.
+                            </p>
+
+                        </div>
+
+                        <label class="compare-select">
+
+                            <input
+                                type="checkbox"
+                                class="university-checkbox"
+                                value="sikkim">
+
+                            <span>
+                                Add to Compare
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- UTTARANCHAL -->
+
+                    <div class="university-card"
+                        data-university="uttaranchal">
+
+                        <div class="university-logo">
+
+                            <img
+                                src="assets/universities/uttaranchal.png"
+                                alt="Uttaranchal University">
+
+                        </div>
+
+                        <div class="university-info">
+
+                            <h3>
+                                Uttaranchal University
+                            </h3>
+
+                            <p>
+                                Flexible online education for students
+                                and working professionals.
+                            </p>
+
+                        </div>
+
+                        <label class="compare-select">
+
+                            <input
+                                type="checkbox"
+                                class="university-checkbox"
+                                value="uttaranchal">
+
+                            <span>
+                                Add to Compare
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- VIVEKANANDA -->
+
+                    <div class="university-card"
+                        data-university="vivekananda">
+
+                        <div class="university-logo">
+
+                            <img
+                                src="assets/universities/vivekananda.png"
+                                alt="Vivekananda Global University">
+
+                        </div>
+
+                        <div class="university-info">
+
+                            <h3>
+                                Vivekananda Global University
+                            </h3>
+
+                            <p>
+                                Online programs focused on academic
+                                flexibility and career development.
+                            </p>
+
+                        </div>
+
+                        <label class="compare-select">
+
+                            <input
+                                type="checkbox"
+                                class="university-checkbox"
+                                value="vivekananda">
+
+                            <span>
+                                Add to Compare
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- NMIMS -->
+
+                    <div class="university-card"
+                        data-university="nmims">
+
+                        <div class="university-logo">
+
+                            <img
+                                src="assets/universities/nmims.png"
+                                alt="NMIMS Online">
+
+                        </div>
+
+                        <div class="university-info">
+
+                            <h3>
+                                NMIMS Online
+                            </h3>
+
+                            <p>
+                                Career-oriented online programs with
+                                flexible learning.
+                            </p>
+
+                        </div>
+
+                        <label class="compare-select">
+
+                            <input
+                                type="checkbox"
+                                class="university-checkbox"
+                                value="nmims">
+
+                            <span>
+                                Add to Compare
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="comparison.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Compare Online Universities | Hanora</title>
+
+    <meta name="description"
+        content="Compare online universities based on fees, placement, accreditation, LMS, exams, degree validity, specializations and scholarships.">
+
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- REMIX ICONS -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/universities.css">
+
+        <!-- CSS -->
+
+    <link rel="stylesheet" href="css/navbar.css">
+
+    <link rel="stylesheet" href="css/footer.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/popup.css">
+
+</head>
+
+<body>
+
+
+
+    <!-- =========================================
+        POPUP FORM
+    ========================================= -->
+
+    <div id="popup"></div>
+
+    <!-- ============================
+     FORM STATUS MODAL
+============================ -->
+
+    <div class="form-status-modal" id="formStatusModal">
+
+        <div class="form-status-container">
+
+            <!-- LEFT -->
+
+            <div class="status-left">
+
+                <span class="popup-label">
+                    HANORA EDTECH
+                </span>
+
+                <h2>
+                    Thank You For Your Enquiry
+                </h2>
+
+                <p>
+                    Our admission counsellors have received your request and will
+                    connect with you shortly to guide you through admissions,
+                    eligibility, programmes and fee details.
+                </p>
+
+                <div class="popup-features">
+
+                    <div class="popup-feature">
+                        <i class="ri-check-line"></i>
+                        <span>Admission Guidance</span>
+                    </div>
+
+                    <div class="popup-feature">
+                        <i class="ri-check-line"></i>
+                        <span>Course Selection Assistance</span>
+                    </div>
+
+                    <div class="popup-feature">
+                        <i class="ri-check-line"></i>
+                        <span>Dedicated Counsellor Support</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT -->
+
+            <div class="status-right">
+
+                <button class="status-close" id="statusCloseBtn">
+
+                    <i class="ri-close-line"></i>
+
+                </button>
+
+                <div class="success-circle">
+
+                    <i class="ri-check-line"></i>
+
+                </div>
+
+                <h2 id="statusTitle">
+                    Thank You!
+                </h2>
+
+                <h4>
+                    Your enquiry has been received.
+                </h4>
+
+                <p id="statusMessage">
+
+                    Thank you for contacting <strong>Hanora EdTech</strong>.
+                    We will contact you shortly.
+
+                </p>
+
+                <div class="status-badge">
+
+                    <i class="ri-phone-line"></i>
+
+                    Our Team Will Contact You Soon
+
+                </div>
+
+                <button class="popup-btn" id="continueBtn">
+
+                    Continue Browsing
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- NAVBAR -->
+
+    <div id="navbar"></div>
+
+
+    <!-- =========================================
+         HERO
+    ========================================= -->
+
+    <section class="comparison-hero">
+
+        <div class="comparison-hero-content">
+
+            <span class="comparison-tag">
+                University Comparison
+            </span>
+
+            <h1>
+                Compare Online Universities
+            </h1>
+
+            <p>
+                Compare leading online universities based on fees, accreditation,
+                placement support, learning platform, degree validity and more.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         UNIVERSITY SELECTION
+    ========================================= -->
+
+    <section class="comparison-section">
+
+        <div class="comparison-container">
+
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    Step 1
+                </span>
+
+                <h2>
+                    Select Universities to Compare
+                </h2>
+
+                <p>
+                    Select up to 3 universities and compare their key features
+                    side by side.
+                </p>
+
+            </div>
+
+
+            <!-- SELECTED COUNT -->
+
+            <div class="selection-info">
+
+                <span>
+
+                    <i class="ri-checkbox-multiple-line"></i>
+
+                    <span id="selectedCount">0</span>
+                    of 3 universities selected
+
+                </span>
+
+                <button
+                    type="button"
+                    class="clear-selection"
+                    onclick="clearSelection()">
+
+                    Clear All
+
+                </button>
+
+            </div>
+
+
+            <!-- UNIVERSITY GRID -->
+
+            <div class="university-selection-grid">
+
+
+                <!-- AMITY -->
+
+                <label class="university-select-card">
+
+                    <input
+                        type="checkbox"
+                        class="university-checkbox"
+                        value="amity"
+                        onchange="handleSelection(this)">
+
+                    <div class="select-check">
+
+                        <i class="ri-check-line"></i>
+
+                    </div>
+
+                    <div class="university-logo">
+
+                        <img
+                            src="./assets/universities/amity.png"
+                            alt="Amity University Online">
+
+                    </div>
+
+                    <div class="university-info">
+
+                        <h3>
+                            Amity University Online
+                        </h3>
+
+                        <p>
+                            Online Programs
+                        </p>
+
+                    </div>
+
+                </label>
+
+
+                <!-- DY PATIL -->
+
+                <label class="university-select-card">
+
+                    <input
+                        type="checkbox"
+                        class="university-checkbox"
+                        value="dy-patil"
+                        onchange="handleSelection(this)">
+
+                    <div class="select-check">
+
+                        <i class="ri-check-line"></i>
+
+                    </div>
+
+                    <div class="university-logo">
+
+                        <img
+                            src="assets/universities/dypatil.png"
+                            alt="DY Patil University">
+
+                    </div>
+
+                    <div class="university-info">
+
+                        <h3>
+                            DY Patil University
+                        </h3>
+
+                        <p>
+                            Online Programs
+                        </p>
+
+                    </div>
+
+                </label>
+
+
+                <!-- JAIN -->
+
+                <label class="university-select-card">
+
+                    <input
+                        type="checkbox"
+                        class="university-checkbox"
+                        value="jain"
+                        onchange="handleSelection(this)">
+
+                    <div class="select-check">
+
+                        <i class="ri-check-line"></i>
+
+                    </div>
+
+                    <div class="university-logo">
+
+                        <img
+                            src="assets/universities/jain.webp"
+                            alt="Jain University">
+
+                    </div>
+
+                    <div class="university-info">
+
+                        <h3>
+                            Jain University
+                        </h3>
+
+                        <p>
+                            Online Programs
+                        </p>
+
+                    </div>
+
+                </label>
+
+
+                <!-- LPU -->
+
+                <label class="university-select-card">
+
+                    <input
+                        type="checkbox"
+                        class="university-checkbox"
+                        value="lpu"
+                        onchange="handleSelection(this)">
+
+                    <div class="select-check">
+
+                        <i class="ri-check-line"></i>
+
+                    </div>
+
+                    <div class="university-logo">
+
+                        <img
+                            src="assets/universities/lpu.svg"
+                            alt="Lovely Professional University">
+
+                    </div>
+
+                    <div class="university-info">
+
+                        <h3>
+                            Lovely Professional University
+                        </h3>
+
+                        <p>
+                            Online Programs
+                        </p>
+
+                    </div>
+
+                </label>
+
+
+                <!-- MANIPAL -->
+
+                <label class="university-select-card">
+
+                    <input
+                        type="checkbox"
+                        class="university-checkbox"
+                        value="manipal"
+                        onchange="handleSelection(this)">
+
+                    <div class="select-check">
+
+                        <i class="ri-check-line"></i>
+
+                    </div>
+
+                    <div class="university-logo">
+
+                        <img
+                            src="assets/universities/manipal.svg"
+                            alt="Manipal University Jaipur">
+
+                    </div>
+
+                    <div class="university-info">
+
+                        <h3>
+                            Manipal University Jaipur
+                        </h3>
+
+                        <p>
+                            Online Programs
+                        </p>
+
+                    </div>
+
+                </label>
+
+
+                <!-- NOIDA -->
+
+                <label class="university-select-card">
+
+                    <input
+                        type="checkbox"
+                        class="university-checkbox"
+                        value="noida"
+                        onchange="handleSelection(this)">
+
+                    <div class="select-check">
+
+                        <i class="ri-check-line"></i>
+
+                    </div>
+
+                    <div class="university-logo">
+
+                        <img
+                            src="assets/universities/noida.svg"
+                            alt="Noida International University">
+
+                    </div>
+
+                    <div class="university-info">
+
+                        <h3>
+                            Noida International University
+                        </h3>
+
+                        <p>
+                            Online Programs
+                        </p>
+
+                    </div>
+
+                </label>
+
+
+                <!-- SHARDA -->
+
+                <label class="university-select-card">
+
+                    <input
+                        type="checkbox"
+                        class="university-checkbox"
+                        value="sharda"
+                        onchange="handleSelection(this)">
+
+                    <div class="select-check">
+
+                        <i class="ri-check-line"></i>
+
+                    </div>
+
+                    <div class="university-logo">
+
+                        <img
+                            src="assets/universities/sharda.jpeg"
+                            alt="Sharda University">
+
+                    </div>
+
+                    <div class="university-info">
+
+                        <h3>
+                            Sharda University
+                        </h3>
+
+                        <p>
+                            Online Programs
+                        </p>
+
+                    </div>
+
+                </label>
+
+
+                <!-- SHOOLINI -->
+
+                <label class="university-select-card">
+
+                    <input
+                        type="checkbox"
+                        class="university-checkbox"
+                        value="shoolini"
+                        onchange="handleSelection(this)">
+
+                    <div class="select-check">
+
+                        <i class="ri-check-line"></i>
+
+                    </div>
+
+                    <div class="university-logo">
+
+                        <img
+                            src="assets/universities/shoolini.png"
+                            alt="Shoolini University">
+
+                    </div>
+
+                    <div class="university-info">
+
+                        <h3>
+                            Shoolini University
+                        </h3>
+
+                        <p>
+                            Online Programs
+                        </p>
+
+                    </div>
+
+                </label>
+
+
+                <!-- SIKKIM MANIPAL -->
+
+                <label class="university-select-card">
+
+                    <input
+                        type="checkbox"
+                        class="university-checkbox"
+                        value="sikkim"
+                        onchange="handleSelection(this)">
+
+                    <div class="select-check">
+
+                        <i class="ri-check-line"></i>
+
+                    </div>
+
+                    <div class="university-logo">
+
+                        <img
+                            src="assets/universities/manipal.svg"
+                            alt="Sikkim Manipal University">
+
+                    </div>
+
+                    <div class="university-info">
+
+                        <h3>
+                            Sikkim Manipal University
+                        </h3>
+
+                        <p>
+                            Online Programs
+                        </p>
+
+                    </div>
+
+                </label>
+
+
+                <!-- UTTARANCHAL -->
+
+                <label class="university-select-card">
+
+                    <input
+                        type="checkbox"
+                        class="university-checkbox"
+                        value="uttaranchal"
+                        onchange="handleSelection(this)">
+
+                    <div class="select-check">
+
+                        <i class="ri-check-line"></i>
+
+                    </div>
+
+                    <div class="university-logo">
+
+                        <img
+                            src="assets/universities/utranchal.png"
+                            alt="Uttaranchal University">
+
+                    </div>
+
+                    <div class="university-info">
+
+                        <h3>
+                            Uttaranchal University
+                        </h3>
+
+                        <p>
+                            Online Programs
+                        </p>
+
+                    </div>
+
+                </label>
+
+
+                <!-- VGU -->
+
+                <label class="university-select-card">
+
+                    <input
+                        type="checkbox"
+                        class="university-checkbox"
+                        value="vgu"
+                        onchange="handleSelection(this)">
+
+                    <div class="select-check">
+
+                        <i class="ri-check-line"></i>
+
+                    </div>
+
+                    <div class="university-logo">
+
+                        <img
+                            src="assets/universities/vivakananda.png"
+                            alt="Vivekananda Global University">
+
+                    </div>
+
+                    <div class="university-info">
+
+                        <h3>
+                            Vivekananda Global University
+                        </h3>
+
+                        <p>
+                            Online Programs
+                        </p>
+
+                    </div>
+
+                </label>
+
+
+                <!-- NMIMS -->
+
+                <label class="university-select-card">
+
+                    <input
+                        type="checkbox"
+                        class="university-checkbox"
+                        value="nmims"
+                        onchange="handleSelection(this)">
+
+                    <div class="select-check">
+
+                        <i class="ri-check-line"></i>
+
+                    </div>
+
+                    <div class="university-logo">
+
+                        <img
+                            src="assets/universities/nmims.png"
+                            alt="NMIMS Online">
+
+                    </div>
+
+                    <div class="university-info">
+
+                        <h3>
+                            NMIMS Online
+                        </h3>
+
+                        <p>
+                            Online Programs
+                        </p>
+
+                    </div>
+
+                </label>
+
+
+            </div>
+
+
+            <!-- COMPARE BUTTON -->
+
+            <div class="compare-action">
+
+                <button
+                    type="button"
+                    class="compare-btn"
+                    id="compareBtn"
+                    onclick="compareUniversities()"
+                    disabled>
+
+                    <i class="ri-arrow-left-right-line"></i>
+
+                    Compare Universities
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         COMPARISON RESULT
+    ========================================= -->
+
+    <section
+        class="comparison-result-section"
+        id="comparisonResult">
+
+        <div class="comparison-container">
+
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    Step 2
+                </span>
+
+                <h2>
+                    University Comparison
+                </h2>
+
+                <p>
+                    Compare the selected universities across important
+                    academic and career-related parameters.
+                </p>
+
+            </div>
+
+
+            <div class="comparison-table-wrapper">
+
+                <table class="comparison-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Comparison Points
+                            </th>
+
+                            <th id="universityHead1">
+                                University 1
+                            </th>
+
+                            <th id="universityHead2">
+                                University 2
+                            </th>
+
+                            <th id="universityHead3">
+                                University 3
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                Fees
+                            </td>
+
+                            <td id="fees1">—</td>
+
+                            <td id="fees2">—</td>
+
+                            <td id="fees3">—</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>
+                                Placement
+                            </td>
+
+                            <td id="placement1">—</td>
+
+                            <td id="placement2">—</td>
+
+                            <td id="placement3">—</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>
+                                Accreditation
+                            </td>
+
+                            <td id="accreditation1">—</td>
+
+                            <td id="accreditation2">—</td>
+
+                            <td id="accreditation3">—</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>
+                                LMS
+                            </td>
+
+                            <td id="lms1">—</td>
+
+                            <td id="lms2">—</td>
+
+                            <td id="lms3">—</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>
+                                Exams
+                            </td>
+
+                            <td id="exams1">—</td>
+
+                            <td id="exams2">—</td>
+
+                            <td id="exams3">—</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>
+                                Degree Validity
+                            </td>
+
+                            <td id="degree1">—</td>
+
+                            <td id="degree2">—</td>
+
+                            <td id="degree3">—</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>
+                                Specializations
+                            </td>
+
+                            <td id="specializations1">—</td>
+
+                            <td id="specializations2">—</td>
+
+                            <td id="specializations3">—</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>
+                                Scholarships
+                            </td>
+
+                            <td id="scholarships1">—</td>
+
+                            <td id="scholarships2">—</td>
+
+                            <td id="scholarships3">—</td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <div class="comparison-note">
+
+                <i class="ri-information-line"></i>
+
+                <p>
+                    The information displayed is intended for general
+                    comparison purposes. Please verify the latest details
+                    with the respective university before making a decision.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================= -->
+
+    <footer class="comparison-footer">
+
+        <p>
+            © 2026 Hanora Edtech. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="./js/universities_comparison.js"></script>
+
+    <!-- FOOTER -->
+
+    <div id="footer"></div>
+
+    <!-- JS -->
+
+    <script src="js/global.js"></script>
+
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>

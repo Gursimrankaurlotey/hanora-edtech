@@ -81,420 +81,4150 @@ section {
 .secondary-btn:hover {
     transform: translateY(-4px);
 }
-
-/* ===============================
-   HERO
-================================= */
-
-.university-hero {
-    padding-top: 140px;
-    background:
-        linear-gradient(135deg,
-            rgba(255, 107, 0, 0.12),
-            rgba(255, 107, 0, 0.03));
-
-}
-
-.university-hero-content {
-    max-width: 1300px;
-    margin: auto;
-
-    display: grid;
-    grid-template-columns: 420px 1fr;
-    align-items: center;
-    gap: 80px;
-}
-
-/* .university-hero-content img {
-    width: 100%;
-    background: #ff6b00;
-    border-radius: 30px;
-    padding: 50px;
-    box-shadow: 0 25px 60px rgba(0,0,0,.08);
-} */
-
-.uni-tag {
-    display: inline-block;
-    background: rgba(255,107,0,.1);
-    color: var(--primary);
-    padding: 12px 22px;
-    border-radius: 50px;
-    font-size: 13px;
-    font-weight: 700;
-    margin-bottom: 25px;
-}
-
-.university-hero h1 {
-    font-size: 64px;
-    line-height: 1.05;
-    margin-bottom: 25px;
-}
-
-.university-hero p {
-    font-size: 18px;
-    color: var(--text);
-    line-height: 1.9;
-    max-width: 700px;
-}
-
-.hero-buttons {
-    margin-top: 40px;
-    display: flex;
-    gap: 18px;
-}
-
-/* ===============================
-   OVERVIEW
-================================= */
+/* ===================================
+   UNIVERSITY OVERVIEW
+=================================== */
 
 .university-overview {
-    background: #fafafa;
+
+    width: 2500px;
+    margin: auto;
+
+    padding: 110px 0;
+
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 80px;
+    align-items: center;
 }
 
-.overview-grid {
-    display: grid;
-    grid-template-columns: 1.2fr .8fr;
-    gap: 60px;
-    align-items: center;
+/* LEFT SIDE */
+
+/* .overview-tag{
+
+    display:inline-block;
+
+    padding:10px 18px;
+
+    border-radius:50px;
+
+    background:#fff4ec;
+
+    color:#ff6b00;
+
+    font-size:13px;
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+    margin-bottom:20px;
+} */
+
+.overview-content h2 {
+
+    font-size: 52px;
+
+    line-height: 1.15;
+
+    color: #1f2937;
+
+    margin-bottom: 25px;
+
+    max-width: 650px;
 }
 
 .overview-content p {
+
+    width: 100%;
+
     font-size: 18px;
+
     line-height: 1.9;
-    color: var(--text);
-    margin-bottom: 30px;
+
+    color: #6b7280;
+
+    margin-bottom: 35px;
+
 }
 
-.overview-content ul {
-    list-style: none;
+/* POINTS */
+
+.overview-points {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
 }
 
-.overview-content li {
-    padding: 18px 20px;
-    background: white;
-    margin-bottom: 15px;
-    border-radius: 16px;
-    border: 1px solid #eee;
+.point {
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 16px;
     font-weight: 600;
+
+    color: #374151;
 }
+
+.point i {
+
+    color: #ff6b00;
+
+    font-size: 20px;
+}
+
+/* RIGHT SIDE */
 
 .overview-stats {
+
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
 }
 
 .stat-card {
-    background: white;
-    padding: 35px;
+
+    background: #fff;
+
+    border: 1px solid #ececec;
+
     border-radius: 24px;
+
+    padding: 40px 30px;
+
     text-align: center;
-    border: 1px solid #eee;
+
+    transition: .3s;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .04);
+}
+
+.stat-card:hover {
+
+    transform: translateY(-6px);
+
+    border-color: #ff6b00;
+
+    box-shadow: 0 18px 40px rgba(255, 107, 0, .08);
 }
 
 .stat-card h3 {
-    color: var(--primary);
-    font-size: 40px;
+
+    font-size: 52px;
+
+    color: #ff6b00;
+
+    font-weight: 800;
+
     margin-bottom: 10px;
 }
 
 .stat-card span {
+
+    font-size: 16px;
+
+    color: #6b7280;
+
     font-weight: 600;
 }
 
-/* ===============================
-   PROGRAMS
-================================= */
+/* RESPONSIVE */
 
-.program-grid {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 30px;
+@media(max-width:991px) {
+
+    .university-overview {
+
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
 }
 
-.program-card {
-    background: white;
+@media(max-width:768px) {
+
+    .overview-content h2 {
+
+        font-size: 38px;
+    }
+
+    .overview-points {
+
+        grid-template-columns: 1fr;
+    }
+
+    .overview-stats {
+
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card h3 {
+
+        font-size: 42px;
+    }
+}
+
+/* =========================================
+   COURSES & FEES
+========================================= */
+
+.courses-fees {
+
+    background: #fafafa;
+    margin: auto;
+}
+
+.course-table {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    background: #fff;
+
+    /* border-radius:24px; */
+
+    overflow: hidden;
+
     border: 1px solid #ececec;
-    border-radius: 24px;
-    padding: 35px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .05);
+}
+
+/* HEADER */
+
+.course-head {
+
+    background: #ff6b00;
+
+    color: #fff;
+
+    font-weight: 700;
+}
+
+/* ROW */
+
+.course-row {
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1.5fr;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 22px 30px;
+
+    border-bottom: 1px solid #ececec;
+
     transition: .3s;
 }
 
-.program-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0,0,0,.08);
+.course-row:not(.course-head):hover {
+
+    background: #fff8f3;
 }
 
-.program-card h3 {
-    margin-bottom: 12px;
-    font-size: 24px;
-}
+.course-row:last-child {
 
-.program-card p {
-    color: var(--text);
-    line-height: 1.7;
-}
-
-/* ===============================
-   HIGHLIGHTS
-================================= */
-
-.university-highlights {
-    background: #fafafa;
-}
-
-.highlight-grid {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 25px;
-}
-
-.highlight-card {
-    background: white;
-    padding: 40px;
-    border-radius: 24px;
-    text-align: center;
-    border: 1px solid #ececec;
-}
-
-.highlight-card i {
-    font-size: 55px;
-    color: var(--primary);
-    margin-bottom: 20px;
-}
-
-.highlight-card h4 {
-    font-size: 22px;
-}
-
-/* ===============================
-   FEES
-================================= */
-
-.fees-table {
-    max-width: 900px;
-    margin: auto;
-    background: white;
-    border-radius: 25px;
-    overflow: hidden;
-    border: 1px solid #ececec;
-}
-
-.fee-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 25px 35px;
-    border-bottom: 1px solid #eee;
-}
-
-.fee-row:last-child {
     border-bottom: none;
 }
 
-.fee-row strong {
-    color: var(--primary);
+/* COURSE */
+
+.course-name {
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    color: #1f2937;
 }
 
-.fee-note {
-    text-align: center;
-    margin-top: 20px;
-    color: var(--text);
+.course-fee {
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    color: #ff6b00;
+}
+
+/* ACTIONS */
+
+.course-actions {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 12px;
+}
+
+.view-btn {
+
+    padding: 10px 18px;
+
+    border-radius: 10px;
+
+    border: 1px solid #e5e7eb;
+
+    color: #374151;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: .3s;
+}
+
+.view-btn:hover {
+
+    border-color: #ff6b00;
+
+    color: #ff6b00;
+}
+
+.enquire-btn {
+
+    padding: 10px 18px;
+
+    border-radius: 10px;
+
+    background: #ff6b00;
+
+    color: #fff;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: .3s;
+}
+
+.enquire-btn:hover {
+
+    background: #e45f00;
+}
+
+/* MOBILE */
+
+@media(max-width:991px) {
+
+    .course-head {
+        display: none;
+    }
+
+    .course-row {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        padding: 25px;
+    }
+
+    .course-actions {
+
+        justify-content: flex-start;
+
+        flex-wrap: wrap;
+    }
+}
+
+/* =========================================
+   ELIGIBILITY
+========================================= */
+
+.eligibility-section {
+    background: #fafafa;
 }
 
 
-/* ===============================
-   CTA
-================================= */
+.eligibility-table {
 
-.university-cta {
+    background: #fff;
+
+    border: 1px solid #ececec;
+
+    /* border-radius:20px; */
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .05);
+}
+
+.eligibility-row {
+
+    display: grid;
+
+    grid-template-columns: 280px 1fr;
+
+    gap: 30px;
+
+    padding: 22px 30px;
+
+    border-bottom: 1px solid #f1f1f1;
+
+    align-items: flex-start;
+}
+
+.eligibility-row:last-child {
+    border-bottom: none;
+}
+
+.eligibility-head {
+
+    background: #ff6b00;
+
+    color: #fff;
+
+    font-weight: 700;
+}
+
+.course-name {
+
+    font-weight: 700;
+
+    color: #1f2937;
+}
+
+.eligibility-row:not(.eligibility-head):hover {
+
+    background: #fff8f3;
+}
+
+.eligibility-section .section-title p {
+
+    max-width: 800px;
+
+    margin: 15px;
+
+    color: #6b7280;
+}
+
+/* MOBILE */
+
+@media(max-width:768px) {
+
+    .eligibility-row {
+
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+        padding: 20px;
+    }
+
+    .eligibility-head {
+        display: none;
+    }
+
+    .course-name {
+
+        color: #ff6b00;
+
+        margin-bottom: 6px;
+    }
+}
+
+
+/* =========================================
+   PLACEMENT SUPPORT
+========================================= */
+
+.placement-support {
+    background: #fafafa;
+}
+
+.placement-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.placement-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 24px;
+    border: 1px solid #ececec;
     text-align: center;
-    background: linear-gradient(
-        135deg,
-        #ff6b00,
-        #ff8a2f
-    );
+    transition: .3s;
+}
+
+.placement-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, .08);
+}
+
+.placement-card i {
+    font-size: 50px;
+    color: #ff6b00;
+    margin-bottom: 18px;
+}
+
+.placement-card h4 {
+    font-size: 20px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:991px) {
+
+    .university-overview {
+        grid-template-columns: 1fr;
+    }
+
+    .approval-grid,
+    .placement-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:768px) {
+
+    .overview-right,
+    .approval-grid,
+    .eligibility-grid,
+    .benefits-grid,
+    .placement-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .course-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .overview-left h2 {
+        font-size: 36px;
+    }
+}
+
+/* ======================================
+   UNIVERSITY HERO
+====================================== */
+
+.university-hero {
+    position: relative;
+    min-height: 780px;
+
+    display: flex;
+    align-items: center;
+
+    background: url("../assets/universities/amity_university.png");
+    background-size: cover;
+    background-position: center;
+
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(90deg,
+            rgba(0, 15, 40, .96) 0%,
+            rgba(0, 15, 40, .92) 22%,
+            rgba(0, 15, 40, .78) 45%,
+            rgba(0, 15, 40, .45) 70%,
+            rgba(0, 15, 40, .10) 100%);
+}
+
+/* MAIN CONTENT */
+
+.university-hero-content {
+    position: relative;
+    z-index: 10;
+
+    width: 100%;
+    max-width: 650px;
+
+    /* Move further left */
+    margin-left: 6%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* ==========================
+   BREADCRUMB
+========================== */
+
+.hero-breadcrumb {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    background: #fff;
+
+    padding: 14px 22px;
+
+    border-radius: 16px;
+
+    margin-bottom: 5px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.hero-breadcrumb a {
+    color: #ff6b00;
+}
+
+.hero-breadcrumb strong {
+    color: #111827;
+}
+
+.hero-breadcrumb span {
+    color: #9ca3af;
+}
+
+/* ==========================
+   TITLE
+========================== */
+
+.university-hero h1 {
+    font-size: 64px;
+    line-height: 1.05;
+    font-weight: 800;
+    color: #fff;
+    max-width: 650px;
+    margin: 0 0 10px;
+}
+
+/* ==========================
+   INFO PILLS
+========================== */
+
+.hero-info-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+
+    margin-bottom: 10px;
+}
+
+.hero-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 14px 22px;
+
+    background: #ff6b00;
+    color: #111;
+
+    border-radius: 999px;
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.hero-pill i {
+    font-size: 10px;
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.hero-buttons {
+    display: flex;
+    gap: 18px;
+}
+
+.hero-buttons a {
+    height: 62px;
+
+    padding: 0 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    border-radius: 18px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    transition: .3s ease;
+}
+
+.hero-btn-primary {
+    background: white;
+    color: #111;
+
+    box-shadow: 0 12px 30px rgba(246, 181, 45, .25);
+}
+
+.hero-btn-primary:hover {
+    transform: translateY(-4px);
+}
+
+.hero-btn-secondary {
+    color: #fff;
+
+    border: 1px solid rgba(255, 255, 255, .25);
+
+    background: rgba(255, 255, 255, .08);
+
+    backdrop-filter: blur(12px);
+}
+
+.hero-btn-secondary:hover {
+    transform: translateY(-4px);
+
+    background: rgba(255, 255, 255, .14);
+}
+
+/* ==========================
+   TABLET
+========================== */
+
+@media(max-width:992px) {
+
+    .university-hero {
+        min-height: 650px;
+    }
+
+    .university-hero-content {
+        margin-left: 5%;
+    }
+
+    .university-hero h1 {
+        font-size: 56px;
+    }
+
+    .hero-pill {
+        font-size: 14px;
+    }
+
+    .hero-buttons a {
+        height: 56px;
+        font-size: 16px;
+    }
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:768px) {
+
+    .university-hero {
+        min-height: auto;
+        padding: 140px 0 80px;
+    }
+
+    .university-hero-content {
+        max-width: 100%;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .university-hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-info-row {
+        gap: 12px;
+        margin-bottom: 30px;
+    }
+
+    .hero-pill {
+        width: 100%;
+        justify-content: center;
+
+        font-size: 13px;
+        padding: 12px 16px;
+    }
+
+    .hero-buttons {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+    }
+
+    .hero-breadcrumb {
+        font-size: 13px;
+        padding: 12px 18px;
+    }
+}
+
+/* =========================================
+   PAGE LAYOUT
+========================================= */
+
+.university-page-layout {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 320px 1fr;
+
+    gap: 40px;
+
+    padding: 50px 70px;
+
+    align-items: start;
+}
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.university-sidebar h4 {
+
+    padding: 28px 24px 20px;
+
+    margin: 0;
+
+    font-size: 22px;
+
+    font-weight: 800;
+
+    color: #1f2937;
+
+    letter-spacing: -0.5px;
+
+    border-bottom: 1px solid #f3f4f6;
+
+    background: #fff;
+}
+
+.university-sidebar nav a:hover {
+
+    background: #fff4ec;
+
+    color: #ff6b00;
+}
+
+
+.university-sidebar {
+
+    position: sticky;
+
+    top: 120px;
+
+    background: #fff;
+
+    border-radius: 18px;
+
+    border: 1px solid #ececec;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .05);
+}
+
+.university-sidebar nav {
+
+    display: flex;
+    flex-direction: column;
+}
+
+.university-sidebar a {
+
+    padding: 18px 22px;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    color: #1f2937;
+
+    border-bottom: 1px solid #f1f1f1;
+
+    transition: .3s;
+}
+
+.university-sidebar a:hover,
+.university-sidebar a.active {
+
+    background: #ff6b00;
+
     color: white;
 }
 
-.university-cta h2 {
-    font-size: 48px;
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.university-main-content {
+
+    width: 100%;
+
+    min-width: 0;
+}
+
+/* =========================================
+   SMOOTH SCROLL
+========================================= */
+
+html {
+
+    scroll-behavior: smooth;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:1100px) {
+
+    .university-page-layout {
+
+        grid-template-columns: 1fr;
+    }
+
+    .university-sidebar {
+
+        position: relative;
+
+        top: auto;
+    }
+}
+
+
+/* =========================================
+   SCHOLARSHIPS
+========================================= */
+
+.scholarship-section {
+    margin-top: 80px;
+}
+
+.scholarship-intro {
+
+    display: grid;
+
+    grid-template-columns: 240px 1fr;
+
+    gap: 30px;
+
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.scholarship-highlight {
+
+    background: linear-gradient(135deg,
+            #ff6b00,
+            #ff8f3a);
+
+    border-radius: 24px;
+
+    color: #fff;
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.scholarship-highlight h3 {
+
+    font-size: 56px;
+
+    font-weight: 800;
+
+    margin-bottom: 10px;
+}
+
+.scholarship-highlight span {
+
+    font-size: 16px;
+
+    font-weight: 600;
+}
+
+.scholarship-content {
+
+    background: #fff;
+
+    border: 1px solid #ececec;
+
+    border-radius: 24px;
+
+    padding: 35px;
+
+    color: #6b7280;
+
+    line-height: 1.9;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .04);
+}
+
+/* GRID */
+
+.scholarship-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 24px;
+}
+
+.scholarship-card {
+
+    background: #fff;
+
+    border: 1px solid #ececec;
+
+    border-radius: 24px;
+
+    padding: 30px;
+
+    transition: .35s;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .04);
+}
+
+.scholarship-card:hover {
+
+    transform: translateY(-6px);
+
+    border-color: #ff6b00;
+}
+
+.scholarship-discount {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 90px;
+
+    height: 48px;
+
+    padding: 0 16px;
+
+    background: #fff4ec;
+
+    color: #ff6b00;
+
+    border-radius: 50px;
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+    margin-bottom: 18px;
+}
+
+.scholarship-card h4 {
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    color: #1f2937;
+
+    margin-bottom: 10px;
+}
+
+.scholarship-card p {
+
+    color: #6b7280;
+
+    line-height: 1.7;
+}
+
+.scholarship-card.featured {
+
+    background:
+        linear-gradient(135deg,
+            #ff6b00,
+            #ff8f3a);
+
+    border: none;
+}
+
+.scholarship-card.featured .scholarship-discount {
+
+    background: #fff;
+
+    color: #ff6b00;
+}
+
+.scholarship-card.featured h4,
+.scholarship-card.featured p {
+
+    color: #fff;
+}
+
+/* MOBILE */
+
+@media(max-width:768px) {
+
+    .scholarship-intro {
+
+        grid-template-columns: 1fr;
+    }
+
+    .scholarship-highlight h3 {
+
+        font-size: 42px;
+    }
+
+    .scholarship-grid {
+
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================
+   UNIVERSITY HERO
+========================================= */
+
+.university-hero {
+    position: relative;
+    height: 650px;
+    overflow: hidden;
+}
+
+/* IMAGE */
+
+.university-hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* OVERLAY */
+
+.university-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(90deg,
+            rgba(0, 0, 0, .80) 0%,
+            rgba(0, 0, 0, .70) 30%,
+            rgba(0, 0, 0, .45) 60%,
+            rgba(0, 0, 0, .20) 100%);
+}
+
+/* HERO CONTENT */
+
+.university-hero-content {
+    position: relative;
+    z-index: 3;
+
+    width: 100%;
+    max-width: 2100px;
+
+    margin: 0 auto;
+
+    padding: 120px 80px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: flex-start;
+    /* IMPORTANT */
+
+    text-align: left;
+    /* IMPORTANT */
+}
+
+/* CONTENT COLUMN */
+
+.university-hero-content-inner {
+    width: 100%;
+    max-width: 700px;
+}
+
+
+/* CONTENT BOX */
+
+.university-hero-box {
+    max-width: 700px;
+}
+
+/* BREADCRUMB */
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 24px;
+
+    font-size: 14px;
+    color: rgba(255, 255, 255, .85);
+}
+
+.breadcrumb a {
+    color: rgba(255, 255, 255, .85);
+    transition: .3s;
+}
+
+.breadcrumb a:hover {
+    color: #ff6b00;
+}
+
+/* TITLE */
+
+.university-hero h1 {
+    font-size: 72px;
+    line-height: 1.05;
+    font-weight: 800;
+
+    color: #fff;
+
+    margin-bottom: 24px;
+}
+
+/* DESCRIPTION */
+
+.university-hero-text {
+    max-width: 650px;
+
+    font-size: 22px;
+    line-height: 1.8;
+
+    color: rgba(255, 255, 255, .95);
+
+    margin: 0 0 35px;
+
+    text-align: left;
+
+    text-shadow: 0 2px 10px rgba(0, 0, 0, .35);
+}
+
+/* BADGES */
+
+.university-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+
+    margin-bottom: 35px;
+
+    justify-content: flex-start;
+}
+
+.hero-badge-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 12px 20px;
+
+    background: #ff6b00;
+    color: #fff;
+
+    border-radius: 50px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    box-shadow: 0 8px 20px rgba(255, 107, 0, .25);
+}
+
+/* BUTTONS */
+
+.university-hero-actions {
+    display: flex;
+    gap: 18px;
+}
+
+.hero-apply-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-decoration: none;
+
+    background: #ff6b00;
+
+    color: #fff;
+
+    border: none;
+
+    padding: 16px 34px;
+
+    border-radius: 14px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.hero-apply-btn:hover {
+
+    transform: translateY(-3px);
+
+    background: #e85f00;
+
+    color: #fff;
+}
+
+.hero-apply-btn:hover {
+    transform: translateY(-3px);
+}
+
+.hero-brochure-btn {
+    background: rgba(255, 255, 255, .10);
+
+    color: #fff;
+
+    border: 1px solid rgba(255, 255, 255, .25);
+
+    padding: 16px 32px;
+
+    border-radius: 14px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(10px);
+}
+
+.hero-brochure-btn:hover {
+    background: rgba(255, 255, 255, .15);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+    .university-hero {
+        height: auto;
+        min-height: 650px;
+    }
+
+    .university-hero-content {
+        padding: 120px 30px 80px;
+    }
+
+    .university-hero h1 {
+        font-size: 52px;
+    }
+
+    .university-hero-text {
+        font-size: 18px;
+    }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .university-hero {
+        min-height: 700px;
+    }
+
+    .university-hero-content {
+        padding: 110px 20px 70px;
+    }
+
+    .university-hero h1 {
+        font-size: 40px;
+    }
+
+    .university-hero-text {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .university-badges {
+        gap: 10px;
+    }
+
+    .hero-badge-item {
+        font-size: 13px;
+        padding: 10px 15px;
+    }
+
+    .university-hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-apply-btn,
+    .hero-brochure-btn {
+        width: 100%;
+    }
+}
+
+/* =========================================
+UNIVERSITY DETAILS LAYOUT
+========================================= */
+
+.university-details {
+    padding: 80px 0;
+    background: #f8f9fb;
+}
+
+.university-details-container {
+
+    max-width: 1700px;
+
+    margin: auto;
+
+    padding: 0 30px;
+
+    display: grid;
+
+    grid-template-columns: 280px 1fr;
+
+    gap: 40px;
+
+    align-items: start;
+}
+
+/* =========================================
+SIDEBAR
+========================================= */
+
+.university-sidebar {
+    align-self: start;
+}
+
+.sidebar-card {
+
+    position: sticky;
+
+    top: 120px;
+
+    background: #fff;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+}
+
+.sidebar-card h3 {
+
+    background: #ff6b00;
+
+    color: #fff;
+
+    padding: 24px;
+
+    margin: 0;
+
+    font-size: 28px;
+
+    font-weight: 700;
+}
+
+.sidebar-card ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar-card li {
+    border-bottom: 1px solid #eeeeee;
+}
+
+.sidebar-card li:last-child {
+    border-bottom: none;
+}
+
+.sidebar-card a {
+
+    display: block;
+
+    padding: 18px 24px;
+
+    color: #1f2937;
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    transition: .3s;
+}
+
+.sidebar-card a:hover {
+
+    background: #fff7f1;
+
+    color: #ff6b00;
+
+    padding-left: 32px;
+}
+
+/* =========================================
+CONTENT AREA
+========================================= */
+
+.university-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 40px;
+}
+
+/* =========================================
+SECTION CARD
+========================================= */
+
+.university-section {
+
+    background: #fff;
+
+    border-radius: 20px;
+
+    padding: 40px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .05);
+}
+
+/* =========================================
+SECTION HEADER
+========================================= */
+
+.section-header {
+
+    margin-bottom: 30px;
+}
+
+.section-tag {
+
+    display: inline-block;
+
+    background: #fff4eb;
+
+    color: #ff6b00;
+
+    padding: 8px 16px;
+
+    border-radius: 50px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
     margin-bottom: 15px;
 }
 
-.university-cta p {
-    max-width: 700px;
-    margin: auto;
+.section-header h2 {
+
+    font-size: 42px;
+
+    line-height: 1.15;
+
+    color: #1f2937;
+
+    margin: 0;
+}
+
+/* REMOVE ORANGE LINE */
+
+.university-section h2::after {
+    display: none;
+}
+
+/* =========================================
+OVERVIEW
+========================================= */
+
+.overview-content {
+
+    width: 100%;
+
+    background: #fff;
+
+    border-radius: 16px;
+
+    padding: 0;
+}
+
+.overview-content p {
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    color: #4b5563;
+
+    margin-bottom: 24px;
+}
+
+.overview-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================================
+GENERAL PARAGRAPH
+========================================= */
+
+.university-section p {
+
+    color: #4b5563;
+
+    line-height: 1.9;
+
+    font-size: 17px;
+}
+
+/* =========================================
+WHY CHOOSE POINTS
+========================================= */
+
+.why-points {
+
+    margin-top: 25px;
+
+    padding-left: 25px;
+}
+
+.why-points li {
+
+    color: #4b5563;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+    margin-bottom: 14px;
+}
+
+.why-points li::marker {
+
+    color: #ff6b00;
+
+    font-size: 18px;
+}
+
+/* =========================================
+COURSES TABLE
+========================================= */
+
+.courses-table-wrapper {
+
+    overflow-x: auto;
+}
+
+.courses-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: #fff;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+}
+
+.courses-table thead {
+
+    background: #ff6b00;
+
+    color: #fff;
+}
+
+.courses-table th {
+
+    padding: 18px;
+
+    text-align: left;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+.courses-table td {
+
+    padding: 18px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    font-size: 15px;
+}
+
+.courses-table tr:last-child td {
+
+    border-bottom: none;
+}
+
+/* BUTTONS */
+
+.enquire-btn {
+
+    background: #ff6b00;
+
+    color: #fff;
+
+    border: none;
+
+    padding: 10px 16px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-right: 8px;
+}
+
+.spec-btn {
+
+    background: #fff;
+
+    color: #1f2937;
+
+    border: 1px solid #dcdcdc;
+
+    padding: 10px 16px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.enquire-btn:hover {
+
+    background: #e85f00;
+}
+
+.spec-btn:hover {
+
+    background: #f8f8f8;
+}
+
+/* =========================================
+COURSE MODAL
+========================================= */
+
+.course-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, .55);
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 9999;
+}
+
+.course-details-table-wrapper {
+
+    max-height: 400px;
+
+    overflow-y: auto;
+
+    margin-top: 20px;
+}
+
+.course-modal.active {
+
+    display: flex;
+}
+
+.course-modal-box {
+
+    width: 650px;
+
+    max-width: 95%;
+
+    max-height: 85vh;
+
+    background: #fff;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    position: relative;
+
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+
+    scrollbar-color: #ff6b00 #f1f1f1;
+}
+
+/* Chrome / Edge / Safari */
+
+.course-modal-box::-webkit-scrollbar {
+
+    width: 8px;
+}
+
+.course-modal-box::-webkit-scrollbar-track {
+
+    background: #f1f1f1;
+
+    border-radius: 10px;
+}
+
+.course-modal-box::-webkit-scrollbar-thumb {
+
+    background: #ff6b00;
+
+    border-radius: 10px;
+}
+
+.course-modal-box::-webkit-scrollbar-thumb:hover {
+
+    background: #e65f00;
+}
+
+.course-modal-box h3 {
+
+    margin-bottom: 25px;
+
+    color: #1f2937;
+}
+
+.course-modal-close {
+
+    position: absolute;
+
+    right: 20px;
+
+    top: 15px;
+
+    border: none;
+
+    background: none;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+.course-details-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+.course-details-table th,
+.course-details-table td {
+
+    padding: 15px;
+
+    border: 1px solid #ececec;
+
+    text-align: left;
+}
+
+/* =========================================
+   SCHOLARSHIPS
+========================================= */
+
+.scholarship-content {
+
+    background: #fff;
+
+    padding: 40px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .05);
+}
+
+.scholarship-content p {
+
+    width: 100%;
+
+    max-width: none;
+
+    color: #4b5563;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    margin-bottom: 30px;
+
+    text-align: left;
+}
+
+.scholarship-content h4 {
+
+    font-size: 24px;
+
+    color: #1f2937;
+
+    margin-bottom: 20px;
+}
+
+.scholarship-list {
+
+    padding-left: 25px;
+
+    margin: 0;
+
+    display: block;
+}
+
+.scholarship-list li {
+
+    margin-bottom: 16px;
+
+    color: #4b5563;
+
+    font-size: 16px;
+
     line-height: 1.8;
+}
+
+.scholarship-note {
+
+    margin-top: 30px;
+
+    padding: 18px 22px;
+
+    background: #fff7f1;
+
+    border-left: 4px solid #ff6b00;
+
+    border-radius: 10px;
+
+    color: #555;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+/* =========================================
+ELIGIBILITY SECTION
+========================================= */
+
+.eligibility-table-wrapper {
+
+    background: #fff;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .06);
+}
+
+.eligibility-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+.eligibility-table thead {
+
+    background: #ff6b00;
+}
+
+.eligibility-table thead th {
+
+    color: #fff;
+
+    padding: 18px 22px;
+
+    text-align: left;
+
+    font-size: 16px;
+
+    font-weight: 700;
+}
+
+.eligibility-table tbody tr {
+
+    border-bottom: 1px solid #ececec;
+
+    transition: .3s;
+}
+
+.eligibility-table tbody tr:last-child {
+
+    border-bottom: none;
+}
+
+.eligibility-table tbody tr:hover {
+
+    background: #fff8f2;
+}
+
+.eligibility-table tbody td {
+
+    padding: 18px 22px;
+
+    color: #475569;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    vertical-align: top;
+}
+
+.eligibility-table tbody td:first-child {
+
+    width: 30%;
+
+    font-weight: 600;
+
+    color: #1f2937;
+}
+
+/* MOBILE */
+
+@media(max-width:768px) {
+
+    .eligibility-table {
+
+        min-width: 700px;
+    }
+
+    .eligibility-table-wrapper {
+
+        overflow-x: auto;
+    }
+}
+
+/* =========================================
+ADMISSION PROCESS
+========================================= */
+
+.admission-steps {
+
+    margin-top: 40px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+.admission-step {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 25px;
+
+    padding: 28px;
+
+    background: #fff;
+
+    border: 1px solid #ececec;
+
+    border-radius: 18px;
+
+    transition: .3s ease;
+}
+
+.admission-step:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .06);
+
+    border-color: #ffd2b0;
+}
+
+.step-number {
+
+    min-width: 60px;
+
+    width: 60px;
+
+    height: 60px;
+
+    border-radius: 50%;
+
+    background: #ff6b00;
+
+    color: #fff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 24px;
+
+    font-weight: 800;
+
+    flex-shrink: 0;
+}
+
+.step-content h4 {
+
+    font-size: 22px;
+
+    font-weight: 100;
+
+    color: #1f2937;
+
+    margin-bottom: 8px;
+}
+
+.step-content p {
+
+    color: #64748b;
+
+    line-height: 1.8;
+
+    margin: 0;
+
+    font-size: 16px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px) {
+
+    .admission-step {
+
+        gap: 18px;
+
+        padding: 22px;
+    }
+
+    .step-number {
+
+        width: 50px;
+
+        height: 50px;
+
+        min-width: 50px;
+
+        font-size: 20px;
+    }
+
+    .step-content h4 {
+
+        font-size: 18px;
+    }
+
+    .step-content p {
+
+        font-size: 15px;
+    }
+}
+
+
+/* =========================================
+PLACEMENT PARTNERS
+========================================= */
+
+.placement-highlights {
+
+    background: #fffaf5;
+
+    border: 1px solid #ffe3cc;
+
+    border-radius: 16px;
+
+    padding: 25px 30px;
+
     margin-bottom: 35px;
 }
 
-.university-cta .primary-btn {
-    background: white;
-    color: var(--primary);
+.placement-highlights ul {
+
+    margin: 0;
+
+    padding-left: 22px;
 }
 
-/* ===============================
+.placement-highlights li {
+
+    color: #4b5563;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+    margin-bottom: 8px;
+}
+
+.placement-highlights li:last-child {
+
+    margin-bottom: 0;
+}
+
+/* LOGO GRID */
+
+.placement-logos {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(180px, 1fr));
+
+    gap: 22px;
+}
+
+/* LOGO CARD */
+
+.partner-logo {
+
+
+    background: rgba(255, 107, 0, 0.08);
+    
+    border: 1px solid #ececec;
+
+    border-radius: 16px;
+
+    padding: 22px;
+
+    height: 110px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: .3s;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, .04);
+}
+
+.partner-logo:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, .08);
+
+    border-color: #ff6b00;
+}
+
+.partner-logo img {
+
+    max-width: 140px;
+
+    max-height: 55px;
+
+    width: auto;
+
+    height: auto;
+
+    object-fit: contain;
+
+    transition: .3s;
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px) {
+
+    .placement-logos {
+
+        grid-template-columns:
+            repeat(auto-fit, minmax(140px, 1fr));
+
+        gap: 15px;
+    }
+
+    .partner-logo {
+
+        height: 90px;
+
+        padding: 15px;
+    }
+
+    .partner-logo img {
+
+        max-width: 110px;
+
+        max-height: 45px;
+    }
+}
+
+/* =========================================
+FAQ SECTION
+========================================= */
+
+.faq-wrapper {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.faq-item {
+
+    background: #fff;
+
+    border: 1px solid #ececec;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    transition: .3s;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, .04);
+}
+
+.faq-item:hover {
+
+    border-color: #ff6b00;
+}
+
+/* QUESTION */
+
+.faq-question {
+
+    width: 100%;
+
+    background: #fff;
+
+    border: none;
+
+    padding: 22px 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    color: #1f2937;
+
+    text-align: left;
+}
+
+.faq-question span {
+
+    color: #ff6b00;
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    transition: .3s;
+}
+
+/* ANSWER */
+
+.faq-answer {
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition: max-height .35s ease;
+}
+
+.faq-answer p {
+
+    padding: 0 25px 25px;
+
+    color: #64748b;
+
+    line-height: 1.8;
+
+    font-size: 15px;
+
+    margin: 0;
+}
+
+/* ACTIVE */
+
+.faq-item.active .faq-answer {
+
+    max-height: 300px;
+}
+
+.faq-item.active .faq-question span {
+
+    transform: rotate(45deg);
+}
+
+/* MOBILE */
+
+@media(max-width:768px) {
+
+    .faq-question {
+
+        font-size: 16px;
+
+        padding: 18px 20px;
+    }
+
+    .faq-answer p {
+
+        padding: 0 20px 20px;
+    }
+}
+
+/* =========================================
+STUDENT REVIEWS
+========================================= */
+
+.reviews-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(320px, 1fr));
+
+    gap: 25px;
+
+    margin-top: 40px;
+}
+
+/* REVIEW CARD */
+
+.review-card {
+
+    background: #fff;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    border: 1px solid #ececec;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, .04);
+
+    transition: .3s;
+}
+
+.review-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: #ff6b00;
+
+    box-shadow:
+        0 15px 35px rgba(255, 107, 0, .08);
+}
+
+/* STARS */
+
+.review-rating {
+
+    color: #ffb400;
+
+    font-size: 22px;
+
+    margin-bottom: 18px;
+
+    letter-spacing: 2px;
+}
+
+/* REVIEW TEXT */
+
+.review-text {
+
+    color: #64748b;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    margin-bottom: 25px;
+}
+
+/* USER */
+
+.review-user {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.review-avatar {
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 50%;
+
+    background: #ff6b00;
+
+    color: #fff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: 700;
+
+    font-size: 18px;
+}
+
+.review-user h4 {
+
+    margin: 0;
+
+    font-size: 17px;
+
+    color: #1f2937;
+}
+
+.review-user span {
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px) {
+
+    .reviews-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .review-card {
+
+        padding: 25px;
+    }
+}
+
+/* =========================================
+ADMISSION PROCESS
+========================================= */
+
+.admission-steps {
+
+    margin-top: 40px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+.admission-step {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    background: #fff;
+
+    border: 1px solid #ececec;
+
+    border-radius: 14px;
+
+    padding: 18px 22px;
+
+    transition: .3s ease;
+}
+
+.admission-step:hover {
+
+    border-color: #ffcfad;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .06);
+
+    transform: translateY(-2px);
+}
+
+/* STEP NUMBER */
+
+.step-number {
+
+    width: 48px;
+
+    height: 48px;
+
+    min-width: 48px;
+
+    border-radius: 50%;
+
+    background: #ff6b00;
+
+    color: #fff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    flex-shrink: 0;
+}
+
+/* CONTENT */
+
+.step-content {
+
+    flex: 1;
+}
+
+.step-content h4 {
+
+    margin: 0 0 4px;
+
+    font-size: 15px;
+
+    font-weight: 100;
+
+    color: #1f2937;
+
+    line-height: 1.4;
+}
+
+.step-content p {
+
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+}
+
+/* =========================================
+TABLET
+========================================= */
+
+@media(max-width:991px) {
+
+    .admission-step {
+
+        padding: 16px 20px;
+    }
+
+    .step-content h4 {
+
+        font-size: 17px;
+    }
+}
+
+/* =========================================
+MOBILE
+========================================= */
+
+@media(max-width:768px) {
+
+    .admission-steps {
+
+        gap: 12px;
+    }
+
+    .admission-step {
+
+        padding: 15px 16px;
+
+        gap: 14px;
+
+        align-items: flex-start;
+    }
+
+    .step-number {
+
+        width: 40px;
+
+        height: 40px;
+
+        min-width: 40px;
+
+        font-size: 16px;
+    }
+
+    .step-content h4 {
+
+        font-size: 15px;
+    }
+
+    .step-content p {
+
+        font-size: 13px;
+    }
+}
+
+/* =========================================
+   PLACEMENT SALARY STRIP
+========================================= */
+
+.placement-salary-strip {
+
+    width: 100%;
+
+    margin-top: 40px;
+
+    margin-bottom: 40px;
+
+    padding: 26px 35px;
+
+    background: #fff8f3;
+
+    border: 1px solid #ffd9bf;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    box-shadow: 0 8px 25px rgba(255, 117, 31, 0.06);
+
+}
+
+
+/* =========================================
+   SALARY ITEM
+========================================= */
+
+.salary-item {
+
+    flex: 1;
+
+    text-align: left;
+
+    min-width: 0;
+}
+
+
+/* =========================================
+   SALARY VALUE
+========================================= */
+
+.salary-value {
+
+    color: #FF751F;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 32px;
+
+    font-weight: 800;
+
+    line-height: 1.2;
+
+    margin-bottom: 6px;
+
+    letter-spacing: -0.5px;
+}
+
+
+/* =========================================
+   SALARY LABEL
+========================================= */
+
+.salary-label {
+
+    color: #64748b;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.salary-divider {
+
+    width: 1px;
+
+    height: 55px;
+
+    background: #ffd9bf;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   HOVER EFFECT
+========================================= */
+
+.placement-salary-strip {
+
+    transition: all 0.3s ease;
+}
+
+.placement-salary-strip:hover {
+
+    border-color: #ffbd91;
+
+    box-shadow: 0 12px 35px rgba(255, 117, 31, 0.10);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+    .placement-salary-strip {
+
+        padding: 24px 22px;
+
+        gap: 20px;
+
+        border-radius: 16px;
+    }
+
+    .salary-value {
+
+        font-size: 26px;
+    }
+
+    .salary-label {
+
+        font-size: 13px;
+    }
+
+    .salary-divider {
+
+        height: 48px;
+    }
+
+}
+
+
+/* =========================================
    MOBILE
-================================= */
+========================================= */
 
-@media(max-width:991px){
+@media (max-width: 600px) {
 
-    .university-hero-content,
-    .overview-grid{
-        grid-template-columns:1fr;
+    .placement-salary-strip {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        padding: 24px;
+
+        gap: 18px;
     }
 
-    .program-grid{
-        grid-template-columns:repeat(2,1fr);
+
+    .salary-item {
+
+        text-align: center;
+
+        padding: 4px 0;
     }
 
-    .highlight-grid{
-        grid-template-columns:repeat(2,1fr);
+
+    .salary-value {
+
+        font-size: 28px;
+
+        margin-bottom: 4px;
     }
 
-    .process-grid{
-        grid-template-columns:repeat(2,1fr);
+
+    .salary-label {
+
+        font-size: 14px;
     }
 
-    .university-hero h1{
-        font-size:48px;
+
+    .salary-divider {
+
+        width: 100%;
+
+        height: 1px;
     }
+
 }
 
-@media(max-width:768px){
 
-    section{
-        padding:80px 6%;
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+    .placement-salary-strip {
+
+        padding: 20px 16px;
     }
 
-    .program-grid,
-    .highlight-grid,
-    .process-grid,
-    .overview-stats{
-        grid-template-columns:1fr;
+    .salary-value {
+
+        font-size: 25px;
     }
 
-    .hero-buttons{
-        flex-direction:column;
-    }
-
-    .university-hero h1{
-        font-size:38px;
-    }
-
-    .section-title h2{
-        font-size:34px;
-    }
-
-    .fee-row{
-        flex-direction:column;
-        gap:10px;
-    }
 }
 
-/* ===============================
+/* =========================================================
+   FINAL RESPONSIVE FIX
+   ADD THIS AT THE VERY END OF university(2).css
+========================================================= */
+
+
+/* =========================================================
+   GLOBAL RESPONSIVE SAFETY
+========================================================= */
+
+
+/* =========================================================
+   HERO
+========================================================= */
+/* IMPORTANT:
+   Previous CSS had width: 2500px
+*/
+
+.university-overview {
+    width: 100%;
+    max-width: 2500px;
+    margin: 0 auto;
+
+    padding: 80px 5%;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.overview-content,
+.overview-left,
+.overview-right {
+    width: 100%;
+    min-width: 0;
+}
+
+.overview-content h2,
+.overview-left h2 {
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+.overview-content p {
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   OVERVIEW POINTS
+========================================================= */
+
+.overview-points {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.point {
+    min-width: 0;
+}
+
+
+/* =========================================================
+   OVERVIEW STATS
+========================================================= */
+
+.overview-stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    min-width: 0;
+}
+
+
+/* =========================================================
+   PAGE LAYOUT
+========================================================= */
+
+.university-page-layout {
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 0 auto;
+
+    padding: 50px 4%;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(220px, 280px)
+        minmax(0, 1fr);
+
+    gap: 35px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.university-sidebar {
+    width: 100%;
+    min-width: 0;
+}
+
+.university-sidebar,
+.sidebar-card {
+    max-width: 100%;
+}
+
+.university-sidebar a,
+.sidebar-card a {
+    overflow-wrap: break-word;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.university-main-content,
+.university-content {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   SECTION CARDS
+========================================================= */
+
+.university-section {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    padding: 40px;
+}
+
+.section-header {
+    width: 100%;
+    max-width: 100%;
+}
+
+.section-header h2 {
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+.section-header p {
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   COURSES
+========================================================= */
+
+.courses-fees,
+.course-table,
+.courses-table-wrapper {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.course-table {
+    overflow-x: auto;
+}
+
+.course-row {
+    width: 100%;
+    min-width: 0;
+}
+
+.course-name,
+.course-fee {
+    min-width: 0;
+    overflow-wrap: break-word;
+}
+
+.course-actions {
+    min-width: 0;
+    flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   COURSE TABLE
+========================================================= */
+
+.courses-table-wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.courses-table {
+    width: 100%;
+    min-width: 650px;
+}
+
+
+/* =========================================================
+   ELIGIBILITY
+========================================================= */
+
+.eligibility-section,
+.eligibility-table-wrapper {
+    width: 100%;
+    max-width: 100%;
+}
+
+.eligibility-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.eligibility-table {
+    width: 100%;
+    min-width: 650px;
+}
+
+
+/* =========================================================
+   SCHOLARSHIP
+========================================================= */
+
+.scholarship-section {
+    width: 100%;
+    max-width: 100%;
+}
+
+.scholarship-intro {
+    width: 100%;
+    max-width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(180px, 240px)
+        minmax(0, 1fr);
+
+    gap: 25px;
+}
+
+.scholarship-highlight,
+.scholarship-content {
+    min-width: 0;
+    width: 100%;
+}
+
+.scholarship-content {
+    padding: 30px;
+}
+
+.scholarship-grid {
+    width: 100%;
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+}
+
+
+/* =========================================================
    ADMISSION PROCESS
-================================= */
+========================================================= */
 
-.admission-process{
-    background:#fafafa;
-    padding:100px 4%;
+.admission-steps {
+    width: 100%;
+    max-width: 100%;
 }
 
-.process-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-    margin-top:60px;
+.admission-step {
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+    align-items: flex-start;
 }
 
-.process-card{
-    background:#fff;
-    border:1px solid #ececec;
-    border-radius:30px;
-    padding:45px 32px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    text-align:center;
-    transition:.35s ease;
-    height:100%;
+.step-content {
+    min-width: 0;
+    flex: 1;
 }
 
-.process-card:hover{
-    transform:translateY(-8px);
-    border-color:rgba(255,107,0,.2);
-    box-shadow:0 20px 45px rgba(255,107,0,.12);
+.step-content h4,
+.step-content p {
+    max-width: 100%;
+    overflow-wrap: break-word;
 }
 
-.process-number{
-    width:74px;
-    height:74px;
-    border-radius:22px;
-    background:linear-gradient(135deg,#ff6b00,#ff8c38);
-    color:#fff;
-    font-size:34px;
-    font-weight:700;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin-bottom:28px;
-    box-shadow:0 10px 24px rgba(255,107,0,.25);
+
+/* =========================================================
+   PLACEMENT
+========================================================= */
+
+.placement-support {
+    width: 100%;
+    max-width: 100%;
 }
 
-.process-icon{
-    width:74px;
-    height:74px;
-    border-radius:22px;
-    background:#fff4ec;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#ff6b00;
-    font-size:34px;
-    margin-bottom:28px;
+.placement-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 20px;
 }
 
-.process-card h3{
-    font-size:30px;
-    line-height:1.25;
-    color:#2f3138;
-    margin-bottom:16px;
+.placement-card {
+    min-width: 0;
+    width: 100%;
 }
 
-.process-card p{
-    color:#6d6d6d;
-    font-size:16px;
-    line-height:1.8;
-    margin:0;
-    flex:1;
+
+/* =========================================================
+   PLACEMENT LOGOS
+========================================================= */
+
+.placement-logos {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(150px, 1fr));
+
+    gap: 18px;
 }
 
-/* ===============================
-   RESPONSIVE
-================================= */
+.partner-logo {
+    min-width: 0;
+    width: 100%;
+}
 
-@media (max-width:1200px){
+.partner-logo img {
+    max-width: 100%;
+}
 
-    .process-grid{
-        grid-template-columns:repeat(2,1fr);
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.faq-wrapper {
+    width: 100%;
+    max-width: 100%;
+}
+
+.faq-item {
+    width: 100%;
+    max-width: 100%;
+}
+
+.faq-question {
+    width: 100%;
+    min-width: 0;
+
+    gap: 15px;
+}
+
+.faq-question span {
+    flex-shrink: 0;
+}
+
+.faq-answer {
+    width: 100%;
+}
+
+.faq-answer p {
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+
+/* =========================================================
+   REVIEWS
+========================================================= */
+
+.reviews-grid {
+    width: 100%;
+    max-width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 20px;
+}
+
+.review-card {
+    width: 100%;
+    min-width: 0;
+}
+
+.review-text {
+    overflow-wrap: break-word;
+}
+
+
+/* =========================================================
+   COURSE MODAL
+========================================================= */
+
+.course-modal {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+}
+
+.course-modal-box {
+    width: 650px;
+    max-width: 100%;
+    max-height: 90vh;
+
+    overflow-y: auto;
+}
+
+.course-details-table-wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.course-details-table {
+    width: 100%;
+    min-width: 500px;
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .university-page-layout {
+        grid-template-columns: 1fr;
+        padding: 40px 5%;
+    }
+
+    .university-sidebar {
+        position: relative;
+        top: auto;
+        width: 100%;
+    }
+
+    .sidebar-card {
+        position: relative;
+        top: auto;
+    }
+
+    .sidebar-card ul {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .sidebar-card li {
+        border-right: 1px solid #eeeeee;
+    }
+
+    .university-section {
+        padding: 35px;
+    }
+
+    .placement-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .university-overview {
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
 
 }
 
-@media (max-width:768px){
 
-    .process-grid{
-        grid-template-columns:1fr;
-        gap:24px;
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+    section {
+        padding-left: 5%;
+        padding-right: 5%;
     }
 
-    .process-card{
-        padding:35px 25px;
+    .university-hero-content {
+        padding-left: 5%;
+        padding-right: 5%;
     }
 
-    .process-card h3{
-        font-size:26px;
+    .university-hero h1 {
+        font-size: 52px;
+        line-height: 1.08;
+    }
+
+    .university-hero-text {
+        font-size: 18px;
+        max-width: 600px;
+    }
+
+    .university-details-container {
+        grid-template-columns: 1fr;
+        padding: 0 25px;
+    }
+
+    .university-sidebar {
+        width: 100%;
+    }
+
+    .sidebar-card {
+        position: relative;
+        top: auto;
+    }
+
+    .overview-points {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .overview-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .scholarship-intro {
+        grid-template-columns: 1fr;
+    }
+
+    .scholarship-highlight {
+        min-height: 180px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* ---------- GLOBAL ---------- */
+
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    section {
+        padding: 55px 5%;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .university-hero {
+        width: 100%;
+        min-height: auto;
+        height: auto;
+
+        background-position: center;
+    }
+
+    .university-hero-content {
+        width: 100%;
+        max-width: 100%;
+
+        padding: 100px 20px 65px;
+
+        margin: 0;
+    }
+
+    .university-hero h1 {
+        font-size: 38px;
+        line-height: 1.12;
+
+        width: 100%;
+        max-width: 100%;
+
+        margin-bottom: 20px;
+    }
+
+    .university-hero-text {
+        font-size: 15px;
+        line-height: 1.75;
+
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* ---------- HERO BADGES ---------- */
+
+    .university-badges {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .hero-badge-item {
+        width: 100%;
+        justify-content: center;
+
+        padding: 11px 15px;
+
+        font-size: 13px;
+    }
+
+
+    /* ---------- HERO BUTTONS ---------- */
+
+    .university-hero-actions,
+    .hero-buttons {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .hero-apply-btn,
+    .hero-brochure-btn,
+    .hero-buttons a {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* ---------- PAGE LAYOUT ---------- */
+
+    .university-page-layout {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        padding: 25px 5%;
+
+        gap: 25px;
+    }
+
+
+    /* ---------- SIDEBAR ---------- */
+
+    .university-sidebar {
+        width: 100%;
+        position: relative;
+        top: auto;
+    }
+
+    .sidebar-card {
+        width: 100%;
+        position: relative;
+        top: auto;
+    }
+
+    .sidebar-card h3 {
+        font-size: 20px;
+        padding: 18px 20px;
+    }
+
+    .sidebar-card ul {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar-card a {
+        padding: 14px 18px;
+        font-size: 14px;
+    }
+
+
+    /* ---------- CONTENT ---------- */
+
+    .university-content {
+        width: 100%;
+        gap: 20px;
+    }
+
+    .university-section {
+        width: 100%;
+        padding: 25px 20px;
+        border-radius: 16px;
+    }
+
+
+    /* ---------- SECTION HEADER ---------- */
+
+    .section-header {
+        margin-bottom: 22px;
+    }
+
+    .section-tag {
+        font-size: 11px;
+        padding: 7px 12px;
+        margin-bottom: 12px;
+    }
+
+    .section-header h2 {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    .section-header p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+
+    /* ---------- GENERAL TEXT ---------- */
+
+    .university-section p,
+    .overview-content p {
+        font-size: 15px;
+        line-height: 1.75;
+    }
+
+
+    /* ---------- OVERVIEW ---------- */
+
+    .university-overview {
+        width: 100%;
+        max-width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        padding: 55px 5%;
+
+        gap: 30px;
+    }
+
+    .overview-content h2,
+    .overview-left h2 {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .overview-points {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .overview-stats {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .stat-card {
+        padding: 28px 20px;
+    }
+
+    .stat-card h3 {
+        font-size: 38px;
+    }
+
+
+    /* ---------- COURSES ---------- */
+
+    .course-table {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .course-row {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+        padding: 18px 20px;
+    }
+
+    .course-actions {
+        width: 100%;
+
+        justify-content: flex-start;
+
+        flex-wrap: wrap;
+    }
+
+    .view-btn,
+    .enquire-btn {
+        flex: 1;
+        min-width: 120px;
+
+        text-align: center;
+    }
+
+
+    /* ---------- TABLES ---------- */
+
+    .courses-table-wrapper,
+    .eligibility-table-wrapper {
+        width: 100%;
+
+        overflow-x: auto;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .courses-table,
+    .eligibility-table {
+        min-width: 620px;
+    }
+
+
+    /* ---------- SCHOLARSHIP ---------- */
+
+    .scholarship-intro {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .scholarship-highlight {
+        min-height: 160px;
+        padding: 30px 20px;
+    }
+
+    .scholarship-highlight h3 {
+        font-size: 40px;
+    }
+
+    .scholarship-content {
+        padding: 25px 20px;
+    }
+
+    .scholarship-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .scholarship-card {
+        padding: 25px;
+    }
+
+
+    /* ---------- ADMISSION ---------- */
+
+    .admission-steps {
+        gap: 12px;
+        margin-top: 25px;
+    }
+
+    .admission-step {
+        padding: 16px;
+
+        gap: 13px;
+
+        align-items: flex-start;
+    }
+
+    .step-number {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+
+        font-size: 16px;
+    }
+
+    .step-content h4 {
+        font-size: 15px;
+        line-height: 1.45;
+
+        margin-bottom: 4px;
+    }
+
+    .step-content p {
+        font-size: 13px;
+        line-height: 1.65;
+    }
+
+
+    /* ---------- PLACEMENT ---------- */
+
+    .placement-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .placement-card {
+        padding: 25px 20px;
+    }
+
+
+    /* ---------- PLACEMENT LOGOS ---------- */
+
+    .placement-logos {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 12px;
+    }
+
+    .partner-logo {
+        height: 85px;
+        padding: 12px;
+    }
+
+    .partner-logo img {
+        max-width: 100px;
+        max-height: 42px;
+    }
+
+
+    /* ---------- SALARY STRIP ---------- */
+
+    .placement-salary-strip {
+        display: flex;
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 18px 16px;
+
+        border-radius: 15px;
+    }
+
+    .salary-item {
+        width: 100%;
+
+        text-align: center;
+
+        padding: 15px 5px;
+    }
+
+    .salary-value {
+        font-size: 25px;
+        line-height: 1.25;
+    }
+
+    .salary-label {
+        font-size: 13px;
+    }
+
+    .salary-divider {
+        width: 100%;
+        height: 1px;
+    }
+
+
+    /* ---------- FAQ ---------- */
+
+    .faq-wrapper {
+        gap: 12px;
+    }
+
+    .faq-question {
+        padding: 16px;
+
+        font-size: 14px;
+
+        line-height: 1.5;
+
+        align-items: flex-start;
+    }
+
+    .faq-question span {
+        font-size: 21px;
+    }
+
+    .faq-answer p {
+        padding: 0 16px 18px;
+
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+
+    /* ---------- REVIEWS ---------- */
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        margin-top: 25px;
+    }
+
+    .review-card {
+        padding: 22px;
+    }
+
+    .review-text {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+
+    /* ---------- MODAL ---------- */
+
+    .course-modal {
+        padding: 10px;
+    }
+
+    .course-modal-box {
+        width: 100%;
+        max-width: 100%;
+
+        max-height: 90vh;
+
+        padding: 20px 15px;
+
+        border-radius: 15px;
+    }
+
+    .course-modal-box h3 {
+        font-size: 20px;
+
+        padding-right: 35px;
+
+        margin-bottom: 18px;
+    }
+
+    .course-details-table {
+        min-width: 500px;
+    }
+
+    .course-details-table th,
+    .course-details-table td {
+        padding: 12px 10px;
+
+        font-size: 13px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    section {
+        padding: 45px 4%;
+    }
+
+    .university-hero-content {
+        padding: 95px 16px 55px;
+    }
+
+    .university-hero h1 {
+        font-size: 31px;
+        line-height: 1.15;
+    }
+
+    .university-hero-text {
+        font-size: 14px;
+    }
+
+    .university-section {
+        padding: 22px 16px;
+    }
+
+    .section-header h2 {
+        font-size: 25px;
+    }
+
+    .section-header p {
+        font-size: 13px;
+    }
+
+    .overview-content h2,
+    .overview-left h2 {
+        font-size: 28px;
+    }
+
+    .stat-card h3 {
+        font-size: 34px;
+    }
+
+    .placement-logos {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .partner-logo {
+        height: 78px;
+    }
+
+    .salary-value {
+        font-size: 23px;
+    }
+
+    .salary-label {
+        font-size: 12px;
+    }
+
+    .admission-step {
+        padding: 14px;
+    }
+
+    .step-number {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        font-size: 14px;
+    }
+
+    .step-content h4 {
+        font-size: 14px;
+    }
+
+    .step-content p {
+        font-size: 12px;
+    }
+
+    .faq-question {
+        font-size: 13px;
+        padding: 14px;
+    }
+
+    .review-card {
+        padding: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .university-hero h1 {
+        font-size: 28px;
+    }
+
+    .section-header h2 {
+        font-size: 23px;
+    }
+
+    .university-section {
+        padding: 20px 14px;
+    }
+
+    .placement-logos {
+        grid-template-columns: 1fr;
+    }
+
+    .salary-value {
+        font-size: 21px;
+    }
+
+    .step-number {
+        width: 34px;
+        height: 34px;
+        min-width: 34px;
     }
 
 }

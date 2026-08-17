@@ -1,0 +1,908 @@
+/* =========================================
+   ROOT
+========================================= */
+
+:root {
+
+    --primary: #FF751F;
+
+    --primary-light: #fff4eb;
+
+    --dark: #1f2937;
+
+    --text: #64748b;
+
+    --border: #ececec;
+
+    --bg: #f8f8f8;
+
+    --white: #ffffff;
+
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    font-family: 'Inter', sans-serif;
+
+    background: var(--bg);
+
+    color: var(--dark);
+
+}
+
+button,
+input {
+
+    font-family: inherit;
+
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.comparison-header {
+
+    background: #fff;
+
+    border-bottom: 1px solid var(--border);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+}
+
+.header-container {
+
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding: 18px 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+.header-logo img {
+
+    width: 160px;
+
+    display: block;
+
+}
+
+.back-home {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--dark);
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition: .3s ease;
+
+}
+
+.back-home i {
+
+    color: var(--primary);
+
+    font-size: 20px;
+
+}
+
+.back-home:hover {
+
+    color: var(--primary);
+
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.comparison-hero {
+
+    background: #111;
+
+    padding: 90px 30px;
+
+    text-align: center;
+
+}
+
+.comparison-hero-content {
+
+    max-width: 850px;
+
+    margin: auto;
+
+}
+
+.comparison-tag {
+
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    border-radius: 50px;
+
+    background: rgba(255,117,31,.12);
+
+    color: var(--primary);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 18px;
+
+}
+
+.comparison-hero h1 {
+
+    color: #fff;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 48px;
+
+    line-height: 1.2;
+
+    margin-bottom: 18px;
+
+}
+
+.comparison-hero p {
+
+    color: #d1d5db;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================
+   COMMON CONTAINER
+========================================= */
+
+.comparison-section,
+.comparison-result-section {
+
+    padding: 75px 30px;
+
+}
+
+.comparison-container {
+
+    max-width: 1400px;
+
+    margin: auto;
+
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.section-heading {
+
+    margin-bottom: 35px;
+
+}
+
+.section-label {
+
+    display: inline-block;
+
+    color: var(--primary);
+
+    background: var(--primary-light);
+
+    padding: 7px 15px;
+
+    border-radius: 50px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    margin-bottom: 12px;
+
+}
+
+.section-heading h2 {
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 36px;
+
+    color: var(--dark);
+
+    margin-bottom: 10px;
+
+}
+
+.section-heading p {
+
+    color: var(--text);
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================
+   SELECTION INFO
+========================================= */
+
+.selection-info {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+    padding: 15px 20px;
+
+    background: #fff;
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+}
+
+.selection-info > span {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--text);
+
+    font-size: 14px;
+
+}
+
+.selection-info i {
+
+    color: var(--primary);
+
+    font-size: 19px;
+
+}
+
+.clear-selection {
+
+    border: none;
+
+    background: none;
+
+    color: var(--primary);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================
+   UNIVERSITY GRID
+========================================= */
+
+.university-selection-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+}
+
+
+/* =========================================
+   UNIVERSITY CARD
+========================================= */
+
+.university-select-card {
+
+    position: relative;
+
+    background: #fff;
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    cursor: pointer;
+
+    transition: .3s ease;
+
+}
+
+.university-select-card:hover {
+
+    transform: translateY(-4px);
+
+    border-color: #ffd1b4;
+
+    box-shadow: 0 12px 30px rgba(0,0,0,.06);
+
+}
+
+.university-select-card input {
+
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+}
+
+.select-check {
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 15px;
+
+    width: 26px;
+
+    height: 26px;
+
+    border: 2px solid #ddd;
+
+    border-radius: 7px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #fff;
+
+    transition: .3s ease;
+
+}
+
+.select-check i {
+
+    display: none;
+
+    font-size: 17px;
+
+}
+
+.university-select-card:has(input:checked) {
+
+    border-color: var(--primary);
+
+    box-shadow: 0 10px 30px rgba(255,117,31,.12);
+
+}
+
+.university-select-card:has(input:checked) .select-check {
+
+    background: var(--primary);
+
+    border-color: var(--primary);
+
+}
+
+.university-select-card:has(input:checked) .select-check i {
+
+    display: block;
+
+}
+
+
+/* =========================================
+   UNIVERSITY LOGO
+========================================= */
+
+.university-logo {
+
+    width: 90px;
+
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+}
+
+.university-logo img {
+
+    max-width: 100%;
+
+    max-height: 65px;
+
+    object-fit: contain;
+
+}
+
+.university-info h3 {
+
+    font-size: 17px;
+
+    line-height: 1.4;
+
+    margin-bottom: 6px;
+
+    color: var(--dark);
+
+}
+
+.university-info p {
+
+    font-size: 13px;
+
+    color: var(--text);
+
+}
+
+
+/* =========================================
+   COMPARE BUTTON
+========================================= */
+
+.compare-action {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 35px;
+
+}
+
+.compare-btn {
+
+    border: none;
+
+    background: var(--primary);
+
+    color: #fff;
+
+    padding: 15px 30px;
+
+    border-radius: 12px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    transition: .3s ease;
+
+}
+
+.compare-btn:hover:not(:disabled) {
+
+    background: #e86615;
+
+    transform: translateY(-2px);
+
+}
+
+.compare-btn:disabled {
+
+    opacity: .45;
+
+    cursor: not-allowed;
+
+}
+
+
+/* =========================================
+   COMPARISON RESULT
+========================================= */
+
+.comparison-result-section {
+
+    background: #fff;
+
+    display: none;
+
+}
+
+.comparison-result-section.active {
+
+    display: block;
+
+}
+
+
+/* =========================================
+   COMPARISON TABLE
+========================================= */
+
+.comparison-table-wrapper {
+
+    width: 100%;
+
+    overflow-x: auto;
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+}
+
+.comparison-table {
+
+    width: 100%;
+
+    min-width: 800px;
+
+    border-collapse: collapse;
+
+    background: #fff;
+
+}
+
+.comparison-table th {
+
+    background: #111;
+
+    color: #fff;
+
+    padding: 20px;
+
+    text-align: left;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    border-right: 1px solid #333;
+
+}
+
+.comparison-table th:first-child {
+
+    width: 220px;
+
+}
+
+.comparison-table td {
+
+    padding: 20px;
+
+    border-bottom: 1px solid var(--border);
+
+    border-right: 1px solid var(--border);
+
+    color: var(--text);
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    vertical-align: top;
+
+}
+
+.comparison-table td:first-child {
+
+    font-weight: 700;
+
+    color: var(--dark);
+
+    background: #fffaf7;
+
+}
+
+.comparison-table tr:last-child td {
+
+    border-bottom: none;
+
+}
+
+.comparison-table tr:hover td {
+
+    background: #fff8f3;
+
+}
+
+.comparison-table tr:hover td:first-child {
+
+    color: var(--primary);
+
+}
+
+
+/* =========================================
+   NOTE
+========================================= */
+
+.comparison-note {
+
+    margin-top: 25px;
+
+    padding: 18px 20px;
+
+    background: var(--primary-light);
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+}
+
+.comparison-note i {
+
+    color: var(--primary);
+
+    font-size: 20px;
+
+    margin-top: 2px;
+
+}
+
+.comparison-note p {
+
+    color: #6d6d6d;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.comparison-footer {
+
+    padding: 25px 20px;
+
+    text-align: center;
+
+    background: #111;
+
+}
+
+.comparison-footer p {
+
+    color: #aaa;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media(max-width:1100px) {
+
+    .university-selection-grid {
+
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+}
+
+
+/* =========================================
+   TABLET SMALL
+========================================= */
+
+@media(max-width:991px) {
+
+    .comparison-hero h1 {
+
+        font-size: 40px;
+
+    }
+
+    .university-selection-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .comparison-section,
+    .comparison-result-section {
+
+        padding: 60px 25px;
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:768px) {
+
+    .header-container {
+
+        padding: 15px 20px;
+
+    }
+
+    .header-logo img {
+
+        width: 140px;
+
+    }
+
+    .back-home {
+
+        font-size: 13px;
+
+    }
+
+    .comparison-hero {
+
+        padding: 65px 20px;
+
+    }
+
+    .comparison-hero h1 {
+
+        font-size: 32px;
+
+    }
+
+    .comparison-hero p {
+
+        font-size: 15px;
+
+    }
+
+    .comparison-section,
+    .comparison-result-section {
+
+        padding: 50px 20px;
+
+    }
+
+    .section-heading h2 {
+
+        font-size: 28px;
+
+    }
+
+    .university-selection-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .selection-info {
+
+        gap: 15px;
+
+        align-items: flex-start;
+
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+
+        padding: 15px;
+
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media(max-width:480px) {
+
+    .comparison-hero h1 {
+
+        font-size: 28px;
+
+    }
+
+    .section-heading h2 {
+
+        font-size: 25px;
+
+    }
+
+    .university-select-card {
+
+        padding: 22px;
+
+    }
+
+    .compare-btn {
+
+        width: 100%;
+
+        justify-content: center;
+
+    }
+
+}

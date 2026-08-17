@@ -104,7 +104,7 @@
         POPUP FORM
     ========================================= -->
 
-        <div id="popup"></div>
+    <div id="popup"></div>
 
     <!-- ============================
      FORM STATUS MODAL
@@ -209,153 +209,80 @@
 
     <div id="navbar"></div>
 
+
     <!-- =========================================
-        HERO SECTION
-    ========================================= -->
+   HERO SECTION
+========================================= -->
 
-    <section class="home-hero">
+    <section class="hero">
 
-        <!-- LEFT -->
+        <div class="hero-overlay"></div>
 
-        <div class="hero-left">
+        <div class="hero-container">
 
-            <div class="hero-label">
-                India's Trusted Online Education Platform
-            </div>
+            <!-- LEFT CONTENT -->
 
-            <h1>
-                Official Admission Guidance For
-                <span>Career-Focused Online Programs</span>
-            </h1>
+            <div class="hero-content">
 
-            <p>
-                Hanora is a trusted education partner helping students explore UG & PG Online Degree Programmes with
-                expert admission guidance, counselling, and enrollment support.
-            </p>
-
-            <!-- RANKING -->
-
-            <!-- <div class="hero-ranking">
-
-                <i class="ri-star-fill"></i>
-
-                <span>
-                    Trusted UGC-Approved Online Degree Programmes
+                <span class="hero-badge">
+                    India's Trusted Online Education Platform
                 </span>
 
-            </div> -->
+                <h1>
+                    Find the Best Online University
+                    <span>for Your Career</span>
+                </h1>
 
-            <!-- BUTTONS -->
+                <p>
+                    UGC Approved • NAAC Accredited • 100% Online Degrees
+                </p>
 
-            <div class="hero-buttons">
+                <div class="hero-features">
 
-                <a href="contact.html" class="primary-btn">
-                    Apply Now
-                </a>
+                    <div class="hero-feature">
+                        <i class="ri-award-line"></i>
+                        Top Universities
+                    </div>
 
-                <button class="secondary-btn" id="openPopupBtn">
-                    Free Counselling
-                </button>
+                    <div class="hero-feature">
+                        <i class="ri-book-open-line"></i>
+                        Industry Relevant Programs
+                    </div>
 
-            </div>
-
-
-            <!-- STATS -->
-
-            <!-- <div class="hero-stats">
-
-                <div class="stat-box">
-
-                    <h3>1:1</h3>
-
-                    <span>
-                        Personalized Admission Counselling
-                    </span>
-
-                </div>
-
-                <div class="stat-box">
-
-                    <h3>100%</h3>
-
-                    <span>
-                        Enrollment Assistance Support
-                    </span>
-
-                </div>
-
-                <div class="stat-box">
-
-                    <h3>24/7</h3>
-
-                    <span>
-                        Dedicated Student Support
-                    </span>
-
-                </div>
-
-            </div> -->
-
-        </div>
-
-        <!-- RIGHT -->
-
-        <div class="hero-right">
-
-            <div class="hero-bg-circle"></div>
-
-            <div class="main-hero-card">
-
-                <div class="hero-card-top">
-
-                    <div class="hero-approved">
-
-                        <i class="ri-verified-badge-fill"></i>
-
-                        <span>
-                            UGC-DEB Approved
-                        </span>
-
+                    <div class="hero-feature">
+                        <i class="ri-briefcase-line"></i>
+                        Placement Support
                     </div>
 
                 </div>
 
-                <div class="main-hero-icon">
+                <div class="hero-buttons">
 
-                    <i class="ri-graduation-cap-line"></i>
+                    <button class="hero-btn-primary" id="openPopupBtn">
+                        Get Free Counselling
+                    </button>
+
+                    <a href="./universities.html" class="hero-btn-secondary">
+                        Compare Universities
+                    </a>
 
                 </div>
 
-                <h3>
-                    Accredited Online Degree Programmes
-                </h3>
-
-                <p>
-                    Advance your career with flexible online learning,
-                    industry-focused curriculum and expert admission guidance.
-                </p>
-
             </div>
 
-            <!-- FLOATING -->
+            <!-- RIGHT IMAGE CAROUSEL -->
 
-            <div class="floating-element floating-1">
+            <div class="hero-image-slider">
 
-                <i class="ri-award-line"></i>
+                <div class="hero-slides">
 
-                <span>
-                    Authorized Partner
-                </span>
+                    <img src="assets/student1.jpg" alt="Online Education">
 
-            </div>
+                    <img src="assets/student.avif" alt="Online University">
 
-            <div class="floating-element floating-2">
+                    <img src="assets/student4.jpg" alt="Career Growth">
 
-                <i class="ri-user-star-line"></i>
-
-                <span>
-                    Admission Support
-                </span>
+                </div>
 
             </div>
 
@@ -367,7 +294,7 @@
      TRUSTED UNIVERSITIES
 ========================================= -->
 
-    <section class="trusted-universities">
+    <section class="trusted-universities" id="universities">
 
         <div class="section-title">
 
@@ -386,51 +313,75 @@
         <div class="university-logos">
 
             <div class="university-logo-card">
-                <img src="assets/universities/amity.png" alt="Amity University">
+                <a href="./universities/amity.html">
+                    <img src="assets/universities/amity.png" alt="Amity University">
+                </a>
             </div>
 
             <div class="university-logo-card">
-                <img src="assets/universities/dypatil.png" alt="DY Patil University">
+                <a href="./universities/dy_patil.html">
+                    <img src="assets/universities/dypatil.png" alt="DY Patil University">
+                </a>
             </div>
 
             <div class="university-logo-card">
-                <img src="assets/universities/jain.webp" alt="Jain University">
+                <a href="./universities/jain.html">
+                    <img src="assets/universities/jain.webp" alt="Jain University">
+                </a>
             </div>
 
             <div class="university-logo-card">
-                <img src="assets/universities/lpu.svg" alt="LPU">
+                <a href="./universities/lpu.html">
+                    <img src="assets/universities/lpu.svg" alt="LPU">
+                </a>
             </div>
 
             <div class="university-logo-card">
-                <img src="assets/universities/manipal.svg" alt="Manipal Jaipur">
+                <a href="./universities/manipal_university.html">
+                    <img src="assets/universities/onlinemanipal.svg" alt="Manipal Jaipur">
+                </a>
+            </div>
+
+            <!-- <div class="university-logo-card">
+                <a href="./universities/noida.html">
+                    <img src="assets/universities/noida.svg" alt="Noida International University">
+                </a>
+            </div> -->
+
+            <div class="university-logo-card">
+                <a href="./universities/sharda.html">
+                    <img src="assets/universities/sharda.png" alt="Sharda University">
+                </a>
             </div>
 
             <div class="university-logo-card">
-                <img src="assets/universities/noida.svg" alt="Noida International University">
+                <a href="./universities/shoolini.html">
+                    <img src="assets/universities/shoolini.png" alt="Shoolini University">
+                </a>
+            </div>
+
+            <!-- <div class="university-logo-card">
+                <a href="./universities/sikkim.html">
+                    <img src="assets/universities/manipal.svg" alt="Sikkim Manipal University">
+                </a>
+            </div> -->
+
+            <div class="university-logo-card">
+                <a href="./universities/uttranchal.html">
+                    <img src="assets/universities/utranchal.png" alt="Uttaranchal University">
+                </a>
             </div>
 
             <div class="university-logo-card">
-                <img src="assets/universities/sharda.png" alt="Sharda University">
+                <a href="./universities/vivekanand.html">
+                    <img src="assets/universities/vivakananda.png" alt="Vivekananda Global University">
+                </a>
             </div>
 
             <div class="university-logo-card">
-                <img src="assets/universities/shoolini.png" alt="Shoolini University">
-            </div>
-
-            <div class="university-logo-card">
-                <img src="assets/universities/manipal.svg" alt="Sikkim Manipal University">
-            </div>
-
-            <div class="university-logo-card">
-                <img src="assets/universities/utranchal.png" alt="Uttaranchal University">
-            </div>
-
-            <div class="university-logo-card">
-                <img src="assets/universities/vivakananda.png" alt="Vivekananda Global University">
-            </div>
-
-            <div class="university-logo-card">
-                <img src="assets/universities/nmims.png" alt="NMIMS">
+                <a href="./universities/narsee.html">
+                    <img src="assets/universities/nmims.png" alt="NMIMS">
+                </a>
             </div>
 
         </div>
@@ -599,11 +550,11 @@
 
         <div class="section-title">
             <span>ONLINE PROGRAMS</span>
-            <h2>Explore Programs By Category</h2>
-            <p>
+            <h2>Ex  plore Programs By Category</h2>
+            <!-- <p>
                 Discover UGC-approved online degree, MBA and diploma programs
                 from India's top universities.
-            </p>
+            </p> -->
         </div>
 
         <div class="program-layout">
@@ -613,23 +564,11 @@
             <div class="program-sidebar">
 
                 <button class="program-tab active" data-tab="degree">
-                    <i class="ri-graduation-cap-line"></i>
-                    Degree Programs
+                    Online UG Programs
                 </button>
 
                 <button class="program-tab" data-tab="mba">
-                    <i class="ri-briefcase-4-line"></i>
-                    MBA Programs
-                </button>
-
-                <button class="program-tab" data-tab="specialization">
-                    <i class="ri-line-chart-line"></i>
-                    MBA Specializations
-                </button>
-
-                <button class="program-tab" data-tab="diploma">
-                    <i class="ri-award-line"></i>
-                    Diploma Programs
+                    Online PG Programs
                 </button>
 
             </div>
@@ -638,7 +577,7 @@
 
             <div class="program-content-wrapper">
 
-                <!-- DEGREE PROGRAMS -->
+                <!-- UG DEGREE PROGRAMS -->
 
                 <div class="program-panel active" id="degree">
 
@@ -646,11 +585,11 @@
 
                         <div class="program-card">
                             <div class="program-image">
-                                <img src="assets/courses/bba.png" alt="BBA">
+                                <img src="./assets/courses/BBA.png" alt="BBA">
                             </div>
                             <div class="program-content">
-                                <span class="program-tag">Popular</span>
-                                <h3>BBA</h3>
+                                <span class="program-tag">25+ SPECIALIZATION</span>
+                                <h3>Online BBA</h3>
                                 <p>Duration: 3 Years</p>
                             </div>
                             <a href="courses/bba.html" class="program-readmore">
@@ -660,11 +599,11 @@
 
                         <div class="program-card">
                             <div class="program-image">
-                                <img src="assets/courses/bCom.png" alt="B.Com">
+                                <img src="./assets/courses/BCOM.png" alt="B.Com">
                             </div>
                             <div class="program-content">
-                                <span class="program-tag">UGC Approved</span>
-                                <h3>B.Com</h3>
+                                <span class="program-tag">ROI 100%</span>
+                                <h3>Online B.Com</h3>
                                 <p>Duration: 3 Years</p>
                             </div>
                             <a href="courses/bcom.html" class="program-readmore">
@@ -672,11 +611,53 @@
                             </a>
                         </div>
 
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="./assets/courses/BCA.png" alt="BCA">
+                            </div>
+                            <div class="program-content">
+                                <span class="program-tag">IT CAREER</span>
+                                <h3>Online BCA</h3>
+                                <p>Duration: 3 Years</p>
+                            </div>
+                            <a href="courses/bca.html" class="program-readmore">
+                                Read More <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="./assets/courses/BA.png" alt="BA">
+                            </div>
+                            <div class="program-content">
+                                <span class="program-tag">Popular</span>
+                                <h3>Online BA</h3>
+                                <p>Duration: 3 Years</p>
+                            </div>
+                            <a href="courses/ba.html" class="program-readmore">
+                                Read More <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+
+                        <!-- <div class="program-card">
+                            <div class="program-image">
+                                <img src="./assets/courses/BAJMC.png" alt="BAJMC">
+                            </div>
+                            <div class="program-content">
+                                <span class="program-tag">UGC Approved</span>
+                                <h3>Online BAJMC</h3>
+                                <p>Duration: 3 Years</p>
+                            </div>
+                            <a href="courses/bajmc.html" class="program-readmore">
+                                Read More <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div> -->
+
                     </div>
 
                 </div>
 
-                <!-- MBA PROGRAMS -->
+                <!-- PG PROGRAMS -->
 
                 <div class="program-panel" id="mba">
 
@@ -684,11 +665,11 @@
 
                         <div class="program-card">
                             <div class="program-image">
-                                <img src="assets/courses/mba.png" alt="MBA">
+                                <img src="./assets/courses/MBA.png" alt="MBA">
                             </div>
                             <div class="program-content">
-                                <span class="program-tag">Popular</span>
-                                <h3>MBA</h3>
+                                <span class="program-tag">RIGHT MBA</span>
+                                <h3>Online MBA</h3>
                                 <p>Duration: 2 Years</p>
                             </div>
                             <a href="courses/mba.html" class="program-readmore">
@@ -698,219 +679,87 @@
 
                         <div class="program-card">
                             <div class="program-image">
-                                <img src="assets/courses/executive.png" alt="">
+                                <img src="./assets/courses/MCA.png" alt="">
                             </div>
                             <div class="program-content">
-                                <span class="program-tag">Executive</span>
-                                <h3>Executive MBA</h3>
-                                <p>Duration: 1 Year</p>
+                                <span class="program-tag">TRENDING</span>
+                                <h3>Online MCA</h3>
+                                <p>Duration: 2 Year</p>
                             </div>
-                            <a href="courses/executive-mba.html" class="program-readmore">
+                            <a href="courses/mca.html" class="program-readmore">
                                 Read More <i class="ri-arrow-right-line"></i>
                             </a>
                         </div>
 
                         <div class="program-card">
                             <div class="program-image">
-                                <img src="assets/courses/wx.png" alt="">
+                                <img src="./assets/courses/MCOM.png" alt="">
                             </div>
                             <div class="program-content">
-                                <span class="program-tag">Working Professionals</span>
-                                <h3>MBA (WX)</h3>
+                                <span class="program-tag">25+ SPECIALIZATION</span>
+                                <h3>Online M.Com</h3>
                                 <p>Duration: 2 Years</p>
                             </div>
-                            <a href="courses/mba-wx.html" class="program-readmore">
+                            <a href="courses/mcom.html" class="program-readmore">
                                 Read More <i class="ri-arrow-right-line"></i>
                             </a>
                         </div>
 
-                        <div class="program-card">
+                        <!-- <div class="program-card">
                             <div class="program-image">
-                                <img src="assets/courses/Marketing_mgm.png" alt="">
+                                <img src="./assets/courses/MBA-ACCA.png" alt="">
                             </div>
                             <div class="program-content">
                                 <span class="program-tag">Trending</span>
-                                <h3>MBA Marketing Management</h3>
+                                <h3>Online MBA with ACCA</h3>
                                 <p>Duration: 2 Years</p>
                             </div>
-                            <a href="courses/marketing-management.html" class="program-readmore">
+                            <a href="courses/acca-mba.html" class="program-readmore">
                                 Read More <i class="ri-arrow-right-line"></i>
                             </a>
-                        </div>
+                        </div> -->
 
                         <div class="program-card">
                             <div class="program-image">
-                                <img src="assets/courses/finance.png" alt="">
+                                <img src="./assets/courses/MSC.png" alt="">
                             </div>
                             <div class="program-content">
                                 <span class="program-tag">Finance</span>
-                                <h3>MBA Financial Management</h3>
+                                <h3>Online MSc</h3>
                                 <p>Duration: 2 Years</p>
                             </div>
-                            <a href="courses/financial-management.html" class="program-readmore">
+                            <a href="courses/msc.html" class="program-readmore">
                                 Read More <i class="ri-arrow-right-line"></i>
                             </a>
                         </div>
 
                         <div class="program-card">
                             <div class="program-image">
-                                <img src="assets/courses/HR.png" alt="">
+                                <img src="./assets/courses/MA.png" alt="">
                             </div>
                             <div class="program-content">
                                 <span class="program-tag">HR</span>
-                                <h3>MBA HR Management</h3>
+                                <h3>Online MA</h3>
+                                <p>Duration: 2 Years</p>
+                            </div>
+                            <a href="courses/ma.html" class="program-readmore">
+                                Read More <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+
+                        <!-- <div class="program-card">
+                            <div class="program-image">
+                                <img src="./assets/courses/MAJMC.png" alt="">
+                            </div>
+                            <div class="program-content">
+                                <span class="program-tag">HR</span>
+                                <h3>Online MAJMC</h3>
                                 <p>Duration: 2 Years</p>
                             </div>
                             <a href="courses/HR-management.html" class="program-readmore">
                                 Read More <i class="ri-arrow-right-line"></i>
                             </a>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!-- MBA SPECIALIZATIONS -->
-
-                <div class="program-panel" id="specialization">
-
-                    <div class="program-cards">
-
-                        <div class="program-card">
-                            <div class="program-image">
-                                <img src="assets/courses/business-mgm.png" alt="">
-                            </div>
-                            <div class="program-content">
-                                <span class="program-tag">Specialization</span>
-                                <h3>MBA Business Management</h3>
-                                <p>Duration: 2 Years</p>
-                            </div>
-                            <a href="courses/business-management.html" class="program-readmore">
-                                Read More <i class="ri-arrow-right-line"></i>
-                            </a>
-                        </div>
-
-                        <div class="program-card">
-                            <div class="program-image">
-                                <img src="assets/courses/operation_and_data.png" alt="">
-                            </div>
-                            <div class="program-content">
-                                <span class="program-tag">Data Science</span>
-                                <h3>MBA Operations & Data Science</h3>
-                                <p>Duration: 2 Years</p>
-                            </div>
-                            <a href="courses/operation&data-science.html" class="program-readmore">
-                                Read More <i class="ri-arrow-right-line"></i>
-                            </a>
-                        </div>
-
-                        <div class="program-card">
-                            <div class="program-image">
-                                <img src="assets/courses/business_analytics.png" alt="">
-                            </div>
-                            <div class="program-content">
-                                <span class="program-tag">Analytics</span>
-                                <h3>MBA Business Analytics</h3>
-                                <p>Duration: 2 Years</p>
-                            </div>
-                            <a href="courses/business-analytics.html" class="program-readmore">
-                                Read More <i class="ri-arrow-right-line"></i>
-                            </a>
-                        </div>
-
-                        <div class="program-card">
-                            <div class="program-image">
-                                <img src="assets/courses/IT.png" alt="">
-                            </div>
-                            <div class="program-content">
-                                <span class="program-tag">Technology</span>
-                                <h3>MBA IT Management</h3>
-                                <p>Duration: 2 Years</p>
-                            </div>
-                            <a href="courses/IT-management.html" class="program-readmore">
-                                Read More <i class="ri-arrow-right-line"></i>
-                            </a>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!-- DIPLOMA PROGRAMS -->
-
-                <div class="program-panel" id="diploma">
-
-                    <div class="program-cards">
-
-                        <div class="program-card">
-                            <div class="program-image">
-                                <img src="assets/courses/diploma/business.png" alt="">
-                            </div>
-                            <div class="program-content">
-                                <span class="program-tag">Diploma</span>
-                                <h3>Diploma in Business Management</h3>
-                                <p>Duration: 1 Year</p>
-                            </div>
-                            <a href="courses/diploma-business-management.html" class="program-readmore">
-                                Read More <i class="ri-arrow-right-line"></i>
-                            </a>
-                        </div>
-
-                        <div class="program-card">
-                            <div class="program-image">
-                                <img src="assets/courses/diploma/Marketing.png" alt="">
-                            </div>
-                            <div class="program-content">
-                                <span class="program-tag">Diploma</span>
-                                <h3>Diploma in Marketing Management</h3>
-                                <p>Duration: 1 Year</p>
-                            </div>
-                            <a href="courses/diploma-marketing-management.html" class="program-readmore">
-                                Read More <i class="ri-arrow-right-line"></i>
-                            </a>
-                        </div>
-
-                        <div class="program-card">
-                            <div class="program-image">
-                                <img src="assets/courses/diploma/HR.png" alt="">
-                            </div>
-                            <div class="program-content">
-                                <span class="program-tag">Diploma</span>
-                                <h3>Diploma in Human Resource Management</h3>
-                                <p>Duration: 1 Year</p>
-                            </div>
-                            <a href="courses/diploma-human-resource-management.html" class="program-readmore">
-                                Read More <i class="ri-arrow-right-line"></i>
-                            </a>
-                        </div>
-
-                        <div class="program-card">
-                            <div class="program-image">
-                                <img src="assets/courses/diploma/Financial.png" alt="">
-                            </div>
-                            <div class="program-content">
-                                <span class="program-tag">Diploma</span>
-                                <h3>Diploma in Financial Management</h3>
-                                <p>Duration: 1 Year</p>
-                            </div>
-                            <a href="courses/diploma-financial-management.html" class="program-readmore">
-                                Read More <i class="ri-arrow-right-line"></i>
-                            </a>
-                        </div>
-
-                        <div class="program-card">
-                            <div class="program-image">
-                                <img src="assets/courses/diploma/operation.png" alt="">
-                            </div>
-                            <div class="program-content">
-                                <span class="program-tag">Diploma</span>
-                                <h3>Diploma in Operations Management</h3>
-                                <p>Duration: 1 Year</p>
-                            </div>
-                            <a href="courses/diploma-operations-management.html" class="program-readmore">
-                                Read More <i class="ri-arrow-right-line"></i>
-                            </a>
-                        </div>
+                        </div> -->
 
                     </div>
 
@@ -1005,153 +854,6 @@
         </div>
 
     </section>
-
-    <!-- =========================================
-     UNIVERSITY COMPARISON
-========================================= -->
-
-    <!-- <section class="university-comparison">
-
-        <div class="section-title">
-
-            <span>
-                COMPARE TOP ONLINE UNIVERSITIES
-            </span>
-
-            <h2>
-                University Comparison
-            </h2>
-
-            <p>
-                Compare top UGC-approved online universities on accreditation,
-                programs, and admission support to choose the right one for your future.
-            </p>
-
-        </div>
-
-        <div class="comparison-wrapper">
-
-            <table class="comparison-table">
-
-                <thead>
-
-                    <tr>
-
-                        <th>University</th>
-                        <th>Mode</th>
-                        <th>Accreditation</th>
-                        <th>Programs</th>
-                        <th>Admission Support</th>
-
-                    </tr>
-
-                </thead>
-
-                <tbody>
-
-                    <tr>
-                        <td>Amity University Online</td>
-                        <td>Online</td>
-                        <td>UGC | NAAC A+</td>
-                        <td>UG & PG</td>
-                        <td><span class="status">Available</span></td>
-                    </tr>
-
-                    <tr>
-                        <td>DY Patil University, Pune</td>
-                        <td>Online</td>
-                        <td>UGC | NAAC A++</td>
-                        <td>UG & PG</td>
-                        <td><span class="status">Available</span></td>
-                    </tr>
-
-                    <tr>
-                        <td>Jain University</td>
-                        <td>Online</td>
-                        <td>UGC | NAAC A++</td>
-                        <td>UG & PG</td>
-                        <td><span class="status">Available</span></td>
-                    </tr>
-
-                    <tr>
-                        <td>Lovely Professional University</td>
-                        <td>Online</td>
-                        <td>UGC | NAAC A++</td>
-                        <td>UG & PG</td>
-                        <td><span class="status">Available</span></td>
-                    </tr>
-
-                    <tr>
-                        <td>Manipal University Jaipur</td>
-                        <td>Online</td>
-                        <td>UGC | NAAC A+</td>
-                        <td>UG & PG</td>
-                        <td><span class="status">Available</span></td>
-                    </tr>
-
-                    <tr>
-                        <td>Noida International University</td>
-                        <td>Online</td>
-                        <td>UGC Approved</td>
-                        <td>UG & PG</td>
-                        <td><span class="status">Available</span></td>
-                    </tr>
-
-                    <tr>
-                        <td>Sharda University</td>
-                        <td>Online</td>
-                        <td>UGC Approved</td>
-                        <td>UG & PG</td>
-                        <td><span class="status">Available</span></td>
-                    </tr>
-
-                    <tr>
-                        <td>Shoolini University</td>
-                        <td>Online</td>
-                        <td>UGC | NAAC A+</td>
-                        <td>UG & PG</td>
-                        <td><span class="status">Available</span></td>
-                    </tr>
-
-                    <tr>
-                        <td>Sikkim Manipal University</td>
-                        <td>Online</td>
-                        <td>UGC | NAAC A+</td>
-                        <td>UG & PG</td>
-                        <td><span class="status">Available</span></td>
-                    </tr>
-
-                    <tr>
-                        <td>Uttaranchal University</td>
-                        <td>Online</td>
-                        <td>UGC Approved</td>
-                        <td>UG & PG</td>
-                        <td><span class="status">Available</span></td>
-                    </tr>
-
-                    <tr>
-                        <td>Vivekananda Global University</td>
-                        <td>Online</td>
-                        <td>UGC Approved</td>
-                        <td>UG & PG</td>
-                        <td><span class="status">Available</span></td>
-                    </tr>
-
-                    <tr>
-                        <td>NMIMS University</td>
-                        <td>Online / Executive</td>
-                        <td>UGC | NAAC A+</td>
-                        <td>UG, PG & Executive</td>
-                        <td><span class="status">Available</span></td>
-                    </tr>
-
-                </tbody>
-
-            </table>
-
-        </div>
-
-    </section> -->
 
     <!-- =========================================
     FEES & EMI SECTION
@@ -2230,123 +1932,6 @@
 
     </section>
 
-    <!-- =========================================
-     ADMISSION PROCESS
-========================================= -->
-
-    <section class="admission-process">
-
-        <div class="section-header">
-
-            <span class="section-tag">
-                Easy Enrollment
-            </span>
-
-            <h2>
-                Admission Process
-            </h2>
-
-            <p>
-                Complete your admission in just a few simple steps.
-            </p>
-
-        </div>
-
-        <div class="process-grid">
-
-            <!-- STEP 1 -->
-
-            <div class="process-card">
-
-                <div class="process-number">
-                    01
-                </div>
-
-                <h3>
-                    Free Counselling
-                </h3>
-
-                <p>
-                    Get expert guidance from our admission team.
-                </p>
-
-            </div>
-
-            <!-- STEP 2 -->
-
-            <div class="process-card">
-
-                <div class="process-number">
-                    02
-                </div>
-
-                <h3>
-                    Program Selection
-                </h3>
-
-                <p>
-                    Choose the best program based on your goals.
-                </p>
-
-            </div>
-
-            <!-- STEP 3 -->
-
-            <div class="process-card">
-
-                <div class="process-number">
-                    03
-                </div>
-
-                <h3>
-                    Documentation
-                </h3>
-
-                <p>
-                    Submit academic and ID proof documents.
-                </p>
-
-            </div>
-
-            <!-- STEP 4 -->
-
-            <div class="process-card">
-
-                <div class="process-number">
-                    04
-                </div>
-
-                <h3>
-                    Enrollment
-                </h3>
-
-                <p>
-                    Complete fee payment and secure admission.
-                </p>
-
-            </div>
-
-            <!-- STEP 5 -->
-
-            <div class="process-card">
-
-                <div class="process-number">
-                    05
-                </div>
-
-                <h3>
-                    Admission Confirmation
-                </h3>
-
-                <p>
-                    Receive confirmation and begin learning.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
 
     <!-- =========================================
         WHY US

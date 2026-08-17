@@ -34,38 +34,72 @@
 
     <div id="navbar"></div>
 
-    <!-- HERO -->
+    <!-- =========================================
+    UNIVERSITY HERO SECTION
+    ========================================= -->
 
     <section class="university-hero">
 
+        <img src="../assets/universities/sharda.webp" alt="Amity University Online" class="university-hero-bg">
+
+        <div class="university-hero-overlay"></div>
+
         <div class="university-hero-content">
 
-            <img src="../assets/universities/sharda.png" alt="Sharda University Online">
+            <div class="university-hero-box">
 
-            <div>
+                <!-- Breadcrumb -->
 
-                <span class="uni-tag">
-                    UGC Entitled | NAAC A+
-                </span>
+                <div class="breadcrumb">
+
+                    <a href="index.html">Home</a>
+
+                    <!-- <span>/</span>
+
+                    <a href="universities.html">Universities</a> -->
+
+                    <span>/</span>
+
+                    <span>Sharda University Online</span>
+
+                </div>
+
+                <!-- Heading -->
 
                 <h1>
                     Sharda University Online
                 </h1>
 
-                <p>
-                    Sharda University Online offers flexible, industry-oriented degree programmes designed for students
-                    and working professionals seeking career advancement through quality online education.
-                </p>
+                <!-- Badges -->
 
-                <div class="hero-buttons">
+                <div class="university-badges">
 
-                    <a href="contact.html" class="primary-btn">
+                    <div class="hero-badge-item">
+                        <i class="ri-map-pin-line"></i>
+                        Greater Noida, Uttar Pradesh
+
+                    </div>
+
+                    <div class="hero-badge-item">
+                        <i class="ri-award-line"></i>
+                        NIRF Rank: 86
+
+                    </div>
+
+
+                </div>
+
+                <!-- Buttons -->
+
+                <div class="university-hero-actions">
+
+                    <a href="../contact.html" class="hero-apply-btn">
                         Apply Now
                     </a>
 
-                    <a href="#programs" class="secondary-btn">
-                        Explore Programs
-                    </a>
+                    <button class="hero-brochure-btn">
+                        Download Brochure
+                    </button>
 
                 </div>
 
@@ -75,66 +109,598 @@
 
     </section>
 
-    <!-- OVERVIEW -->
+    <!-- =========================================
+    UNIVERSITY DETAILS LAYOUT
+    ========================================= -->
 
-    <section class="university-overview">
+    <section class="university-details">
 
-        <div class="section-title">
+        <div class="university-details-container">
 
-            <span>ABOUT SHARDA ONLINE</span>
+            <!-- SIDEBAR -->
 
-            <h2>
-                Why Choose Sharda University Online?
-            </h2>
+            <aside class="university-sidebar">
 
-        </div>
+                <div class="sidebar-card">
 
-        <div class="overview-grid">
+                    <h3>Quick Navigation</h3>
 
-            <div class="overview-content">
+                    <ul>
 
-                <p>
-                    Sharda University Online combines academic excellence, expert faculty, digital learning technology,
-                    and career-focused programmes to deliver a flexible learning experience.
-                </p>
+                        <li><a href="#overview">Overview</a></li>
 
-                <ul>
+                        <li><a href="#why-choose">Why Choose</a></li>
 
-                    <li>UGC Entitled Online Degrees</li>
+                        <li><a href="#courses">Courses Offered</a></li>
 
-                    <li>NAAC A+ Accredited University</li>
+                        <li><a href="#scholarships">Scholarships</a></li>
 
-                    <li>Industry-Relevant Curriculum</li>
+                        <li><a href="#eligibility">Eligibility</a></li>
 
-                    <li>Experienced Faculty Members</li>
+                        <li><a href="#admission-process">Admission Process</a></li>
 
-                    <li>Career Support & Guidance</li>
+                        <li><a href="#placement-partners">Placement Partners</a></li>
 
-                </ul>
+                        <li><a href="#faqs">FAQs</a></li>
 
-            </div>
+                        <li><a href="#student-reviews">Student Reviews</a></li>
 
-            <div class="overview-stats">
+                    </ul>
 
-                <div class="stat-card">
-                    <h3>40+</h3>
-                    <span>Programs</span>
                 </div>
 
-                <div class="stat-card">
-                    <h3>95K+</h3>
-                    <span>Students</span>
+            </aside>
+
+            <!-- CONTENT -->
+
+            <div class="university-content">
+
+                <!-- UNIVERSITY OVERVIEW -->
+                <section id="overview" class="university-section">
+
+                    <div class="section-header">
+                        <span class="section-tag">University Overview</span>
+                        <h2>About Sharda University Online</h2>
+                    </div>
+
+                    <div class="overview-wrapper">
+
+                        <div class="overview-content">
+
+                            <p>
+                                Established in 2009, Sharda University is one of India's leading private universities
+                                and is ranked among the top private institutions for management education. Over the
+                                years, the university has earned recognition for its academic excellence, modern
+                                infrastructure, and industry-focused curriculum.
+                            </p>
+
+                            <p>
+                                To make quality higher education accessible to a wider audience, Sharda University
+                                established its Centre for Distance and Open Learning. Through its online learning
+                                platform, the university enables students and working professionals to pursue
+                                industry-relevant degree programs without compromising their personal or professional
+                                commitments.
+                            </p>
+
+                            <p>
+                                Sharda University Online offers a diverse range of undergraduate and postgraduate
+                                programs at affordable fee structures. The online degrees are widely recognized and
+                                accepted, helping learners acquire valuable knowledge, enhance professional skills,
+                                and advance their careers through flexible and accessible education.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- WHY CHOOSE SECTION -->
+                <section id="why-choose" class="university-section">
+
+                    <div class="section-header">
+
+                        <span class="section-tag">Why Choose</span>
+
+                        <h2>Why Choose This University?</h2>
+
+                    </div>
+
+                    <ul class="why-points">
+
+                        <li>Recognised &amp; Approved courses from renowned governing bodies</li>
+
+                        <li>Affordable fees for all the courses</li>
+
+                        <li>Continuous evaluation via quizzes and assignments</li>
+
+                        <li>Flexible and self-paced learning</li>
+
+                    </ul>
+
+                </section>
+
+                <!-- =========================================
+                COURSES OFFERED
+                ========================================= -->
+                <section class="university-section" id="courses">
+
+                    <div class="section-header">
+                        <span class="section-tag">COURSES OFFERED</span>
+                        <h2>Courses Offered</h2>
+                    </div>
+
+                    <div class="courses-table-wrapper">
+
+                        <table class="courses-table">
+
+                            <thead>
+                                <tr>
+                                    <th>Course Name</th>
+                                    <th>Fees</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td>Online BA</td>
+                                    <td>₹105000</td>
+                                    <td>
+                                        <button class="enquire-btn" id="openPopupBtn">Enquire Now</button>
+                                        <button class="spec-btn" onclick="openSpecializationModal('ba')">
+                                            View Specializations
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Online BCA</td>
+                                    <td>₹105000</td>
+                                    <td>
+                                        <button class="enquire-btn" id="openPopupBtn">Enquire Now</button>
+                                        <button class="spec-btn" onclick="openSpecializationModal('bca')">
+                                            View Specializations
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Online BBA</td>
+                                    <td>₹105000</td>
+                                    <td>
+                                        <button class="enquire-btn" id="openPopupBtn">Enquire Now</button>
+                                        <button class="spec-btn" onclick="openSpecializationModal('bba')">
+                                            View Specializations
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Online MCom</td>
+                                    <td>₹70000</td>
+                                    <td>
+                                        <button class="enquire-btn" id="openPopupBtn">Enquire Now</button>
+                                        <button class="spec-btn" onclick="openSpecializationModal('mcom')">
+                                            View Specializations
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Online MCA</td>
+                                    <td>₹100000</td>
+                                    <td>
+                                        <button class="enquire-btn" id="openPopupBtn">Enquire Now</button>
+                                        <button class="spec-btn" onclick="openSpecializationModal('mca')">
+                                            View Specializations
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Online MBA</td>
+                                    <td>₹100000</td>
+                                    <td>
+                                        <button class="enquire-btn" id="openPopupBtn">Enquire Now</button>
+                                        <button class="spec-btn" onclick="openSpecializationModal('mba')">
+                                            View Specializations
+                                        </button>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </section>
+
+                <!-- =========================================
+                COURSE DETAILS MODAL
+                ========================================= -->
+                <div class="course-modal" id="courseModal">
+
+                    <div class="course-modal-box">
+
+                        <button class="course-modal-close" onclick="closeCourseModal()">
+
+                            ×
+
+                        </button>
+
+                        <h3 id="modalTitle">
+                            Course Specializations
+                        </h3>
+
+                        <table class="course-details-table">
+
+                            <thead>
+                                <tr>
+                                    <th>Specialization</th>
+                                    <th>Fees</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="specializationTableBody">
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
                 </div>
 
-                <div class="stat-card">
-                    <h3>85+</h3>
-                    <span>Countries</span>
-                </div>
 
-                <div class="stat-card">
-                    <h3>A+</h3>
-                    <span>NAAC Grade</span>
-                </div>
+                <!-- =========================================
+                ELIGIBILITY SECTION
+                ========================================= -->
+
+                <section class="university-section" id="eligibility">
+
+                    <div class="section-header">
+                        <span class="section-tag">ELIGIBILITY</span>
+                        <h2>Eligibility Criteria</h2>
+                    </div>
+
+                    <div class="eligibility-table-wrapper">
+
+                        <table class="eligibility-table">
+
+                            <thead>
+                                <tr>
+                                    <th>Course Name</th>
+                                    <th>Eligibility</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td>Online BA</td>
+                                    <td>Pass the 10+2 examination from State Board / CBSE / NIOS / IGCSE / IB / ICSE
+                                        recognised by the State or Central Government.</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Online BCA</td>
+                                    <td>Pass the 10+2 examination from State Board / CBSE / NIOS / IGCSE / IB / ICSE
+                                        recognised by the State or Central Government.</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Online BBA</td>
+                                    <td>Pass the 10+2 examination from State Board / CBSE / NIOS / IGCSE / IB / ICSE
+                                        recognised by the State or Central Government.</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Online MCom</td>
+                                    <td>Pass in an Undergraduate (Bachelor) Program of a minimum duration of three (3)
+                                        years in any stream from a UGC recognised University, with a minimum aggregate
+                                        of 50% or an equivalent letter/numerical grade.</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Online MCA</td>
+                                    <td>Pass in an Undergraduate (Bachelor) Program of a minimum duration of three (3)
+                                        years in any stream from a UGC recognised University, with a minimum aggregate
+                                        of 50% or an equivalent letter/numerical grade.</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Online MBA</td>
+                                    <td>Pass in an Undergraduate (Bachelor) Program of a minimum duration of three (3)
+                                        years with a minimum aggregate of 45% or an equivalent letter/numerical grade in
+                                        any stream from a UGC-recognised university.</td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </section>
+
+                <!-- =========================================
+                ADMISSION PROCESS
+                ========================================= -->
+
+                <section class="university-section" id="admission-process">
+
+                    <div class="section-header">
+
+                        <span class="section-tag">ADMISSION PROCESS</span>
+
+                        <h2>Admission Process</h2>
+
+                        <p>
+                            The admission process for Sharda University Online is conducted completely online.
+                            Admissions generally begin in January every year and students can apply directly
+                            without appearing for any entrance examination. The admission process is simple
+                            and can be completed in a few easy steps.
+                        </p>
+
+                    </div>
+
+                    <div class="admission-steps">
+
+                        <div class="admission-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Visit the official website of Sharda University Online.</h4>
+                            </div>
+                        </div>
+
+                        <div class="admission-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Select your preferred online course.</h4>
+                            </div>
+                        </div>
+
+                        <div class="admission-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Pay the programme fee through the online payment portal.</h4>
+                            </div>
+                        </div>
+
+                        <div class="admission-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Wait for admission confirmation from the university.</h4>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- =========================================
+                PLACEMENT PARTNERS
+                ========================================= -->
+
+                <section id="placement-partners" class="university-section">
+
+                    <div class="section-header">
+
+                        <span class="section-tag">
+                            Placement Support
+                        </span>
+
+                        <h2>Placement Partners</h2>
+
+                        <p>
+                            Our students have an opportunity of
+                        </p>
+
+                    </div>
+
+                    <!-- Key Highlights -->
+
+                    <div class="placement-highlights">
+
+                        <ul>
+                            <li>Dedicated placement cell for career guidance and support.</li>
+                            <li>Access to top recruiting companies across various industries.</li>
+                        </ul>
+
+                    </div>
+
+                                        <!-- =========================================
+     PLACEMENT SALARY STRIP
+========================================= -->
+
+                    <div class="placement-salary-strip">
+
+                        <div class="salary-item">
+
+                            <div class="salary-value">
+                                ₹ NaN LPA
+                            </div>
+
+                            <div class="salary-label">
+                                Average Salary
+                            </div>
+
+                        </div>
+
+
+                        <div class="salary-divider"></div>
+
+
+                        <div class="salary-item">
+
+                            <div class="salary-value">
+                                ₹ NaN LPA
+                            </div>
+
+                            <div class="salary-label">
+                                Highest Salary
+                            </div>
+
+                        </div>
+
+
+                        <div class="salary-divider"></div>
+
+
+                        <div class="salary-item">
+
+                            <div class="salary-value">
+                                3x
+                            </div>
+
+                            <div class="salary-label">
+                                Interview Opportunities
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Logos Grid -->
+
+                    <div class="placement-logos">
+
+                        <div class="partner-logo">
+                            <img src="../placement/dishtv.png" alt="TCS">
+                        </div>
+
+                        <div class="partner-logo">
+                            <img src="../placement/zee.jpeg" alt="Accenture">
+                        </div>
+
+                        <div class="partner-logo">
+                            <img src="../placement/amazon.png" alt="Wipro">
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+
+                <!-- =========================================
+                STUDENT REVIEWS
+                ========================================= -->
+
+                <section id="student-reviews" class="university-section">
+
+                    <div class="section-header">
+
+                        <span class="section-tag">
+                            Student Feedback
+                        </span>
+
+                        <h2>Student Reviews</h2>
+
+                        <p>
+                            Hear what students and working professionals have to say about their
+                            learning experience with Amity University Online.
+                        </p>
+
+                    </div>
+
+                    <div class="reviews-grid">
+
+                        <div class="review-card">
+
+                            <div class="review-rating">
+                                ★★★★★
+                            </div>
+
+                            <p class="review-text">
+                                The learning platform is easy to use and the faculty members are
+                                highly supportive. The flexibility helped me continue my studies
+                                while working full-time.
+                            </p>
+
+                            <div class="review-user">
+
+                                <div class="review-avatar">
+                                    AS
+                                </div>
+
+                                <div>
+
+                                    <h4>Arjun Sharma</h4>
+
+                                    <span>MBA Student</span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="review-card">
+
+                            <div class="review-rating">
+                                ★★★★★
+                            </div>
+
+                            <p class="review-text">
+                                Course content is industry-relevant and the recorded lectures
+                                make learning convenient. I would definitely recommend it to
+                                working professionals.
+                            </p>
+
+                            <div class="review-user">
+
+                                <div class="review-avatar">
+                                    PR
+                                </div>
+
+                                <div>
+
+                                    <h4>Priya Roy</h4>
+
+                                    <span>BCA Student</span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="review-card">
+
+                            <div class="review-rating">
+                                ★★★★☆
+                            </div>
+
+                            <p class="review-text">
+                                The placement support and career guidance sessions were very
+                                useful. Overall, a great online learning experience.
+                            </p>
+
+                            <div class="review-user">
+
+                                <div class="review-avatar">
+                                    VK
+                                </div>
+
+                                <div>
+
+                                    <h4>Vikas Kumar</h4>
+
+                                    <span>M.Com Student</span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
 
             </div>
 
@@ -142,265 +708,6 @@
 
     </section>
 
-    <!-- PROGRAMS -->
-
-    <section id="programs" class="university-programs">
-
-        <div class="section-title">
-
-            <span>PROGRAMS OFFERED</span>
-
-            <h2>
-                Popular Online Degree Programmes
-            </h2>
-
-        </div>
-
-        <div class="program-grid">
-
-            <div class="program-card">
-                <h3>Online MBA</h3>
-                <p>Finance, Marketing, HR & Operations</p>
-            </div>
-
-            <div class="program-card">
-                <h3>Online BBA</h3>
-                <p>Business Administration & Leadership</p>
-            </div>
-
-            <div class="program-card">
-                <h3>Online MCA</h3>
-                <p>Computer Applications & Technology</p>
-            </div>
-
-            <div class="program-card">
-                <h3>Online BCA</h3>
-                <p>Software Development & IT Skills</p>
-            </div>
-
-            <div class="program-card">
-                <h3>Online M.Com</h3>
-                <p>Commerce & Financial Management</p>
-            </div>
-
-            <div class="program-card">
-                <h3>Online BA</h3>
-                <p>Humanities & Social Sciences</p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- HIGHLIGHTS -->
-
-    <section class="university-highlights">
-
-        <div class="section-title">
-
-            <span>KEY HIGHLIGHTS</span>
-
-            <h2>
-                Why Students Prefer Sharda Online
-            </h2>
-
-        </div>
-
-        <div class="highlight-grid">
-
-            <div class="highlight-card">
-                <i class="ri-award-line"></i>
-                <h4>NAAC A+</h4>
-            </div>
-
-            <div class="highlight-card">
-                <i class="ri-verified-badge-line"></i>
-                <h4>UGC Approved</h4>
-            </div>
-
-            <div class="highlight-card">
-                <i class="ri-global-line"></i>
-                <h4>Global Exposure</h4>
-            </div>
-
-            <div class="highlight-card">
-                <i class="ri-briefcase-line"></i>
-                <h4>Career Services</h4>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- FEES -->
-
-    <section class="university-fees">
-
-        <div class="section-title">
-
-            <span>FEES & EMI</span>
-
-            <h2>
-                Flexible Payment Options
-            </h2>
-
-        </div>
-
-        <div class="fees-table">
-
-            <div class="fee-row">
-                <span>Online MBA</span>
-                <strong>₹1,15,000*</strong>
-            </div>
-
-            <div class="fee-row">
-                <span>Online MCA</span>
-                <strong>₹90,000*</strong>
-            </div>
-
-            <div class="fee-row">
-                <span>Online BBA</span>
-                <strong>₹70,000*</strong>
-            </div>
-
-            <div class="fee-row">
-                <span>Online BCA</span>
-                <strong>₹70,000*</strong>
-            </div>
-
-        </div>
-
-        <p class="fee-note">
-            *EMI options available.
-        </p>
-
-    </section>
-
-    <!-- ADMISSION PROCESS -->
-
-    <section class="admission-process">
-
-        <div class="section-title">
-
-            <span>ADMISSION PROCESS</span>
-
-            <h2>
-                Apply In 4 Easy Steps
-            </h2>
-
-        </div>
-
-        <div class="process-grid">
-
-            <!-- STEP 01 -->
-
-            <div class="process-card">
-
-                <div class="process-number">
-                    01
-                </div>
-
-                <div class="process-icon">
-                    <i class="ri-edit-box-line"></i>
-                </div>
-
-                <h3>
-                    Apply Online
-                </h3>
-
-                <p>
-                    Complete the online application form with your personal and academic information.
-                </p>
-
-            </div>
-
-            <!-- STEP 02 -->
-
-            <div class="process-card">
-
-                <div class="process-number">
-                    02
-                </div>
-
-                <div class="process-icon">
-                    <i class="ri-file-upload-line"></i>
-                </div>
-
-                <h3>
-                    Upload Documents
-                </h3>
-
-                <p>
-                    Submit academic certificates, identity proof, and other required documents.
-                </p>
-
-            </div>
-
-            <!-- STEP 03 -->
-
-            <div class="process-card">
-
-                <div class="process-number">
-                    03
-                </div>
-
-                <div class="process-icon">
-                    <i class="ri-bank-card-line"></i>
-                </div>
-
-                <h3>
-                    Pay Fees
-                </h3>
-
-                <p>
-                    Complete the programme fee payment securely through the university payment portal.
-                </p>
-
-            </div>
-
-            <!-- STEP 04 -->
-
-            <div class="process-card">
-
-                <div class="process-number">
-                    04
-                </div>
-
-                <div class="process-icon">
-                    <i class="ri-checkbox-circle-line"></i>
-                </div>
-
-                <h3>
-                    Admission Confirmed
-                </h3>
-
-                <p>
-                    Receive confirmation from the university and get access to your student dashboard.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- CTA -->
-
-    <section class="university-cta">
-
-        <h2>
-            Interested In Sharda University Online?
-        </h2>
-
-        <p>
-            Get free counselling and admission support from Hanora Edtech.
-        </p>
-
-        <a href="contact.html" class="primary-btn">
-            Apply Now
-        </a>
-
-    </section>
 
     <!-- FOOTER -->
 
@@ -409,6 +716,176 @@
     <!-- JS -->
 
     <script src="../js/global.js"></script>
+
+    <script>
+
+        const courseData = {
+
+            ba: {
+                title: "Online BA",
+
+                specializations: [
+
+                    {
+                        name: "Political Science",
+                        fees: "₹ 105000"
+                    }
+                ]
+            },
+
+            bca: {
+                title: "Online BCA",
+
+                specializations: [
+
+                    {
+                        name: "Bachelor of Computer Applications",
+                        fees: "₹ 105000"
+                    }
+                ]
+            },
+
+            bba: {
+                title: "Online BBA",
+
+                specializations: [
+
+                    {
+                        name: "Bachelor of Business Administration",
+                        fees: "₹ 105000"
+                    }
+                ]
+            },
+
+            mcom: {
+                title: "Online MCom",
+
+                specializations: [
+
+                    {
+                        name: "Accounting & Finance",
+                        fees: "₹ 70000"
+                    }
+                ]
+            },
+
+            mca: {
+                title: "Online MCA",
+
+                specializations: [
+
+                    {
+                        name: "Cloud Computing",
+                        fees: "₹ 100000"
+                    },
+                    {
+                        name: "Cyber Security",
+                        fees: "₹ 100000"
+                    },
+                    {
+                        name: "Artificial Intelligence",
+                        fees: "₹ 100000"
+                    },
+                    {
+                        name: "Data Science",
+                        fees: "₹ 100000"
+                    },
+                    {
+                        name: "Computer and IT",
+                        fees: "₹ 100000"
+                    }
+                ]
+            },
+
+            mba: {
+                title: "Online MBA",
+
+                specializations: [
+
+                    {
+                        name: "Marketing",
+                        fees: "₹ 100000"
+                    },
+                    {
+                        name: "Finance",
+                        fees: "₹ 100000"
+                    },
+                    {
+                        name: "Human Resource Management",
+                        fees: "₹ 100000"
+                    },
+                    {
+                        name: "Data Science & Analytics",
+                        fees: "₹ 100000"
+                    },
+                    {
+                        name: "Operations Management",
+                        fees: "₹ 100000"
+                    },
+                    {
+                        name: "International Business",
+                        fees: "₹ 100000"
+                    },
+                    {
+                        name: "Project Management",
+                        fees: "₹ 100000"
+                    },
+                    {
+                        name: "Logistic & Supply Chain Management",
+                        fees: "₹ 100000"
+                    },
+                    {
+                        name: "Digital Marketing & E-Commerce",
+                        fees: "₹ 100000"
+                    },
+                    {
+                        name: "Healthcare & Hospital Administration",
+                        fees: "₹ 100000"
+                    }
+                ]
+            }
+        };
+
+        function openSpecializationModal(course) {
+
+            const modal =
+                document.getElementById("courseModal");
+
+            const title =
+                document.getElementById("modalTitle");
+
+            const tableBody =
+                document.getElementById("specializationTableBody");
+
+            tableBody.innerHTML = "";
+
+            title.innerText =
+                courseData[course].title + " Specializations";
+
+            courseData[course].specializations.forEach(item => {
+
+                tableBody.innerHTML += `
+            <tr>
+                <td>${item.name}</td>
+                <td>${item.fees}</td>
+            </tr>
+        `;
+
+            });
+
+            modal.classList.add("active");
+        }
+
+        function closeCourseModal() {
+
+            document
+                .getElementById("courseModal")
+                .classList.remove("active");
+        }
+
+    </script>
+    <script src="../js/script.js"></script>
+
 </body>
 
 </html>
