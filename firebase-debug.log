@@ -1,0 +1,50 @@
+[debug] [2026-08-21T11:29:36.872Z] ----------------------------------------------------------------------
+[debug] [2026-08-21T11:29:36.891Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2026-08-21T11:29:36.891Z] CLI Version:   15.26.0
+[debug] [2026-08-21T11:29:36.891Z] Platform:      win32
+[debug] [2026-08-21T11:29:36.891Z] Node Version:  v24.19.0
+[debug] [2026-08-21T11:29:36.892Z] Detected Agent: unknown
+[debug] [2026-08-21T11:29:36.892Z] Time:          Fri Aug 21 2026 16:59:36 GMT+0530 (India Standard Time)
+[debug] [2026-08-21T11:29:36.892Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\dell\Desktop\Amity Hanora
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2026-08-21T11:30:11.322Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-08-21T11:30:11.322Z] > authorizing via signed-in user (loteyginny@gmail.com)
+[debug] [2026-08-21T11:30:11.363Z] Checked if tokens are valid: false, expires at: 1787311405709
+[debug] [2026-08-21T11:30:11.363Z] Checked if tokens are valid: false, expires at: 1787311405709
+[debug] [2026-08-21T11:30:11.363Z] > refreshing access token with scopes: []
+[debug] [2026-08-21T11:30:11.366Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-08-21T11:30:11.366Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-08-21T11:30:11.976Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-08-21T11:30:11.976Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-08-21T11:30:11.987Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2026-08-21T11:30:15.271Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2026-08-21T11:30:15.272Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] 
+=== Hosting Setup
+[debug] [2026-08-21T11:30:19.623Z] Checked if tokens are valid: true, expires at: 1787315410976
+[debug] [2026-08-21T11:30:19.623Z] Checked if tokens are valid: true, expires at: 1787315410976
+[debug] [2026-08-21T11:30:19.624Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/hanora-dd607 [none]
+[debug] [2026-08-21T11:30:20.081Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/hanora-dd607 200
+[debug] [2026-08-21T11:30:20.081Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/hanora-dd607 {"projectId":"hanora-dd607","projectNumber":"462699883313","displayName":"hanora","name":"projects/hanora-dd607","resources":{"hostingSite":"hanora-dd607"},"state":"ACTIVE","labels":{"firebase":"enabled"},"etag":"1_d18fc56f-4a1a-4563-8bf2-efc1bcceb4e7"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
