@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -56,7 +58,7 @@
                     <div class="badges">
                         <span>✓ UGC Approved</span>
                         <span>◈ AI Enabled Learning</span>
-                        <span class="yellow-badge">0 Cost EMI</span>
+                        <span class="yellow-badge">0 Cost EMIs</span>
                     </div>
 
                     <h1>
@@ -77,61 +79,118 @@
                         <span>✓ Live Classes</span>
                     </div>
 
-                    <a class="primary-btn hero-btn" href="#apply">Get Free Counselling</a>
+                    <a class="primary-btn hero-btn" href="#apply">Get Free Consultation</a>
                 </div>
 
                 <div class="application-card" id="apply">
+
                     <div class="form-heading">
                         <h2>Apply for Admission</h2>
-                        <p>Start your online degree journey today.</p>
+
+                        <div class="form-info">
+                            Complete this form to receive admission guidance, fee<br>
+                            details and eligibility assistance.
+                        </div>
                     </div>
 
                     <form id="admissionForm">
-                        <label>
-                            <span>Full Name</span>
-                            <input type="text" name="name" placeholder="Name" required>
-                        </label>
 
-                        <label>
-                            <span>Email</span>
-                            <input type="email" name="email" placeholder="Email" required>
-                        </label>
+                        <!-- NAME -->
+                        <div class="form-input-group">
+                            <span class="input-icon">👤</span>
 
-                        <label>
-                            <span>Phone Number</span>
-                            <input type="tel" name="phone" placeholder="+91" required>
-                        </label>
+                            <input type="text" name="name" placeholder="Name*" required>
+                        </div>
 
-                        <label>
-                            <span>Select Program</span>
+
+                        <!-- EMAIL -->
+                        <div class="form-input-group">
+                            <span class="input-icon">✉</span>
+
+                            <input type="email" name="email" placeholder="Email*" required>
+                        </div>
+
+
+                        <!-- PHONE -->
+                        <div class="phone-group">
+
+                            <div class="country-code">
+                                <span>☎</span>
+                                <strong>+91</strong>
+                            </div>
+
+                            <input type="tel" name="phone" placeholder="Phone*" required>
+
+                        </div>
+
+
+                        <!-- PROGRAM -->
+                        <div class="form-input-group select-group">
+
+                            <span class="input-icon">🎓</span>
+
                             <select name="program" required>
-                                <option value="">Select Program</option>
-                                <option>MBA</option>
-                                <option>MCA</option>
-                                <option>BBA</option>
-                                <option>BCA</option>
-                                <option>MA</option>
-                            </select>
-                        </label>
 
-                        <label>
-                            <span>Highest Qualification</span>
-                            <select name="qualification" required>
-                                <option value="">Select Qualification</option>
-                                <option>12th</option>
-                                <option>Graduation</option>
-                                <option>Post Graduation</option>
-                            </select>
-                        </label>
+                                <option value="">
+                                    Select Program*
+                                </option>
 
-                        <label class="consent">
+                                <option value="BBA">
+                                    BBA
+                                </option>
+
+                                <option value="MBA">
+                                    MBA
+                                </option>
+
+                                <option value="BCA">
+                                    BCA
+                                </option>
+
+                                <option value="MCA">
+                                    MCA
+                                </option>
+
+                                <option value="B.Com">
+                                    B.Com
+                                </option>
+
+                                <option value="M.Com">
+                                    M.Com
+                                </option>
+
+                                <option value="MA.JMC">
+                                    MA.JMC
+                                </option>
+
+                            </select>
+
+                            <span class="select-arrow"></span>
+
+                        </div>
+
+
+                        <!-- CONSENT -->
+                        <label class="admission-consent">
+
                             <input type="checkbox" required>
-                            <span>I agree to be contacted regarding admissions and counselling.</span>
+
+                            <span>
+                                I am interested in receiving admission/course
+                                counselling and agree to be contacted regarding my
+                                enquiry.
+                            </span>
+
                         </label>
 
-                        <button class="form-btn" type="submit">Apply Now</button>
+
+                        <!-- BUTTON -->
+                        <button class="form-btn" type="submit">
+                            Apply Now
+                        </button>
+
                     </form>
-                    <p class="form-note">By submitting this form, you agree to our terms and privacy policy.</p>
+
                 </div>
             </div>
         </section>
@@ -140,17 +199,21 @@
         <section class="about section-light" id="about">
             <div class="container about-grid">
                 <div class="about-media">
+
+                    <div class="student-photo">
+                        <img src="assets/images/about.png" alt="Amity Online students">
+                    </div>
+
                     <div class="metric-card metric-top">
                         <strong>225K+</strong>
                         <span>Students</span>
                     </div>
-                    <div class="student-photo image-placeholder">
-                        <span>STUDENT IMAGE</span>
-                    </div>
+
                     <div class="metric-card metric-bottom">
                         <strong>36K+</strong>
-                        <span>Alumni</span>
+                        <span>Placements</span>
                     </div>
+
                 </div>
 
                 <div class="about-copy">
@@ -237,63 +300,212 @@
         </section>
 
         <!-- FACULTY -->
+        <!-- FACULTY -->
         <section class="faculty section-white" id="faculty">
             <div class="container">
+
                 <div class="section-heading faculty-heading">
                     <div class="eyebrow">OUR FACULTY</div>
                     <h2>Meet Our Expert Faculty</h2>
-                    <p>Learn from experienced academics and industry professionals with global expertise.</p>
+                    <p>
+                        Learn from experienced academics and industry professionals
+                        with global expertise.
+                    </p>
                 </div>
 
-                <div class="faculty-grid">
-                    <article class="faculty-card">
-                        <div class="faculty-photo image-placeholder"><span>FACULTY</span></div>
-                        <div class="faculty-body">
-                            <h3>Prof. Alice Ghimizian</h3>
-                            <div class="faculty-role">Visiting Professor</div>
-                            <p>Experienced academic with expertise in communication, education and corporate training.
-                            </p>
-                            <strong>Multiple publications and Corporate Communication - NTU</strong>
-                        </div>
-                    </article>
+                <div class="faculty-slider">
 
-                    <article class="faculty-card">
-                        <div class="faculty-photo image-placeholder"><span>FACULTY</span></div>
-                        <div class="faculty-body">
-                            <h3>Asst. Prof. Steven Barrett</h3>
-                            <div class="faculty-role">Assistant Professor</div>
-                            <p>Experienced educator with research and teaching expertise across business and education.
-                            </p>
-                            <strong>Doctor of Education</strong>
-                        </div>
-                    </article>
+                    <!-- LEFT ARROW -->
+                    <button class="faculty-arrow faculty-prev" aria-label="Previous faculty">
+                        ‹
+                    </button>
 
-                    <article class="faculty-card">
-                        <div class="faculty-photo image-placeholder"><span>FACULTY</span></div>
-                        <div class="faculty-body">
-                            <h3>Asst. Prof. Tristan Casey</h3>
-                            <div class="faculty-role">Assistant Professor</div>
-                            <p>Researcher and educator focused on organisational psychology and workplace learning.</p>
-                            <strong>PhD Organisational Psychology - University of Queensland</strong>
-                        </div>
-                    </article>
+                    <!-- VIEWPORT -->
+                    <div class="faculty-viewport">
 
-                    <article class="faculty-card">
-                        <div class="faculty-photo image-placeholder"><span>FACULTY</span></div>
-                        <div class="faculty-body">
-                            <h3>Asst. Prof. Ruchi Jain</h3>
-                            <div class="faculty-role">Assistant Professor</div>
-                            <p>Academic professional with experience in management, learning and student development.
-                            </p>
-                            <strong>MPA Marketing - M.P.P.E University, London</strong>
+                        <!-- SLIDING TRACK -->
+                        <div class="faculty-track">
+
+                            <!-- ================= SLIDE 1 ================= -->
+                            <div class="faculty-slide">
+
+                                <div class="faculty-card">
+
+                                    <div class="faculty-image">
+                                        <img src="assets/faculty/Asst.-Prof.-Tristan-Casey.png" alt="Prof. Alice Ghimizian">
+                                    </div>
+
+                                    <div class="faculty-card-content">
+
+                                        <h3>Asst. Prof. Tristan Casey</h3>
+
+                                        <div class="faculty-role">
+                                              Assistant Professor
+                                        </div>
+
+                                        <p>
+                                            Working as Lecturer at Safety Science Innovation Lab, Griffith University |
+                                            Senior Research Scientist and Principal Advisor | Co-Founder at The Cultural
+                                            Effect | Visiting Faculty at Amity University Online.
+                                        </p>
+
+                                        <div class="faculty-qualification">
+                                             PhD Organizational Psychology - University of Queensland
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="faculty-card">
+
+                                    <div class="faculty-image">
+                                        <img src="assets/faculty/Asst.-Prof.-Arindam-Patra.png" alt="Prof. Alice Ghimizian">
+                                    </div>
+
+                                    <div class="faculty-card-content">
+
+                                        <h3>Asst. Prof. Arindam Patra</h3>
+
+                                        <div class="faculty-role">
+                                              Assistant Professor
+                                        </div>
+
+                                        <p>
+                                            Working as Assistant Professor at Amity University | Passionate in teaching English Language and Communication Skills.
+                                        </p>
+
+                                        <div class="faculty-qualification">
+                                             Masters in English Literature - University of Burdwan
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="faculty-card">
+
+                                    <div class="faculty-image">
+                                        <img src="assets/faculty/Asst.-Prof.-Ruchi-Jain.png" alt="Prof. Alice Ghimizian">
+                                    </div>
+
+                                    <div class="faculty-card-content">
+
+                                        <h3>Asst. Prof. Ruchi Jain</h3>
+
+                                        <div class="faculty-role">
+                                              Assistant Professor
+                                        </div>
+
+                                        <p>
+                                           Working as Assistant Professor at Amity University | Stellar career with 16 years of research and academic experience with expertise in Service Marketing and Brand Management
+                                        </p>
+
+                                        <div class="faculty-qualification">
+                                             PhD Marketing - MJPR University, Bareilly
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="faculty-card">
+
+                                    <div class="faculty-image">
+                                        <img src="assets/faculty/Asst.-Prof.-Tristan-Casey.png" alt="Prof. Alice Ghimizian">
+                                    </div>
+
+                                    <div class="faculty-card-content">
+
+                                        <h3>Asst. Prof. Tristan Casey</h3>
+
+                                        <div class="faculty-role">
+                                              Assistant Professor
+                                        </div>
+
+                                        <p>
+                                            Working as Lecturer at Safety Science Innovation Lab, Griffith University |
+                                            Senior Research Scientist and Principal Advisor | Co-Founder at The Cultural
+                                            Effect | Visiting Faculty at Amity University Online.
+                                        </p>
+
+                                        <div class="faculty-qualification">
+                                             PhD Organizational Psychology - University of Queensland
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="faculty-card">
+
+                                    <div class="faculty-image">
+                                        <img src="assets/faculty/Asst.-Prof.-Tristan-Casey.png" alt="Prof. Alice Ghimizian">
+                                    </div>
+
+                                    <div class="faculty-card-content">
+
+                                        <h3>Asst. Prof. Tristan Casey</h3>
+
+                                        <div class="faculty-role">
+                                              Assistant Professor
+                                        </div>
+
+                                        <p>
+                                            Working as Lecturer at Safety Science Innovation Lab, Griffith University |
+                                            Senior Research Scientist and Principal Advisor | Co-Founder at The Cultural
+                                            Effect | Visiting Faculty at Amity University Online.
+                                        </p>
+
+                                        <div class="faculty-qualification">
+                                             PhD Organizational Psychology - University of Queensland
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="faculty-card">
+
+                                    <div class="faculty-image">
+                                        <img src="assets/faculty/Asst.-Prof.-Tristan-Casey.png" alt="Prof. Alice Ghimizian">
+                                    </div>
+
+                                    <div class="faculty-card-content">
+
+                                        <h3>Asst. Prof. Tristan Casey</h3>
+
+                                        <div class="faculty-role">
+                                              Assistant Professor
+                                        </div>
+
+                                        <p>
+                                            Working as Lecturer at Safety Science Innovation Lab, Griffith University |
+                                            Senior Research Scientist and Principal Advisor | Co-Founder at The Cultural
+                                            Effect | Visiting Faculty at Amity University Online.
+                                        </p>
+
+                                        <div class="faculty-qualification">
+                                             PhD Organizational Psychology - University of Queensland
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
                         </div>
-                    </article>
+                    </div>
+
+                    <!-- RIGHT ARROW -->
+                    <button class="faculty-arrow faculty-next" aria-label="Next faculty">
+                        ›
+                    </button>
+
                 </div>
 
-                <div class="slider-controls">
-                    <button aria-label="Previous faculty">‹</button>
-                    <button aria-label="Next faculty">›</button>
-                </div>
             </div>
         </section>
 
@@ -302,27 +514,27 @@
             <div class="container benefit-grid">
                 <div class="benefit-box">
                     <div class="benefit-icon">♙</div><strong>Personalized<br>Mentorship</strong>
-                    <p>Expert guidance for every learner.</p>
+                    <p>Learn directly from experienced industry leaders.</p>
                 </div>
                 <div class="benefit-box">
                     <div class="benefit-icon">▤</div><strong>Hands-on<br>Learning</strong>
-                    <p>Learn through practical experiences.</p>
+                    <p>Practical projects with immersive online classes.</p>
                 </div>
                 <div class="benefit-box">
                     <div class="benefit-icon">⚒</div><strong>Career<br>Services</strong>
-                    <p>Support for your career journey.</p>
+                    <p>Placement assistance with expert guidance.</p>
                 </div>
                 <div class="benefit-box">
                     <div class="benefit-icon">♧</div><strong>Student<br>Support</strong>
-                    <p>Help whenever you need it.</p>
+                    <p>Dedicated relationship managers throughout.</p>
                 </div>
                 <div class="benefit-box">
                     <div class="benefit-icon">♟</div><strong>100+ Hiring<br>Partners</strong>
-                    <p>Connect with opportunities.</p>
+                    <p>Top recruiters across multiple industries.</p>
                 </div>
                 <div class="benefit-box">
                     <div class="benefit-icon">▣</div><strong>Real-world<br>Projects</strong>
-                    <p>Build practical experience.</p>
+                    <p>Build an impressive industry-ready portfolio.</p>
                 </div>
             </div>
         </section>
@@ -331,16 +543,16 @@
         <section class="testimonials section-light" id="testimonials">
             <div class="container">
                 <div class="section-heading">
-                    <div class="eyebrow">FROM OUR LEARNERS</div>
+                    <div class="eyebrow">Student Testimonials</div>
                     <h2>Hear From Our Learners</h2>
-                    <p>Real experiences from students who chose flexible online learning.</p>
+                    <p>Discover how Amity Online has helped students achieve their academic and career goals.</p>
                 </div>
 
                 <div class="testimonial-grid">
                     <article class="testimonial-card">
                         <div class="avatar">NK</div>
                         <div class="stars">★★★★★</div>
-                        <p>“The learning experience has been flexible and very helpful throughout the program.”</p>
+                        <p>“Outstanding academic support throughout the program.”</p>
                         <h3>Neha Kapoor</h3>
                         <span>MBA Student</span>
                     </article>
@@ -348,7 +560,7 @@
                     <article class="testimonial-card">
                         <div class="avatar">RK</div>
                         <div class="stars">★★★★★</div>
-                        <p>“The faculty support and online learning format made it easy to continue my studies.”</p>
+                        <p>“Flexible schedule helped balance work and studies.”</p>
                         <h3>Rohit Kumar</h3>
                         <span>MCA Student</span>
                     </article>
@@ -356,31 +568,267 @@
                     <article class="testimonial-card">
                         <div class="avatar">SD</div>
                         <div class="stars">★★★★★</div>
-                        <p>“The guidance helped me understand the right program and plan my career better.”</p>
+                        <p>“Highly recommended for quality online education.”</p>
                         <h3>Sneha Das</h3>
                         <span>BBA Student</span>
                     </article>
                 </div>
-                <div class="dots"><span class="active"></span><span></span><span></span></div>
+                <!-- <div class="dots"><span class="active"></span><span></span><span></span></div> -->
             </div>
         </section>
 
-        <!-- LOGOS -->
+        <!-- =========================================
+             CORPORATE LOGOS
+             ========================================= -->
         <section class="logo-strip" id="alumni">
-            <div class="container logo-grid">
-                <div class="logo-tile">SONY</div>
-                <div class="logo-tile">Cognizant</div>
-                <div class="logo-tile">NIIT</div>
-                <div class="logo-tile">citi</div>
-                <div class="logo-tile">AMITY</div>
-                <div class="logo-tile">HCL</div>
-                <div class="logo-tile">TCS</div>
-                <div class="logo-tile">DELL</div>
-                <div class="logo-tile">SIEMENS</div>
-                <div class="logo-tile">IBM</div>
-                <div class="logo-tile">Microsoft</div>
-                <div class="logo-tile">HP</div>
+
+            <!-- ROW 1 -->
+            <div class="logo-marquee">
+                <div class="logo-track logo-track-left">
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/sony.png" alt="Sony">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/alumini16.png" alt="Alumni 16">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/ESPN.png" alt="ESPN">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/gecapital.png" alt="GE Capital">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/Hewitt.png" alt="Hewitt">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/Adobe.png" alt="Adobe">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/CITI.png" alt="CITI">
+                    </div>
+
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/Nestle.png" alt="Nestle">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/samsung.png" alt="Samsung">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/NIIT.png" alt="NIIT">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/seimens.png" alt="Siemens">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/IBM.png" alt="IBM">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/Mc-CANN.png" alt="McCann Erickson">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/SBIlife.png" alt="SBI Life">
+                    </div>
+
+                    <!-- DUPLICATE SET FOR INFINITE LOOP -->
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/sony.png" alt="Sony">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/alumini16.png" alt="Alumni 16">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/ESPN.png" alt="ESPN">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/gecapital.png" alt="GE Capital">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/Hewitt.png" alt="Hewitt">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/Adobe.png" alt="Adobe">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/CITI.png" alt="CITI">
+                    </div>
+
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/Nestle.png" alt="Nestle">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/samsung.png" alt="Samsung">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/NIIT.png" alt="NIIT">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/seimens.png" alt="Siemens">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/IBM.png" alt="IBM">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/Mc-CANN.png" alt="McCann Erickson">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/SBIlife.png" alt="SBI Life">
+                    </div>
+
+                </div>
             </div>
+
+
+            <!-- ROW 2 -->
+            <div class="logo-marquee">
+                <div class="logo-track logo-track-right">
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/sony.png" alt="Sony">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/alumini16.png" alt="Alumni 16">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/ESPN.png" alt="ESPN">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/gecapital.png" alt="GE Capital">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/Hewitt.png" alt="Hewitt">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/Adobe.png" alt="Adobe">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/CITI.png" alt="CITI">
+                    </div>
+
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/Nestle.png" alt="Nestle">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/samsung.png" alt="Samsung">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/NIIT.png" alt="NIIT">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/seimens.png" alt="Siemens">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/IBM.png" alt="IBM">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/Mc-CANN.png" alt="McCann Erickson">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/SBIlife.png" alt="SBI Life">
+                    </div>
+
+                    <!-- DUPLICATE SET -->
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/sony.png" alt="Sony">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/alumini16.png" alt="Alumni 16">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/ESPN.png" alt="ESPN">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/gecapital.png" alt="GE Capital">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/Hewitt.png" alt="Hewitt">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/Adobe.png" alt="Adobe">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/CITI.png" alt="CITI">
+                    </div>
+
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/Nestle.png" alt="Nestle">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/samsung.png" alt="Samsung">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/NIIT.png" alt="NIIT">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/seimens.png" alt="Siemens">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/IBM.png" alt="IBM">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/Mc-CANN.png" alt="McCann Erickson">
+                    </div>
+
+                    <div class="logo-tile">
+                        <img src="assets/Alumuni-logos/SBIlife.png" alt="SBI Life">
+                    </div>
+
+                </div>
+            </div>
+
         </section>
 
         <!-- FAQ + SIDE FORM -->
@@ -389,18 +837,85 @@
                 <div class="small-form-card">
                     <h2>Still have questions?<br><span>Talk to an Expert</span></h2>
                     <form id="expertForm">
-                        <input type="text" placeholder="Name" required>
-                        <input type="tel" placeholder="Phone Number" required>
-                        <input type="email" placeholder="Email" required>
-                        <select required>
-                            <option value="">Select Program</option>
-                            <option>MBA</option>
-                            <option>MCA</option>
-                            <option>BBA</option>
-                            <option>BCA</option>
-                        </select>
-                        <label class="consent"><input type="checkbox" required><span>I agree to be
-                                contacted.</span></label>
+                        <!-- NAME -->
+                        <div class="form-input-group">
+                            <span class="input-icon">👤</span>
+
+                            <input type="text" name="name" placeholder="Name*" required>
+                        </div>
+
+
+                        <!-- EMAIL -->
+                        <div class="form-input-group">
+                            <span class="input-icon">✉</span>
+
+                            <input type="email" name="email" placeholder="Email*" required>
+                        </div>
+
+
+                        <!-- PHONE -->
+                        <div class="phone-group">
+
+                            <div class="country-code">
+                                <span>☎</span>
+                                <strong>+91</strong>
+                            </div>
+
+                            <input type="tel" name="phone" placeholder="Phone*" required>
+
+                        </div>
+
+
+                        <!-- PROGRAM -->
+                        <div class="form-input-group select-group">
+
+                            <span class="input-icon">🎓</span>
+
+                            <select name="program" required>
+
+                                <option value="">
+                                    Select Program*
+                                </option>
+
+                                <option value="BBA">
+                                    BBA
+                                </option>
+
+                                <option value="MBA">
+                                    MBA
+                                </option>
+
+                                <option value="BCA">
+                                    BCA
+                                </option>
+
+                                <option value="MCA">
+                                    MCA
+                                </option>
+
+                                <option value="B.Com">
+                                    B.Com
+                                </option>
+
+                                <option value="M.Com">
+                                    M.Com
+                                </option>
+
+                                <option value="MA.JMC">
+                                    MA.JMC
+                                </option>
+
+                            </select>
+
+                            <span class="select-arrow"></span>
+                        </div>
+                        <div class="consent">
+                            <input type="checkbox" id="expertConsent" name="consent" required>
+
+                            <label for="expertConsent">
+                                I agree to be contacted regarding admissions and counselling.
+                            </label>
+                        </div>
                         <button type="submit">Apply Now</button>
                     </form>
                 </div>
@@ -410,23 +925,20 @@
 
                     <div class="faq-item">
                         <button class="faq-question">What is Amity University Online?<span>+</span></button>
-                        <div class="faq-answer">Amity University Online provides flexible, technology-enabled online
-                            degree programs.</div>
+                        <div class="faq-answer">Amity University Online is India's first UGC-approved online university
+                            offering globally recognized degree programs.</div>
                     </div>
                     <div class="faq-item">
                         <button class="faq-question">Is Amity University Online accredited?<span>+</span></button>
-                        <div class="faq-answer">Programs and recognitions vary by program and applicable regulatory
-                            approvals. Verify the current program details before admission.</div>
+                        <div class="faq-answer">Yes, it is UGC approved and NAAC accredited.</div>
                     </div>
                     <div class="faq-item">
                         <button class="faq-question">How does online learning work?<span>+</span></button>
-                        <div class="faq-answer">Students access digital learning resources, classes, assessments and
-                            academic support through the online learning platform.</div>
+                        <div class="faq-answer">Students attend live and recorded classes online.</div>
                     </div>
                     <div class="faq-item">
                         <button class="faq-question">How are exams conducted?<span>+</span></button>
-                        <div class="faq-answer">Examination methods depend on the program and current university
-                            examination policy.</div>
+                        <div class="faq-answer">Exams are conducted in online mode as per university guidelines.</div>
                     </div>
                 </div>
             </div>
@@ -435,20 +947,28 @@
         <!-- ACCREDITATION -->
         <section class="accreditation">
             <div class="container accreditation-grid">
-                <div class="accreditation-photo image-placeholder"><span>STUDENT IMAGE</span></div>
+                <div class="accreditation-photo">
+                    <img src="assets/images/student3.jpg" alt="Amity University student">
+                </div>
                 <div class="accreditation-copy">
                     <div class="accreditation-title">ACCREDITED. RESPECTED. TRUSTED.</div>
                     <p>
-                        Build your future with a recognised online learning ecosystem designed
-                        around flexibility, academic support and career growth. Explore the
-                        latest program-specific approvals, recognitions and university information
-                        before applying.
+                        Amity University has been established by an act of State Legislature and recognized by the
+                        University Grants Commission (UGC). Amity Education Group is India’s leading private education
+                        group, ranked amongst the top 200 Universities of Asia by QS, UK rankings and the only
+                        University in India to be WASQ accredited by the US.
+                    </p>
+                    <br>
+                    <p>
+                        We offer globally benchmarked education to 150,000 students worldwide. Our fast-expanding
+                        network ofglobally benchmarked institutions has resulted in campuses at Dubai, Abu Dhabi,
+                        London, Singapore, NewYork, Mauritius, China, South Africa and Romania with further plans of
+                        establishing campuses in 25countries. With over 300 UG & PG programmes across various
+                        disciplines in education, and a team of 6,000strong faculty, we have emerged as one of the most
+                        sought-after education destinations globally.
                     </p>
                     <div class="accreditation-logos">
-                        <span>WSC</span>
-                        <span>WES</span>
-                        <span>QS</span>
-                        <span>NAAC</span>
+                        <img src="assets/accreditation-logos.png" alt="Accreditation and recognition logos">
                     </div>
                 </div>
             </div>
@@ -456,62 +976,114 @@
 
     </main>
 
-    <!-- FOOTER -->
     <footer class="footer" id="contact">
+
         <div class="container footer-grid">
+
+            <!-- BRAND -->
             <div class="footer-brand">
+
                 <div class="brand footer-brand-mark">
-                    <span class="brand-mark">A</span>
-                    <span class="brand-text"><strong>AMITY</strong><small>UNIVERSITY</small></span>
+                    <img src="assets/footer-logo.png" alt="Amity University" class="amity-logo">
                 </div>
+
                 <p>
-                    Amity Online provides flexible learning, academic support and
-                    career-focused opportunities for students and professionals.
+                    Empowering Future Leaders Through Quality Education. We provide
+                    industry-focused online programs designed to help students build
+                    successful careers and achieve their professional goals.
                 </p>
+
             </div>
 
-            <div>
+
+            <!-- QUICK LINKS -->
+            <div class="footer-column">
+
                 <h3>Quick Links</h3>
+
                 <a href="#home">Home</a>
-                <a href="#programs">Program</a>
+                <a href="#programs">Programs</a>
                 <a href="#faculty">Faculty</a>
                 <a href="#testimonials">Testimonials</a>
+                <a href="#testimonials">Learning Pedagogy</a>
                 <a href="#alumni">Alumni</a>
+
             </div>
 
-            <div>
+
+            <!-- PROGRAMS -->
+            <div class="footer-column">
+
                 <h3>Programs</h3>
+
                 <a href="#programs">MBA</a>
-                <a href="#programs">MCA</a>
                 <a href="#programs">BBA</a>
                 <a href="#programs">BCA</a>
-                <a href="#programs">MA</a>
+                <a href="#programs">MCA</a>
+
             </div>
 
-            <div>
+
+            <!-- CONTACT -->
+            <div class="footer-column footer-contact">
+
                 <h3>Contact</h3>
-                <p>+91 00000 00000</p>
-                <p>admissions@example.com</p>
-                <p>Mon - Sat | 9:00 AM - 6:00 PM</p>
+
+                <a href="tel:+919220369472">
+                    <span class="contact-icon">☎</span>
+                    <span>+91-9815123370</span>
+                </a>
+
+                <a href="mailto:info@nextwaveeducation.in">
+                    <span class="contact-icon">✉</span>
+                    <span>info@hanora.co.in</span>
+                </a>
+
+                <div class="contact-location">
+                    <span class="contact-icon">📍</span>
+                    <span>Punjab, India</span>
+                </div>
+
             </div>
+
         </div>
 
-        <div class="container footer-bottom">
-            <span>© 2026 Amity University Online. All Rights Reserved.</span>
-            <div>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms &amp; Conditions</a>
-                <a href="#">Back to Top ↑</a>
+
+        <!-- FOOTER BOTTOM -->
+        <div class="footer-bottom">
+
+            <div class="footer-bottom-inner">
+
+                <span>
+                    © 2026 Amity University. All Rights Reserved.
+                </span>
+
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms &amp; Conditions</a>
+                    <a href="#home">↑ Back To Top</a>
+                </div>
+
             </div>
+
         </div>
+
     </footer>
 
+    <!-- FLOATING CALL + WHATSAPP BUTTONS -->
     <div class="floating-actions">
-        <a href="tel:+910000000000" aria-label="Call">☎</a>
-        <a href="https://wa.me/910000000000" aria-label="WhatsApp">◉</a>
-    </div>
 
-    <div class="toast" id="toast">Thank you! Our counsellor will contact you shortly.</div>
+        <!-- Call -->
+        <a href="tel:+919815123370" aria-label="Call">
+            <i class="ri-phone-fill"></i>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/919815123370" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <i class="ri-whatsapp-line"></i>
+        </a>
+
+    </div>
 
     <script src="script.js"></script>
 </body>

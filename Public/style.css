@@ -106,8 +106,8 @@ button{cursor:pointer}
 .brand{
     display:flex;
     align-items:center;
-    width:150px;
-    min-width:150px;
+    width:195px;
+    min-width:195px;
     color:var(--navy);
 }
 
@@ -210,9 +210,9 @@ button{cursor:pointer}
     position:relative;
     z-index:2;
     display:grid;
-    grid-template-columns:1.12fr .62fr;
+    grid-template-columns:1fr 423px;
     align-items:center;
-    gap:80px;
+    gap:65px;
 }
 
 .hero-copy{
@@ -315,97 +315,253 @@ button{cursor:pointer}
     transform:translateY(-2px);
 }
 
+/* =========================================================
+   ADMISSION FORM — CLIENT REFERENCE
+========================================================= */
+
 .application-card{
+    width:423px;
+    max-width:100%;
     background:#fff;
     color:var(--text);
-    border-radius:8px;
-    padding:20px;
-    box-shadow:0 16px 45px rgba(0,0,0,.24);
-    border:1px solid rgba(255,255,255,.5);
+    border-radius:16px;
+    padding:28px 23px 25px;
+    box-shadow:0 18px 45px rgba(0,0,0,.18);
+    border:0;
+    margin:0 auto;
 }
 
 .form-heading{
     text-align:center;
-    margin-bottom:10px;
+    margin-bottom:20px;
 }
 
 .form-heading h2{
-    color:#214f86;
-    font-size:19px;
-    line-height:1.2;
+    color:#073b78;
+    font-size:29px;
+    line-height:1.15;
+    font-weight:500;
+    letter-spacing:-.5px;
+    margin-bottom:12px;
 }
 
-.form-heading p{
-    font-size:8px;
-    color:#6d7f98;
+.form-info{
+    background:#fff3cc;
+    color:#073b78;
+    border-radius:6px;
+    padding:8px 10px;
+    min-height:45px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    font-size:11px;
+    line-height:1.3;
 }
+
+.form-heading p{display:none}
 
 #apply form{
     display:flex;
     flex-direction:column;
-    gap:7px;
+    gap:13px;
 }
 
-#apply label:not(.consent){
-    display:flex;
-    flex-direction:column;
-    gap:3px;
-}
-
-#apply label:not(.consent) span{
-    font-size:8px;
-    color:#536a86;
-    font-weight:700;
-}
-
-#apply input,
-#apply select{
+.form-input-group{
     width:100%;
-    height:34px;
-    border:1px solid #dce4ee;
-    border-radius:3px;
-    outline:none;
-    padding:0 9px;
-    color:#29496e;
+    height:50px;
+    border:1px solid #d6d6d6;
+    border-radius:7px;
     background:#fff;
-    font-size:9px;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
 }
 
-#apply input:focus,
-#apply select:focus{
-    border-color:#f2b400;
+.form-input-group:focus-within{
+    border-color:#073b78;
+    box-shadow:0 0 0 2px rgba(7,59,120,.06);
 }
 
-.consent{
+.input-icon{
+    width:43px;
+    min-width:43px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#286aa0;
+    font-size:15px;
+}
+
+.form-input-group input{
+    flex:1;
+    width:auto;
+    height:100%;
+    border:0 !important;
+    outline:0;
+    background:transparent;
+    padding:0 12px 0 0 !important;
+    color:#244b74;
+    font-size:14px !important;
+}
+
+.form-input-group input::placeholder{
+    color:#718097;
+    opacity:1;
+}
+
+.phone-group{
+    width:100%;
+    height:50px;
+    border:1px solid #d6d6d6;
+    border-radius:7px;
+    background:#fff;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+}
+
+.phone-group:focus-within{
+    border-color:#073b78;
+    box-shadow:0 0 0 2px rgba(7,59,120,.06);
+}
+
+.country-code{
+    width:72px;
+    min-width:72px;
+    height:100%;
+    background:#f4f5f7;
+    border-right:1px solid #d9dce1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:7px;
+    color:#183f6c;
+}
+
+.country-code span{
+    font-size:16px;
+    color:#35404d;
+}
+
+.country-code strong{
+    font-size:13px;
+}
+
+.phone-group input{
+    flex:1;
+    width:auto !important;
+    height:100%;
+    border:0 !important;
+    outline:0;
+    padding:0 13px !important;
+    font-size:14px !important;
+    color:#244b74;
+}
+
+.phone-group input::placeholder{
+    color:#718097;
+}
+
+.select-group{
+    position:relative;
+}
+
+.select-group select{
+    width:100%;
+    height:100%;
+    border:0 !important;
+    outline:0;
+    background:transparent;
+    appearance:none;
+    -webkit-appearance:none;
+    padding:0 38px 0 0 !important;
+    color:#183b65;
+    font-size:14px !important;
+    cursor:pointer;
+}
+
+.select-arrow{
+    position:absolute;
+    right:12px;
+    top:50%;
+    transform:translateY(-55%);
+    color:#000;
+    font-size:22px;
+    line-height:1;
+    pointer-events:none;
+}
+
+.admission-consent{
     display:flex;
     align-items:flex-start;
-    gap:6px;
-    font-size:7px;
-    color:#657994;
-    line-height:1.35;
-}
-
-.consent input{
-    width:12px;
-    height:12px;
+    gap:10px;
+    width:100%;
+    color:#53647a;
+    font-size:12px;
+    line-height:1.12;
     margin-top:1px;
+    cursor:pointer;
 }
 
-.form-btn{
-    border:0;
-    background:var(--yellow);
-    color:#15345f;
-    height:35px;
-    border-radius:3px;
-    font-size:9px;
+.admission-consent input{
+    appearance:none;
+    -webkit-appearance:none;
+    width:17px !important;
+    height:17px !important;
+    min-width:17px;
+    border:1px solid #777 !important;
+    border-radius:2px;
+    background:#fff;
+    margin:0;
+    padding:0 !important;
+    position:relative;
+    cursor:pointer;
+}
+
+.admission-consent input:checked{
+    background:#ffbf00;
+    border-color:#ffbf00 !important;
+}
+
+.admission-consent input:checked::after{
+    content:"✓";
+    position:absolute;
+    left:3px;
+    top:-1px;
+    color:#073b78;
+    font-size:13px;
     font-weight:900;
 }
 
+.admission-consent span{
+    flex:1;
+    padding-top:1px;
+}
+
+.form-btn{
+    width:100%;
+    height:54px;
+    border:0;
+    border-radius:7px;
+    background:#ffbf00;
+    color:#073b78;
+    font-size:17px;
+    font-weight:800;
+    cursor:pointer;
+    margin-top:2px;
+    transition:background .2s ease,transform .2s ease,box-shadow .2s ease;
+}
+
+.form-btn:hover{
+    background:#ffc928;
+    transform:translateY(-1px);
+    box-shadow:0 7px 15px rgba(255,191,0,.25);
+}
+
 .form-note{
-    font-size:7px;
-    color:#8a98aa;
-    margin-top:7px;
-    text-align:center;
+    display:none;
 }
 
 /* ---------- headings ---------- */
@@ -439,126 +595,121 @@ button{cursor:pointer}
     margin-top:8px;
 }
 
-/* ---------- about ---------- */
+/* =========================================================
+   ABOUT / SHAPE YOUR FUTURE
+   CLIENT REFERENCE MATCH
+========================================================= */
 
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    align-items:center;
-    gap:65px;
-}
-
-.about-media{
-    min-height:300px;
-    position:relative;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-.student-photo{
-    width:360px;
-    height:245px;
-    border-radius:9px;
-    box-shadow:var(--shadow);
-    overflow:hidden;
-}
-
-.image-placeholder{
+.about {
+    position: relative;
+    overflow: hidden;
     background:
-        linear-gradient(135deg,#d9e7f7,#fff 50%,#b7cee9);
-    display:grid;
-    place-items:center;
-    color:#53719a;
-    font-size:10px;
-    font-weight:800;
-    letter-spacing:1px;
+        radial-gradient(circle at 100% 0%,rgba(255,191,0,.13),transparent 25%),
+        #f5f9ff;
+    padding:78px 0 88px;
 }
 
-.metric-card{
-    position:absolute;
-    z-index:2;
-    background:#fff;
-    border-radius:6px;
-    padding:12px 14px;
-    display:flex;
-    flex-direction:column;
-    box-shadow:0 10px 28px rgba(8,45,90,.13);
+.about::after {
+    content:""; position:absolute; width:270px; height:270px; right:-75px; top:-105px;
+    border-radius:50%; background:rgba(255,191,0,.10); pointer-events:none;
 }
 
-.metric-card strong{
-    color:#17497f;
-    font-size:16px;
+.about-grid {
+    position:relative; z-index:2; width:1240px; max-width:calc(100% - 100px);
+    margin-left:auto; margin-right:auto; display:grid;
+    grid-template-columns:570px minmax(0,1fr); align-items:center; gap:60px;
 }
 
-.metric-card span{
-    color:#73839a;
-    font-size:8px;
+.about-media { min-height:390px; position:relative; display:flex; align-items:center; justify-content:center; }
+
+.student-photo {
+    width:570px; height:382px; max-width:100%; border-radius:22px; overflow:hidden;
+    box-shadow:0 20px 45px rgba(20,61,105,.15); position:relative; z-index:1;
 }
 
-.metric-top{
-    left:0;
-    top:35px;
+.student-photo img { width:100%; height:100%; display:block; object-fit:cover; }
+
+.image-placeholder {
+    width:100%; height:100%; background:linear-gradient(135deg,#d9e7f7,#fff 50%,#b7cee9);
+    display:grid; place-items:center; color:#53719a; font-size:12px; font-weight:800; letter-spacing:1px;
 }
 
-.metric-bottom{
-    right:0;
-    bottom:22px;
+.metric-card {
+    position:absolute; z-index:3; background:#fff; border-radius:14px; padding:18px 22px;
+    min-width:127px; min-height:108px; display:flex; flex-direction:column; justify-content:center;
+    box-shadow:0 14px 35px rgba(8,45,90,.14);
+}
+.metric-card strong { color:#17497f; font-size:25px; line-height:1.1; font-weight:800; white-space:nowrap; }
+.metric-card span { color:#73839a; font-size:12px; margin-top:7px; }
+.metric-top { left:-20px; top:35px; }
+.metric-bottom { right:-20px; bottom:18px; }
+
+.about-copy { width:100%; max-width:620px; }
+.about-copy .eyebrow { color:#f0ad00; font-size:11px; font-weight:900; letter-spacing:2.2px; margin-bottom:12px; }
+.about-copy h2 { color:#073b78; font-size:46px; line-height:1.08; font-weight:800; letter-spacing:-1.3px; margin:0; }
+.about-copy h2 span { display:block; color:#f0ad00; font-weight:800; }
+.about-copy > p { color:#667c98; font-size:15px; line-height:1.65; margin-top:22px; max-width:610px; }
+
+.about-features { margin-top:30px; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+
+.mini-feature {
+    min-height:96px; display:flex; align-items:center; gap:14px; border:1px solid #e1e9f3;
+    background:#fff; border-radius:13px; padding:15px 17px; box-shadow:0 7px 20px rgba(20,61,105,.06);
+    transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+}
+.mini-feature:hover { transform:translateY(-4px); border-color:#ffbf00; box-shadow:0 13px 28px rgba(20,61,105,.11); }
+.mini-feature i {
+    width:52px; height:52px; min-width:52px; border-radius:10px; display:grid; place-items:center;
+    flex:0 0 52px; background:#073b78; color:#ffbf00; font-size:17px; font-style:normal;
+}
+.mini-feature strong { display:block; color:#183d6b; font-size:14px; line-height:1.25; font-weight:800; }
+.mini-feature small { display:block; color:#7b8ba1; font-size:11px; line-height:1.3; margin-top:5px; }
+
+.about-copy .secondary-btn {
+    display:inline-flex; align-items:center; justify-content:center; background:#073b78; color:#fff;
+    padding:14px 27px; margin-top:27px; border-radius:5px; font-size:12px; font-weight:800;
+    transition:background .25s ease,transform .25s ease,box-shadow .25s ease;
+}
+.about-copy .secondary-btn:hover { background:#0a4d9c; transform:translateY(-2px); box-shadow:0 8px 20px rgba(7,59,120,.2); }
+
+@media (max-width:1250px) {
+    .about-grid { width:1120px; grid-template-columns:510px minmax(0,1fr); gap:50px; }
+    .student-photo { width:510px; height:340px; }
+    .about-copy h2 { font-size:40px; }
 }
 
-.about-copy h2 span{
-    display:block;
-    color:#f0ad00;
+@media (max-width:1000px) {
+    .about { padding:65px 0 75px; }
+    .about-grid { width:90%; max-width:700px; grid-template-columns:1fr; gap:55px; }
+    .about-media { min-height:360px; }
+    .student-photo { width:570px; max-width:100%; height:360px; }
+    .about-copy { max-width:650px; margin:0 auto; }
+    .about-copy h2 { font-size:38px; }
 }
 
-.about-features{
-    margin-top:18px;
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:7px;
+@media (max-width:760px) {
+    .about { padding:55px 0 65px; }
+    .about-grid { width:92%; max-width:550px; grid-template-columns:1fr; gap:40px; }
+    .about-media { min-height:270px; }
+    .student-photo { width:100%; height:280px; border-radius:16px; }
+    .metric-card { min-width:105px; min-height:82px; padding:13px 16px; border-radius:10px; }
+    .metric-card strong { font-size:20px; }
+    .metric-card span { font-size:10px; }
+    .metric-top { left:-8px; top:15px; }
+    .metric-bottom { right:-8px; bottom:8px; }
+    .about-copy h2 { font-size:32px; line-height:1.1; }
+    .about-copy > p { font-size:13px; line-height:1.55; }
+    .about-features { grid-template-columns:1fr; gap:12px; margin-top:22px; }
+    .mini-feature { min-height:76px; }
 }
 
-.mini-feature{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    border:1px solid #dfe8f3;
-    background:#fff;
-    border-radius:5px;
-    padding:8px;
-}
-
-.mini-feature i{
-    width:24px;
-    height:24px;
-    border-radius:4px;
-    display:grid;
-    place-items:center;
-    flex:0 0 24px;
-    background:var(--navy);
-    color:var(--yellow);
-    font-style:normal;
-    font-size:9px;
-}
-
-.mini-feature strong{
-    display:block;
-    font-size:8px;
-    color:#183d6b;
-}
-
-.mini-feature small{
-    display:block;
-    color:#7b8ba1;
-    font-size:7px;
-    margin-top:2px;
-}
-
-.secondary-btn{
-    background:var(--navy);
-    color:#fff;
-    padding:10px 20px;
-    margin-top:17px;
+@media (max-width:480px) {
+    .student-photo { height:240px; }
+    .about-copy h2 { font-size:29px; }
+    .about-copy > p { font-size:12px; }
+    .metric-card { min-width:95px; min-height:72px; padding:10px 13px; }
+    .metric-card strong { font-size:18px; }
+    .metric-card span { font-size:9px; }
 }
 
 /* =========================================================
@@ -628,8 +779,9 @@ button{cursor:pointer}
 }
 
 .program-card:hover{
-    transform:translateY(-4px);
-    box-shadow:0 16px 35px rgba(19,55,94,.12);
+    transform:translateY(-5px);
+    border-top-color:#f0aa00;
+    box-shadow:0 18px 38px rgba(19,55,94,.14);
 }
 
 .program-icon{
@@ -753,17 +905,43 @@ button{cursor:pointer}
     }
 }
 
-/* ---------- faculty ---------- */
+/* =========================================================
+   FACULTY SLIDER
+========================================================= */
 
-.faculty-heading{
-    margin-bottom:29px;
+.faculty-slider{
+    position:relative;
+    width:100%;
+    max-width:1000px;
+    margin:30px auto 0;
+    display:flex;
+    align-items:center;
 }
 
-.faculty-grid{
+.faculty-viewport{
+    width:100%;
+    overflow:hidden;
+}
+
+.faculty-track{
+    display:flex;
+    width:300%;
+    transition:transform .55s cubic-bezier(.4,0,.2,1);
+    will-change:transform;
+}
+
+.faculty-slide{
+    width:33.333333%;
+    flex:0 0 33.333333%;
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:12px;
+    box-sizing:border-box;
+    padding:0 2px;
 }
+
+
+/* ---------- CARD ---------- */
 
 .faculty-card{
     border:1px solid #e2e8f0;
@@ -772,22 +950,43 @@ button{cursor:pointer}
     overflow:hidden;
     background:#fff;
     box-shadow:0 7px 18px rgba(14,51,91,.05);
+    min-width:0;
+    display:flex;
+    flex-direction:column;
 }
 
 .faculty-photo{
     height:110px;
     border-bottom:1px solid #edf1f6;
+    background:
+        linear-gradient(
+            135deg,
+            #eef5fc,
+            #ffffff 50%,
+            #dce9f7
+        );
+    display:grid;
+    place-items:center;
+}
+
+.faculty-photo span{
+    color:#37618f;
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:.5px;
 }
 
 .faculty-body{
     padding:12px 12px 15px;
     text-align:center;
+    flex:1;
 }
 
 .faculty-body h3{
     color:#0b3b72;
     font-size:10px;
     line-height:1.15;
+    margin:0;
 }
 
 .faculty-role{
@@ -802,6 +1001,7 @@ button{cursor:pointer}
     font-size:7px;
     line-height:1.55;
     min-height:72px;
+    margin:0;
 }
 
 .faculty-body strong{
@@ -812,22 +1012,130 @@ button{cursor:pointer}
     margin-top:9px;
 }
 
-.slider-controls{
-    display:flex;
-    justify-content:space-between;
-    margin-top:-115px;
+
+/* =========================================================
+   ARROWS
+========================================================= */
+
+.faculty-arrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    z-index:10;
+
+    width:36px;
+    height:36px;
+
+    border:0;
+    border-radius:50%;
+
+    background:#fff;
+    color:#16467d;
+
+    display:grid;
+    place-items:center;
+
+    font-size:25px;
+    line-height:1;
+
+    cursor:pointer;
+
+    box-shadow:0 5px 18px rgba(0,0,0,.13);
+
+    transition:
+        background .2s ease,
+        color .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.faculty-arrow:hover{
+    background:#0b3b72;
+    color:#fff;
+    box-shadow:0 7px 22px rgba(0,0,0,.18);
+}
+
+.faculty-arrow:active{
+    transform:translateY(-50%) scale(.94);
+}
+
+.faculty-prev{
+    left:-48px;
+}
+
+.faculty-next{
+    right:-48px;
+}
+
+
+/* Disabled arrow */
+
+.faculty-arrow:disabled{
+    opacity:.35;
+    cursor:not-allowed;
     pointer-events:none;
 }
 
-.slider-controls button{
-    pointer-events:auto;
-    width:25px;
-    height:25px;
-    border:0;
-    border-radius:50%;
-    background:#fff;
-    color:#16467d;
-    box-shadow:0 4px 15px rgba(0,0,0,.12);
+
+/* =========================================================
+   FACULTY RESPONSIVE
+========================================================= */
+
+@media(max-width:1100px){
+
+    .faculty-slider{
+        max-width:900px;
+    }
+
+    .faculty-prev{
+        left:-35px;
+    }
+
+    .faculty-next{
+        right:-35px;
+    }
+
+}
+
+
+@media(max-width:760px){
+
+    .faculty-slider{
+        max-width:100%;
+    }
+
+    .faculty-slide{
+        grid-template-columns:1fr;
+        gap:15px;
+    }
+
+    .faculty-track{
+        width:300%;
+    }
+
+    .faculty-slide{
+        width:33.333333%;
+        flex-basis:33.333333%;
+    }
+
+    .faculty-arrow{
+        width:32px;
+        height:32px;
+        font-size:21px;
+    }
+
+    .faculty-prev{
+        left:5px;
+    }
+
+    .faculty-next{
+        right:5px;
+    }
+
+    .faculty-viewport{
+        padding:0 25px;
+    }
+
 }
 
 /* ---------- benefits ---------- */
@@ -983,107 +1291,300 @@ button{cursor:pointer}
     color:#6b7790;
     font-size:9px;
     font-weight:800;
-    filter:grayscale(1);
+    filter:none;
 }
 
-/* ---------- faq ---------- */
+/* =========================================================
+   FAQ / EXPERT SECTION
+========================================================= */
 
 .faq-section{
-    padding:62px 0;
+    padding:70px 0 65px;
+    background:#f4f8fd;
 }
 
 .faq-grid{
+    width:1105px;
+    max-width:92%;
+    margin:0 auto;
+
     display:grid;
-    grid-template-columns:.62fr 1.38fr;
-    gap:18px;
-    max-width:1000px;
+    grid-template-columns:407px minmax(0,1fr);
+    gap:32px;
+
+    align-items:start;
 }
 
-.small-form-card,
-.faq-card{
-    background:#fff;
-    border:1px solid #e0e7ef;
-    border-radius:7px;
-    box-shadow:0 8px 24px rgba(15,54,95,.07);
-    padding:18px;
+/* =========================
+   LEFT EXPERT FORM CARD
+========================= */
+
+.small-form-card{
+    background:#ffffff;
+    border:1px solid #e1e7ef;
+    border-radius:16px;
+    box-shadow:0 12px 30px rgba(15,54,95,.08);
+
+    padding:25px 18px 19px;
+    min-height:490px;
 }
 
 .small-form-card h2{
-    color:#0b3b72;
-    font-size:17px;
-    line-height:1.05;
-    margin-bottom:14px;
+    color:#123f79;
+    font-size:31px;
+    line-height:1.08;
+    font-weight:800;
+    letter-spacing:-.5px;
+
+    margin:0 0 24px;
 }
 
 .small-form-card h2 span{
-    color:#0b3b72;
+    color:#123f79;
 }
+
+/* FORM */
 
 #expertForm{
     display:flex;
     flex-direction:column;
-    gap:7px;
+    gap:13px;
 }
 
 #expertForm input,
 #expertForm select{
-    height:31px;
-    border:1px solid #dde5ef;
-    border-radius:3px;
-    padding:0 8px;
+    width:100%;
+    height:50px;
+
+    border:1px solid #d7dee8;
+    border-radius:7px;
+
+    padding:0 14px;
+
     outline:none;
-    font-size:8px;
+
+    font-size:14px;
     color:#375575;
+
+    background:#ffffff;
 }
 
+#expertForm input::placeholder{
+    color:#75839a;
+    opacity:1;
+}
+
+#expertForm input:focus,
+#expertForm select:focus{
+    border-color:#174a83;
+    box-shadow:0 0 0 2px rgba(23,74,131,.06);
+}
+
+/* APPLY BUTTON */
+
 #expertForm button{
+    width:100%;
+    height:54px;
+
     border:0;
-    height:33px;
-    background:var(--yellow);
-    color:#15345f;
-    border-radius:3px;
-    font-size:8px;
-    font-weight:900;
+    border-radius:7px;
+
+    background:#FFC107;
+    color:#073b78;
+
+    font-size:16px;
+    font-weight:800;
+
+    margin-top:2px;
+
+    cursor:pointer;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+}
+
+#expertForm button:hover{
+    background:#ffca28;
+    transform:translateY(-1px);
+    box-shadow:0 7px 16px rgba(255,193,7,.24);
+}
+
+
+/* =========================
+   RIGHT FAQ CARD
+========================= */
+
+.faq-card{
+    background:#ffffff;
+    border:1px solid #e1e7ef;
+    border-radius:16px;
+
+    box-shadow:0 12px 30px rgba(15,54,95,.08);
+
+    min-height:319px;
+
+    padding:24px 18px 12px;
 }
 
 .faq-card h2{
-    color:#0b3b72;
-    font-size:17px;
-    margin-bottom:5px;
+    color:#123f79;
+
+    font-size:31px;
+    line-height:1.15;
+    font-weight:800;
+
+    letter-spacing:-.5px;
+
+    margin:0 0 21px;
 }
 
+/* FAQ ROW */
+
 .faq-item{
-    border-bottom:1px solid #e6ebf2;
+    border-bottom:1px solid #e3e8ef;
 }
 
 .faq-question{
     width:100%;
-    padding:11px 0;
+
+    min-height:54px;
+
+    padding:14px 0;
+
     background:none;
     border:0;
+
     display:flex;
+    align-items:center;
     justify-content:space-between;
+
     text-align:left;
-    color:#29486d;
-    font-size:9px;
-    font-weight:800;
+
+    color:#202020;
+
+    font-size:16px;
+    line-height:1.25;
+    font-weight:700;
+
+    cursor:pointer;
 }
 
 .faq-question span{
-    color:#e5a800;
-    font-size:13px;
+    color:#111111;
+
+    font-size:20px;
+    line-height:1;
+
+    margin-left:15px;
 }
 
 .faq-answer{
     display:none;
+
     color:#71839a;
-    font-size:8px;
-    line-height:1.5;
-    padding:0 0 10px;
+
+    font-size:14px;
+    line-height:1.55;
+
+    padding:0 0 14px;
 }
 
 .faq-item.open .faq-answer{
     display:block;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width:1150px){
+
+    .faq-grid{
+        width:94%;
+        max-width:94%;
+
+        grid-template-columns:
+            minmax(300px,.62fr)
+            minmax(0,1fr);
+    }
+
+    .small-form-card h2,
+    .faq-card h2{
+        font-size:27px;
+    }
+
+    .faq-question{
+        font-size:15px;
+    }
+}
+
+
+@media (max-width:760px){
+
+    .faq-section{
+        padding:50px 0 55px;
+    }
+
+    .faq-grid{
+        width:92%;
+        max-width:92%;
+
+        grid-template-columns:1fr;
+
+        gap:22px;
+    }
+
+    .small-form-card{
+        min-height:0;
+    }
+
+    .small-form-card h2,
+    .faq-card h2{
+        font-size:27px;
+    }
+
+    .faq-question{
+        font-size:14px;
+        min-height:50px;
+    }
+}
+
+
+@media (max-width:500px){
+
+    .faq-grid{
+        width:92%;
+        max-width:92%;
+    }
+
+    .small-form-card,
+    .faq-card{
+        border-radius:13px;
+        padding:20px 15px;
+    }
+
+    .small-form-card h2,
+    .faq-card h2{
+        font-size:24px;
+    }
+
+    #expertForm input,
+    #expertForm select{
+        height:48px;
+        font-size:13px;
+    }
+
+    #expertForm button{
+        height:51px;
+        font-size:15px;
+    }
+
+    .faq-question{
+        font-size:13px;
+    }
 }
 
 /* ---------- accreditation ---------- */
@@ -1290,6 +1791,7 @@ button{cursor:pointer}
     .hero{padding:40px 0}
     .hero-grid,.about-grid,.faq-grid,.accreditation-grid{grid-template-columns:1fr}
     .hero-grid{gap:30px}
+    .application-card{width:100%;max-width:423px}
     .hero h1{font-size:34px}
     .hero-points{grid-template-columns:1fr 1fr}
     .application-card{max-width:470px;margin:auto;width:100%}
@@ -1317,4 +1819,2862 @@ button{cursor:pointer}
     .footer-grid{grid-template-columns:1fr}
     .accreditation-grid{grid-template-columns:1fr}
     .accreditation-photo{height:210px}
+}
+
+/* =========================================================
+   GLOBAL CENTERED CONTENT
+   Match client reference layout
+========================================================= */
+
+/* Main content width */
+.container {
+    width: 1080px;
+    max-width: calc(100% - 80px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.top-strip-inner {
+    width: 1080px;
+    max-width: calc(100% - 80px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.nav-inner {
+    width: 1080px;
+    max-width: calc(100% - 80px);
+    margin-left: auto;
+    margin-right: auto;
+
+    height: 66px;
+}
+
+
+/* Keep logo inside the centered navbar */
+.brand {
+    width: 180px;
+    min-width: 180px;
+}
+
+.amity-logo {
+    width: 180px;
+    max-height: 58px;
+}
+
+
+/* Navigation */
+.main-nav {
+    margin-left: auto;
+    gap: 25px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero-grid {
+    width: 1080px;
+    max-width: calc(100% - 80px);
+
+    margin-left: auto;
+    margin-right: auto;
+
+    grid-template-columns: minmax(0, 1fr) 423px;
+
+    gap: 55px;
+}
+
+
+/* Keep hero text from spreading */
+.hero-copy {
+    max-width: 600px;
+}
+
+
+/* =========================================================
+   ABOUT SECTION
+========================================================= */
+
+.about-grid {
+    width: 1080px;
+    max-width: calc(100% - 80px);
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   PROGRAMS
+========================================================= */
+
+.program-grid {
+    width: 1065px;
+    max-width: calc(100% - 80px);
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   FACULTY
+========================================================= */
+
+.faculty-grid {
+    width: 1080px;
+    max-width: calc(100% - 80px);
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+
+.benefit-grid {
+    width: 1080px;
+    max-width: calc(100% - 80px);
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   TESTIMONIALS
+========================================================= */
+
+.testimonial-grid {
+    width: 950px;
+    max-width: calc(100% - 80px);
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   PARTNER / LOGO SECTION
+========================================================= */
+
+.partner-grid {
+    width: 1080px;
+    max-width: calc(100% - 80px);
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.faq-grid {
+    width: 950px;
+    max-width: calc(100% - 80px);
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   ACCREDITATION
+========================================================= */
+
+.accreditation-grid {
+    width: 1080px;
+    max-width: calc(100% - 80px);
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer-grid {
+    width: 1080px;
+    max-width: calc(100% - 80px);
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.footer-bottom {
+    width: 1080px;
+    max-width: calc(100% - 80px);
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
+
+.section-heading {
+    width: 100%;
+    max-width: 760px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   DESKTOP SECTION SPACING
+========================================================= */
+
+.section-light,
+.section-white {
+    width: 100%;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1150px) {
+
+    .container,
+    .top-strip-inner,
+    .nav-inner,
+    .hero-grid,
+    .about-grid,
+    .program-grid,
+    .faculty-grid,
+    .benefit-grid,
+    .partner-grid,
+    .accreditation-grid,
+    .footer-grid,
+    .footer-bottom {
+
+        max-width: calc(100% - 50px);
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+    .container,
+    .top-strip-inner,
+    .nav-inner,
+    .hero-grid,
+    .about-grid,
+    .program-grid,
+    .faculty-grid,
+    .benefit-grid,
+    .testimonial-grid,
+    .partner-grid,
+    .faq-grid,
+    .accreditation-grid,
+    .footer-grid,
+    .footer-bottom {
+
+        width: 100%;
+
+        max-width: calc(100% - 30px);
+
+    }
+
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+
+    .hero-copy {
+        max-width: 100%;
+    }
+
+
+    .main-nav {
+        gap: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+
+    .container,
+    .top-strip-inner,
+    .nav-inner,
+    .hero-grid,
+    .about-grid,
+    .program-grid,
+    .faculty-grid,
+    .benefit-grid,
+    .testimonial-grid,
+    .partner-grid,
+    .faq-grid,
+    .accreditation-grid,
+    .footer-grid,
+    .footer-bottom {
+
+        max-width: calc(100% - 24px);
+
+    }
+
+
+    .brand {
+        width: 145px;
+        min-width: 145px;
+    }
+
+
+    .amity-logo {
+        width: 145px;
+    }
+
+}
+
+/* =========================================================
+   MORE COMPACT CENTERED LAYOUT
+========================================================= */
+
+.container,
+.top-strip-inner,
+.nav-inner,
+.hero-grid,
+.about-grid,
+.faculty-grid,
+.benefit-grid,
+.partner-grid,
+.accreditation-grid,
+.footer-grid,
+.footer-bottom {
+    width: 950px;
+    max-width: calc(100% - 100px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Programs */
+.program-grid {
+    width: 930px;
+    max-width: calc(100% - 100px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Testimonials + FAQ */
+.testimonial-grid,
+.faq-grid {
+    width: 850px;
+    max-width: calc(100% - 100px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Hero */
+.hero-grid {
+    grid-template-columns: minmax(0, 1fr) 423px;
+    gap: 45px;
+}
+
+
+/* Keep headings centered */
+.section-heading {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .container,
+    .top-strip-inner,
+    .nav-inner,
+    .hero-grid,
+    .about-grid,
+    .program-grid,
+    .faculty-grid,
+    .benefit-grid,
+    .testimonial-grid,
+    .partner-grid,
+    .faq-grid,
+    .accreditation-grid,
+    .footer-grid,
+    .footer-bottom {
+        width: 90%;
+        max-width: 90%;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+    .container,
+    .top-strip-inner,
+    .nav-inner,
+    .hero-grid,
+    .about-grid,
+    .program-grid,
+    .faculty-grid,
+    .benefit-grid,
+    .testimonial-grid,
+    .partner-grid,
+    .faq-grid,
+    .accreditation-grid,
+    .footer-grid,
+    .footer-bottom {
+        width: 92%;
+        max-width: 92%;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+}
+
+/* =========================================================
+   FINAL ABOUT WIDTH OVERRIDE
+   Prevents the later compact-layout rules from shrinking
+   the About section below the client reference width.
+========================================================= */
+
+@media (min-width:1051px) {
+    .about-grid {
+        width:1240px;
+        max-width:calc(100% - 100px);
+        grid-template-columns:570px minmax(0,1fr);
+        gap:60px;
+    }
+    .student-photo { width:570px; height:382px; }
+}
+
+@media (min-width:761px) and (max-width:1050px) {
+    .about-grid { width:90%; max-width:90%; grid-template-columns:1fr; gap:55px; }
+    .student-photo { width:570px; max-width:100%; height:360px; }
+}
+
+@media (max-width:760px) {
+    .about-grid { width:92%; max-width:92%; grid-template-columns:1fr; }
+    .student-photo { width:100%; max-width:100%; }
+}
+
+/* =========================================================
+   ACTUAL REFERENCE IMAGES
+========================================================= */
+
+/* ---------- SHAPE YOUR FUTURE IMAGE ---------- */
+
+.student-photo {
+    position: relative;
+    width: 570px;
+    height: 382px;
+    border-radius: 22px;
+    overflow: hidden;
+    background: #eaf2ff;
+    box-shadow: 0 20px 45px rgba(20, 61, 105, 0.15);
+}
+
+.student-photo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* ---------- 225K / 36K CARDS ---------- */
+
+.metric-card {
+    position: absolute;
+    z-index: 5;
+
+    background: #ffffff;
+
+    border-radius: 14px;
+
+    padding: 18px 22px;
+
+    min-width: 127px;
+    min-height: 108px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    box-shadow:
+        0 14px 35px rgba(8, 45, 90, 0.14);
+}
+
+.metric-card strong {
+    color: #17497f;
+    font-size: 25px;
+    line-height: 1.1;
+    font-weight: 800;
+}
+
+.metric-card span {
+    color: #73839a;
+    font-size: 12px;
+    margin-top: 7px;
+}
+
+.metric-top {
+    left: -20px;
+    top: 35px;
+}
+
+.metric-bottom {
+    right: -20px;
+    bottom: 18px;
+}
+
+
+/* =========================================================
+   ACCREDITATION IMAGE
+========================================================= */
+
+.accreditation-photo {
+    height: 438px;
+    width: 342px;
+
+    border-radius: 7px;
+    overflow: hidden;
+
+    background: #eaf2ff;
+}
+
+.accreditation-photo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* =========================================================
+   ACCREDITATION SECTION
+========================================================= */
+
+.accreditation {
+    background: #06386f;
+    color: #ffffff;
+    padding: 48px 0;
+}
+
+.accreditation-grid {
+    display: grid;
+    grid-template-columns: 342px minmax(0, 1fr);
+    gap: 48px;
+    align-items: center;
+
+    width: 1080px;
+    max-width: calc(100% - 100px);
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.accreditation-copy {
+    max-width: 760px;
+}
+
+.accreditation-title {
+    color: #ffbf00;
+    font-size: 31px;
+    line-height: 1.15;
+    font-weight: 800;
+    letter-spacing: .2px;
+    margin-bottom: 18px;
+}
+
+.accreditation-copy p {
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 17px;
+}
+
+.accreditation-logos {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin-top: 10px;
+}
+
+.accreditation-logos span {
+    width: 62px;
+    height: 52px;
+
+    border-radius: 4px;
+
+    background: transparent;
+    color: #ffffff;
+
+    display: grid;
+    place-items: center;
+
+    font-size: 10px;
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   ABOUT SECTION — DESKTOP
+========================================================= */
+
+@media (min-width: 1051px) {
+
+    .about-grid {
+        width: 1240px;
+        max-width: calc(100% - 100px);
+
+        grid-template-columns: 570px minmax(0, 1fr);
+
+        gap: 60px;
+    }
+
+    .student-photo {
+        width: 570px;
+        height: 382px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .about-grid {
+        width: 90%;
+        max-width: 90%;
+    }
+
+    .student-photo {
+        width: 100%;
+        max-width: 570px;
+        height: 360px;
+    }
+
+    .accreditation-grid {
+        width: 90%;
+        max-width: 90%;
+        grid-template-columns: 300px 1fr;
+        gap: 35px;
+    }
+
+    .accreditation-photo {
+        width: 300px;
+        height: 390px;
+    }
+
+    .accreditation-title {
+        font-size: 27px;
+    }
+
+    .accreditation-copy p {
+        font-size: 13px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+    .about-grid {
+        width: 92%;
+        max-width: 92%;
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .student-photo {
+        width: 100%;
+        height: 280px;
+        border-radius: 16px;
+    }
+
+    .metric-card {
+        min-width: 105px;
+        min-height: 82px;
+
+        padding: 13px 16px;
+
+        border-radius: 10px;
+    }
+
+    .metric-card strong {
+        font-size: 20px;
+    }
+
+    .metric-card span {
+        font-size: 10px;
+    }
+
+    .metric-top {
+        left: -8px;
+        top: 15px;
+    }
+
+    .metric-bottom {
+        right: -8px;
+        bottom: 8px;
+    }
+
+
+    /* Accreditation */
+
+    .accreditation {
+        padding: 45px 0;
+    }
+
+    .accreditation-grid {
+        width: 92%;
+        max-width: 92%;
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .accreditation-photo {
+        width: 100%;
+        max-width: 360px;
+        height: 420px;
+
+        margin: 0 auto;
+    }
+
+    .accreditation-copy {
+        width: 100%;
+    }
+
+    .accreditation-title {
+        font-size: 25px;
+    }
+
+    .accreditation-copy p {
+        font-size: 13px;
+        line-height: 1.55;
+    }
+
+    .accreditation-logos {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .student-photo {
+        height: 240px;
+    }
+
+    .accreditation-photo {
+        height: 360px;
+    }
+
+    .accreditation-title {
+        font-size: 22px;
+    }
+
+    .accreditation-copy p {
+        font-size: 12px;
+    }
+
+}
+
+/* =========================================================
+   FOOTER
+   CLIENT REFERENCE MATCH
+========================================================= */
+
+.footer {
+    position: relative;
+    background: #0b4678;
+    color: #ffffff;
+    padding: 72px 0 0;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   FOOTER MAIN CONTAINER
+========================================================= */
+
+.footer-grid {
+    width: 1280px;
+    max-width: calc(100% - 120px);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        2.15fr
+        1fr
+        1fr
+        1.15fr;
+
+    column-gap: 72px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   FOOTER BRAND
+========================================================= */
+
+.footer-brand {
+    max-width: 450px;
+}
+
+.footer-brand-mark {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 38px;
+}
+
+.footer-brand-mark .amity-logo {
+    width: 225px;
+    height: auto;
+
+    display: block;
+}
+
+
+/* DESCRIPTION */
+
+.footer-brand p {
+    margin: 0;
+
+    max-width: 450px;
+
+    color: rgba(255,255,255,.96);
+
+    font-size: 17px;
+    line-height: 1.9;
+
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   FOOTER COLUMNS
+========================================================= */
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+
+/* =========================================================
+   FOOTER HEADINGS
+========================================================= */
+
+.footer-column h3 {
+    position: relative;
+
+    margin: 4px 0 30px;
+
+    padding-bottom: 14px;
+
+    color: #ffffff;
+
+    font-size: 27px;
+    line-height: 1.15;
+
+    font-weight: 800;
+
+    letter-spacing: -.4px;
+}
+
+
+/* Yellow heading underline */
+
+.footer-column h3::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 55px;
+    height: 4px;
+
+    background: #ffbf00;
+
+    border-radius: 3px;
+}
+
+
+/* =========================================================
+   FOOTER LINKS
+========================================================= */
+
+.footer-column > a {
+    display: block;
+
+    margin-bottom: 19px;
+
+    color: #ffffff;
+
+    font-size: 17px;
+    line-height: 1.35;
+
+    text-decoration: none;
+
+    transition:
+        color .2s ease,
+        transform .2s ease;
+}
+
+.footer-column > a:hover {
+    color: #ffbf00;
+
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.footer-contact > a,
+.contact-location {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 23px;
+
+    color: #ffffff;
+
+    font-size: 17px;
+    line-height: 1.4;
+
+    text-decoration: none;
+}
+
+.footer-contact > a:hover {
+    color: #ffbf00;
+}
+
+
+/* Contact icons */
+
+.contact-icon {
+    width: 22px;
+    min-width: 22px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
+
+.footer-bottom {
+    margin-top: 62px;
+
+    border-top: 1px solid rgba(255,255,255,.16);
+}
+
+
+.footer-bottom-inner {
+    width: 1280px;
+    max-width: calc(100% - 120px);
+
+    min-height: 94px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+.footer-bottom-inner > span {
+    color: #ffffff;
+
+    font-size: 14px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   BOTTOM LINKS
+========================================================= */
+
+.footer-bottom-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+
+.footer-bottom-links a {
+    color: #ffffff;
+
+    font-size: 14px;
+
+    text-decoration: none;
+
+    transition: color .2s ease;
+}
+
+
+.footer-bottom-links a:hover {
+    color: #ffbf00;
+}
+
+
+/* =========================================================
+   DESKTOP — MATCH REFERENCE WIDTH
+========================================================= */
+
+@media (min-width: 1400px) {
+
+    .footer-grid {
+        width: 1280px;
+        max-width: 1280px;
+
+        column-gap: 72px;
+    }
+
+    .footer-bottom-inner {
+        width: 1280px;
+        max-width: 1280px;
+    }
+
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .footer-grid {
+        width: 90%;
+        max-width: 90%;
+
+        column-gap: 45px;
+
+        grid-template-columns:
+            2fr
+            1fr
+            1fr
+            1.1fr;
+    }
+
+    .footer-brand-mark .amity-logo {
+        width: 195px;
+    }
+
+    .footer-brand p {
+        font-size: 15px;
+        line-height: 1.75;
+    }
+
+    .footer-column h3 {
+        font-size: 23px;
+    }
+
+    .footer-column > a,
+    .footer-contact > a,
+    .contact-location {
+        font-size: 15px;
+    }
+
+    .footer-bottom-inner {
+        width: 90%;
+        max-width: 90%;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .footer {
+        padding-top: 60px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1.5fr 1fr;
+
+        row-gap: 50px;
+
+        width: 90%;
+        max-width: 90%;
+    }
+
+    .footer-brand {
+        max-width: 420px;
+    }
+
+    .footer-column h3 {
+        font-size: 22px;
+    }
+
+    .footer-bottom-inner {
+        min-height: 85px;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        text-align: center;
+
+        padding: 20px 0;
+
+        gap: 18px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .footer {
+        padding-top: 50px;
+    }
+
+    .footer-grid {
+        width: 90%;
+        max-width: 90%;
+
+        grid-template-columns: 1fr;
+
+        row-gap: 40px;
+    }
+
+    .footer-brand {
+        max-width: 100%;
+    }
+
+    .footer-brand-mark {
+        margin-bottom: 25px;
+    }
+
+    .footer-brand-mark .amity-logo {
+        width: 190px;
+    }
+
+    .footer-brand p {
+        max-width: 100%;
+
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .footer-column h3 {
+        font-size: 21px;
+
+        margin-bottom: 24px;
+    }
+
+    .footer-column > a {
+        font-size: 15px;
+
+        margin-bottom: 15px;
+    }
+
+    .footer-contact > a,
+    .contact-location {
+        font-size: 15px;
+
+        margin-bottom: 17px;
+    }
+
+    .footer-bottom {
+        margin-top: 45px;
+    }
+
+    .footer-bottom-inner {
+        width: 90%;
+        max-width: 90%;
+
+        min-height: auto;
+
+        padding: 25px 0;
+
+        flex-direction: column;
+
+        gap: 18px;
+    }
+
+    .footer-bottom-inner > span {
+        font-size: 12px;
+
+        white-space: normal;
+
+        text-align: center;
+    }
+
+    .footer-bottom-links {
+        gap: 17px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .footer-bottom-links a {
+        font-size: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .footer-brand-mark .amity-logo {
+        width: 170px;
+    }
+
+    .footer-column h3 {
+        font-size: 20px;
+    }
+
+    .footer-bottom-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
+
+
+/* =========================================================
+   FINAL TESTIMONIALS — CLIENT REFERENCE MATCH
+   Replace/override all earlier testimonial styling
+========================================================= */
+
+.testimonial-grid {
+    width: 1177px !important;
+    max-width: calc(100% - 120px) !important;
+    margin: 58px auto 0 !important;
+
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 24px !important;
+}
+
+
+/* Reference section heading */
+.section-light:has(.testimonial-grid) {
+    background:
+        radial-gradient(circle at 100% 0%, rgba(255,191,0,.08), transparent 24%),
+        #f5f8fc;
+    padding: 72px 0 70px;
+}
+
+.section-light:has(.testimonial-grid) .section-heading {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto 0;
+    text-align: center;
+}
+
+.section-light:has(.testimonial-grid) .eyebrow {
+    color: #f5ad00;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+}
+
+.section-light:has(.testimonial-grid) .section-heading h2 {
+    color: #073b78;
+    font-size: 42px;
+    line-height: 1.15;
+    font-weight: 800;
+    letter-spacing: -.8px;
+    margin: 0 0 14px;
+}
+
+.section-light:has(.testimonial-grid) .section-heading p {
+    color: #667b96;
+    font-size: 16px;
+    line-height: 1.55;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+
+/* Individual testimonial card */
+.testimonial-card {
+    position: relative;
+
+    min-height: 345px !important;
+
+    background: #ffffff !important;
+    border: 1px solid #edf0f5 !important;
+    border-radius: 20px !important;
+
+    padding: 30px 31px 27px !important;
+
+    box-shadow: 0 10px 28px rgba(24,61,105,.08) !important;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-6px);
+    border-color: #ffbf00 !important;
+    box-shadow: 0 18px 38px rgba(24,61,105,.13) !important;
+}
+
+
+/* Quote mark in upper-right */
+.testimonial-card::after {
+    content: "“";
+
+    position: absolute;
+    top: 22px;
+    right: 20px;
+
+    color: #edf3fc;
+
+    font-family: Georgia, serif;
+    font-size: 58px;
+    line-height: 1;
+    font-weight: 900;
+
+    pointer-events: none;
+}
+
+
+/* Avatar */
+.testimonial-card .avatar {
+    width: 60px !important;
+    height: 60px !important;
+    min-width: 60px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #173f7a !important;
+    color: #ffffff !important;
+
+    font-size: 16px !important;
+    font-weight: 800;
+
+    margin-bottom: 20px;
+}
+
+
+/* Stars */
+.testimonial-card .stars {
+    color: #ffb400 !important;
+
+    font-size: 15px !important;
+    line-height: 1;
+
+    letter-spacing: 1px;
+
+    margin: 0 0 22px !important;
+}
+
+
+/* Testimonial quote */
+.testimonial-card p {
+    color: #394f6a !important;
+
+    font-size: 16px !important;
+    line-height: 1.65 !important;
+
+    min-height: 0 !important;
+
+    margin: 0 !important;
+
+    max-width: 100%;
+}
+
+
+/* Student name */
+.testimonial-card h3 {
+    color: #073b78 !important;
+
+    font-size: 24px !important;
+    line-height: 1.2;
+
+    font-weight: 700;
+
+    margin-top: auto !important;
+    margin-bottom: 14px !important;
+}
+
+
+/* Course / location */
+.testimonial-card span {
+    color: #71849c !important;
+
+    font-size: 14px !important;
+    line-height: 1.4;
+
+    margin: 0;
+}
+
+
+/* Keep the dots subtle like the reference */
+.testimonial-grid + .dots {
+    display: none;
+}
+
+
+/* =========================================================
+   TESTIMONIAL RESPONSIVE
+========================================================= */
+
+@media (max-width: 1250px) {
+
+    .testimonial-grid {
+        width: 1050px !important;
+        max-width: calc(100% - 80px) !important;
+    }
+
+    .testimonial-card {
+        min-height: 330px !important;
+        padding: 28px !important;
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .testimonial-grid {
+        width: 90% !important;
+        max-width: 90% !important;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    .section-light:has(.testimonial-grid) .section-heading h2 {
+        font-size: 38px;
+    }
+
+}
+
+
+@media (max-width: 760px) {
+
+    .section-light:has(.testimonial-grid) {
+        padding: 55px 0 60px;
+    }
+
+    .section-light:has(.testimonial-grid) .section-heading {
+        width: 92%;
+        max-width: 92%;
+    }
+
+    .section-light:has(.testimonial-grid) .section-heading h2 {
+        font-size: 32px;
+        letter-spacing: -.4px;
+    }
+
+    .section-light:has(.testimonial-grid) .section-heading p {
+        font-size: 14px;
+    }
+
+    .testimonial-grid {
+        width: 92% !important;
+        max-width: 92% !important;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 18px !important;
+
+        margin-top: 40px !important;
+    }
+
+    .testimonial-card {
+        min-height: 300px !important;
+        padding: 25px !important;
+    }
+
+    .testimonial-card .avatar {
+        width: 55px !important;
+        height: 55px !important;
+        min-width: 55px;
+    }
+
+    .testimonial-card h3 {
+        font-size: 21px !important;
+    }
+
+    .testimonial-card p {
+        font-size: 14px !important;
+    }
+
+    .testimonial-card span {
+        font-size: 13px !important;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .section-light:has(.testimonial-grid) .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .testimonial-card {
+        min-height: 280px !important;
+        padding: 22px !important;
+    }
+
+}
+
+
+/* =========================================================
+   FINAL FLOATING CALL + WHATSAPP BUTTONS
+========================================================= */
+
+.floating-actions {
+    position: fixed !important;
+    right: 14px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px !important;
+
+    z-index: 9999 !important;
+}
+
+.floating-actions a {
+    width: 52px !important;
+    height: 52px !important;
+    min-width: 52px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    border-radius: 50% !important;
+    color: #fff !important;
+
+    box-shadow: 0 5px 14px rgba(0,0,0,.16) !important;
+    font-size: 22px !important;
+
+    transition: transform .2s ease, box-shadow .2s ease !important;
+}
+
+.floating-actions a:hover {
+    transform: scale(1.08) !important;
+    box-shadow: 0 8px 20px rgba(0,0,0,.22) !important;
+}
+
+.floating-actions a:first-child {
+    background: #1769d9 !important;
+}
+
+.floating-actions a:last-child {
+    background: #20c967 !important;
+}
+
+.floating-actions a i,
+.floating-actions a svg {
+    display: block;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    .floating-actions {
+        right: 12px !important;
+        gap: 15px !important;
+    }
+
+    .floating-actions a {
+        width: 48px !important;
+        height: 48px !important;
+        min-width: 48px !important;
+        font-size: 20px !important;
+    }
+}
+
+/* =========================================================
+   FINAL FIX — CALL + WHATSAPP BOTTOM RIGHT
+   ========================================================= */
+
+body .floating-actions {
+    position: fixed !important;
+
+    top: auto !important;
+    left: auto !important;
+    bottom: 45px !important;
+    right: 18px !important;
+
+    transform: none !important;
+
+    width: auto !important;
+    height: auto !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+
+    gap: 18px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    z-index: 999999 !important;
+}
+
+
+/* BUTTONS */
+
+body .floating-actions a {
+    position: relative !important;
+
+    width: 52px !important;
+    height: 52px !important;
+    min-width: 52px !important;
+    max-width: 52px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border: none !important;
+    border-radius: 50% !important;
+
+    color: #ffffff !important;
+
+    text-decoration: none !important;
+
+    box-sizing: border-box !important;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.20) !important;
+
+    font-size: 23px !important;
+
+    line-height: 1 !important;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease !important;
+}
+
+
+/* CALL */
+
+body .floating-actions a:first-child {
+    background: #1769d9 !important;
+}
+
+
+/* WHATSAPP */
+
+body .floating-actions a:last-child {
+    background: #20c967 !important;
+}
+
+
+/* ICONS */
+
+body .floating-actions a i {
+    display: block !important;
+
+    width: auto !important;
+    height: auto !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    line-height: 1 !important;
+}
+
+
+/* HOVER */
+
+body .floating-actions a:hover {
+    transform: scale(1.08) !important;
+
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28) !important;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    body .floating-actions {
+        right: 12px !important;
+        bottom: 25px !important;
+
+        gap: 14px !important;
+    }
+
+    body .floating-actions a {
+        width: 48px !important;
+        height: 48px !important;
+        min-width: 48px !important;
+        max-width: 48px !important;
+
+        font-size: 21px !important;
+    }
+}
+
+/* =========================================================
+   BLUE FEATURES / BENEFITS SECTION
+   CLIENT REFERENCE MATCH
+   ========================================================= */
+
+.features-section {
+    position: relative;
+    width: 100%;
+    min-height: 405px;
+
+    background: #0b3473;
+
+    padding: 60px 0 65px;
+
+    overflow: hidden;
+}
+
+
+/* Decorative circle on the left */
+
+.features-section::before {
+    content: "";
+    position: absolute;
+
+    width: 430px;
+    height: 430px;
+
+    left: -175px;
+    top: -150px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    pointer-events: none;
+}
+
+
+/* Main centered container */
+
+.features-section .container {
+    position: relative;
+    z-index: 2;
+
+    width: min(100%, 1320px);
+
+    margin: 0 auto;
+
+    padding: 0 20px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   FEATURES GRID
+   ========================================================= */
+
+.features-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(6, 155px);
+
+    justify-content: center;
+
+    align-items: stretch;
+
+    gap: 20px;
+
+    width: 100%;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   FEATURE CARD
+   ========================================================= */
+
+.feature-card {
+    position: relative;
+
+    width: 155px;
+    height: 275px;
+
+    min-height: 275px;
+
+    box-sizing: border-box;
+
+    padding: 25px 18px 22px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.045);
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    border-radius: 15px;
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.feature-card .feature-icon {
+    width: 82px;
+    height: 82px;
+
+    margin: 0 auto 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffbf00;
+
+    background: transparent;
+
+    border: none;
+
+    font-size: 52px;
+
+    line-height: 1;
+
+    flex-shrink: 0;
+}
+
+
+/* If icon uses img */
+
+.feature-card .feature-icon img {
+    width: 70px;
+    height: 70px;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* If icon itself is an SVG */
+
+.feature-card .feature-icon svg {
+    width: 62px;
+    height: 62px;
+
+    stroke: #ffbf00;
+
+    color: #ffbf00;
+
+    fill: none;
+
+    stroke-width: 1.8;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.feature-card h3 {
+    width: 100%;
+
+    margin: 0 0 12px;
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    line-height: 1.12;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.feature-card p {
+    width: 100%;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.88);
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    line-height: 1.55;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+.feature-card:hover {
+    transform: translateY(-2px);
+
+    background: rgba(255, 255, 255, 0.055);
+
+    border-color: #ffbf00;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================================
+   ACTIVE / HIGHLIGHTED CARD
+   ========================================================= */
+
+.feature-card.active,
+.feature-card:nth-child(3) {
+    border: 1.5px solid #ffbf00;
+
+    background: rgba(255, 255, 255, 0.045);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.10);
+}
+
+
+/* Active icon */
+
+.feature-card.active .feature-icon,
+.feature-card:nth-child(3) .feature-icon {
+    color: #ffbf00;
+}
+
+
+/* =========================================================
+   REMOVE OLD BLUE ICON BOX
+   ========================================================= */
+
+.features-section .feature-card .icon-box,
+.features-section .feature-card .icon,
+.features-section .feature-card .feature-icon-box {
+    background: transparent !important;
+
+    border: none !important;
+
+    box-shadow: none !important;
+
+    border-radius: 0 !important;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    .features-grid {
+        grid-template-columns:
+            repeat(3, 155px);
+
+        row-gap: 20px;
+    }
+
+    .features-section {
+        padding: 55px 20px;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .features-grid {
+        grid-template-columns:
+            repeat(2, minmax(145px, 155px));
+
+        gap: 15px;
+
+        justify-content: center;
+    }
+
+    .feature-card {
+        width: 155px;
+        height: 260px;
+        min-height: 260px;
+    }
+
+    .feature-card h3 {
+        font-size: 16px;
+    }
+
+    .feature-card p {
+        font-size: 13px;
+    }
+
+    .feature-card .feature-icon {
+        margin-bottom: 22px;
+    }
+}
+
+
+@media (max-width: 400px) {
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card {
+        width: 155px;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* =========================================================
+   FINAL BENEFITS SECTION
+   EXACT CLIENT-STYLE BLUE FEATURE CARDS
+   ========================================================= */
+
+.benefit-strip {
+    position: relative !important;
+    width: 100% !important;
+    min-height: 405px !important;
+
+    background: #0b3473 !important;
+
+    padding: 60px 0 65px !important;
+
+    overflow: hidden !important;
+}
+
+
+/* LEFT DECORATIVE CIRCLE */
+
+.benefit-strip::before {
+    content: "" !important;
+
+    position: absolute !important;
+
+    width: 430px !important;
+    height: 430px !important;
+
+    left: -175px !important;
+    top: -150px !important;
+
+    border-radius: 50% !important;
+
+    background: rgba(255, 255, 255, 0.08) !important;
+
+    pointer-events: none !important;
+
+    z-index: 0 !important;
+}
+
+
+/* CENTERED CONTENT */
+
+.benefit-strip > .container {
+    position: relative !important;
+
+    z-index: 2 !important;
+
+    width: 100% !important;
+    max-width: 1320px !important;
+
+    margin: 0 auto !important;
+
+    padding: 0 20px !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* SIX CARDS IN ONE ROW */
+
+.benefit-grid {
+    display: grid !important;
+
+    grid-template-columns:
+        repeat(6, 155px) !important;
+
+    justify-content: center !important;
+
+    align-items: stretch !important;
+
+    gap: 20px !important;
+
+    width: 100% !important;
+
+    margin: 0 auto !important;
+}
+
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.benefit-box {
+    position: relative !important;
+
+    width: 155px !important;
+    height: 275px !important;
+
+    min-height: 275px !important;
+
+    box-sizing: border-box !important;
+
+    padding: 25px 18px 22px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    align-items: center !important;
+
+    justify-content: flex-start !important;
+
+    text-align: center !important;
+
+    color: #ffffff !important;
+
+    background: rgba(255, 255, 255, 0.045) !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.10) !important;
+
+    border-radius: 15px !important;
+
+    box-shadow: none !important;
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease !important;
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.benefit-box .benefit-icon {
+    width: 82px !important;
+    height: 82px !important;
+
+    min-width: 82px !important;
+    min-height: 82px !important;
+
+    margin: 0 auto 28px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    color: #ffbf00 !important;
+
+    background: transparent !important;
+
+    border: none !important;
+
+    box-shadow: none !important;
+
+    font-size: 42px !important;
+
+    line-height: 1 !important;
+}
+
+
+/* =========================================================
+   CARD TITLE
+   ========================================================= */
+
+.benefit-box strong {
+    width: 100% !important;
+
+    margin: 0 0 12px !important;
+
+    color: #ffffff !important;
+
+    font-size: 18px !important;
+
+    font-weight: 700 !important;
+
+    line-height: 1.12 !important;
+
+    text-align: center !important;
+}
+
+
+/* =========================================================
+   CARD DESCRIPTION
+   ========================================================= */
+
+.benefit-box p {
+    width: 100% !important;
+
+    margin: 0 !important;
+
+    color: rgba(255, 255, 255, 0.88) !important;
+
+    font-size: 14px !important;
+
+    font-weight: 400 !important;
+
+    line-height: 1.55 !important;
+
+    text-align: center !important;
+}
+
+
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+.benefit-box:hover {
+    transform: translateY(-2px) !important;
+
+    background: rgba(255, 255, 255, 0.055) !important;
+
+    border-color: #ffbf00 !important;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.12) !important;
+}
+
+
+/* =========================================================
+   THIRD CARD — ACTIVE / HIGHLIGHTED
+   CAREER SERVICES
+   ========================================================= */
+
+.benefit-box:nth-child(3) {
+    border: 1.5px solid #ffbf00 !important;
+
+    background: rgba(255, 255, 255, 0.045) !important;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.10) !important;
+}
+
+
+/* ACTIVE ICON */
+
+.benefit-box:nth-child(3) .benefit-icon {
+    color: #ffbf00 !important;
+}
+
+
+/* =========================================================
+   REMOVE ANY OLD CARD STYLING
+   ========================================================= */
+
+.benefit-strip .benefit-box,
+.benefit-strip .benefit-box:hover {
+    border-radius: 15px !important;
+}
+
+
+/* =========================================================
+   DESKTOP — KEEP EXACT CENTERING
+   ========================================================= */
+
+@media (min-width: 1201px) {
+
+    .benefit-grid {
+        grid-template-columns:
+            repeat(6, 155px) !important;
+
+        gap: 20px !important;
+
+        justify-content: center !important;
+    }
+.benefit-box {
+    width: 155px !important;
+    height: 325px !important;
+    min-height: 325px !important;
+}
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    .benefit-strip {
+        padding: 55px 20px !important;
+    }
+
+    .benefit-grid {
+        grid-template-columns:
+            repeat(3, 155px) !important;
+
+        row-gap: 20px !important;
+
+        column-gap: 20px !important;
+
+        justify-content: center !important;
+    }
+
+    .benefit-box {
+        width: 155px !important;
+        height: 275px !important;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .benefit-strip {
+        padding: 55px 20px !important;
+    }
+
+    .benefit-grid {
+        grid-template-columns:
+            repeat(2, minmax(145px, 155px)) !important;
+
+        gap: 15px !important;
+
+        justify-content: center !important;
+    }
+
+    .benefit-box {
+        width: 155px !important;
+
+        height: 260px !important;
+
+        min-height: 260px !important;
+
+        padding: 22px 15px !important;
+    }
+
+    .benefit-box .benefit-icon {
+        width: 70px !important;
+        height: 70px !important;
+
+        min-width: 70px !important;
+        min-height: 70px !important;
+
+        margin-bottom: 22px !important;
+
+        font-size: 36px !important;
+    }
+
+    .benefit-box strong {
+        font-size: 16px !important;
+    }
+
+    .benefit-box p {
+        font-size: 13px !important;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .benefit-grid {
+        grid-template-columns: 1fr !important;
+
+        gap: 15px !important;
+    }
+
+    .benefit-box {
+        width: 155px !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+/* =========================================================
+   ACCREDITATION LOGOS
+   EXACT CLIENT REFERENCE
+   ========================================================= */
+
+.accreditation-logos {
+    width: 100%;
+    max-width: 680px;
+
+    margin-top: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.accreditation-logos img {
+    display: block;
+
+    width: 100%;
+    max-width: 680px;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+/* =========================================
+   CHECKBOX - EXPERT FORM
+========================================= */
+
+.consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+    margin: 2px 0 18px;
+    padding: 0;
+}
+
+.consent input[type="checkbox"] {
+    appearance: auto !important;
+    -webkit-appearance: checkbox !important;
+
+    width: 18px !important;
+    height: 18px !important;
+
+    min-width: 18px !important;
+    min-height: 18px !important;
+
+    margin: 1px 0 0 0 !important;
+    padding: 0 !important;
+
+    cursor: pointer !important;
+
+    accent-color: #123f79;
+
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+.consent label {
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    color: #123f79;
+    font-size: 15px;
+    line-height: 1.35;
+
+    cursor: pointer;
+}
+
+/* =========================================
+   CORPORATE LOGO MARQUEE
+========================================= */
+
+.logo-strip {
+    width: 100%;
+    background: #eaf1fc;
+    padding: 28px 0;
+    overflow: hidden;
+}
+
+/* Individual scrolling row */
+.logo-marquee {
+    width: 100%;
+    overflow: hidden;
+    margin: 0 0 18px;
+}
+
+.logo-marquee:last-child {
+    margin-bottom: 0;
+}
+
+/* Moving track */
+.logo-track {
+    display: flex;
+    width: max-content;
+    gap: 18px;
+    align-items: center;
+    will-change: transform;
+}
+
+/* Logo card */
+.logo-tile {
+    width: 205px;
+    height: 100px;
+
+    flex: 0 0 205px;
+
+    background: #ffffff;
+    border: 1px solid #dfe5ef;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 18px 25px;
+
+    box-sizing: border-box;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Logo image */
+.logo-tile img {
+    width: auto;
+    max-width: 145px;
+    height: auto;
+    max-height: 52px;
+
+    object-fit: contain;
+
+    display: block;
+
+    filter: none;
+}
+
+/* Small hover effect */
+.logo-tile:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+/* Left moving row */
+.logo-track-left {
+    animation: logoMoveLeft 35s linear infinite;
+}
+
+/* Right moving row */
+.logo-track-right {
+    animation: logoMoveRight 38s linear infinite;
+}
+
+
+/* Move first row left */
+@keyframes logoMoveLeft {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-50% - 9px));
+    }
+
+}
+
+
+/* Move second row right */
+@keyframes logoMoveRight {
+
+    from {
+        transform: translateX(calc(-50% - 9px));
+    }
+
+    to {
+        transform: translateX(0);
+    }
+
+}
+
+
+/* =========================================
+   PAUSE ON HOVER
+========================================= */
+
+.logo-marquee:hover .logo-track {
+    animation-play-state: paused;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .logo-strip {
+        padding: 22px 0;
+    }
+
+    .logo-tile {
+        width: 175px;
+        height: 88px;
+        flex-basis: 175px;
+    }
+
+    .logo-tile img {
+        max-width: 125px;
+        max-height: 45px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .logo-strip {
+        padding: 18px 0;
+    }
+
+    .logo-marquee {
+        margin-bottom: 12px;
+    }
+
+    .logo-track {
+        gap: 12px;
+    }
+
+    .logo-tile {
+        width: 145px;
+        height: 76px;
+        flex-basis: 145px;
+
+        padding: 12px 18px;
+
+        border-radius: 10px;
+    }
+
+    .logo-tile img {
+        max-width: 105px;
+        max-height: 38px;
+    }
+
+    .logo-track-left {
+        animation-duration: 28s;
+    }
+
+    .logo-track-right {
+        animation-duration: 31s;
+    }
+
+}
+
+/* =========================================================
+   FACULTY TEXT SIZE — FINAL
+========================================================= */
+
+.faculty-card h3,
+.faculty-card .faculty-name {
+    font-size: 18px !important;
+    line-height: 1.3;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.faculty-card .faculty-role,
+.faculty-card .designation {
+    font-size: 12px !important;
+    line-height: 1.3;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.faculty-card p {
+    font-size: 12px !important;
+    line-height: 1.6;
+    color: #6f7f94;
+}
+
+.faculty-card .faculty-qualification,
+.faculty-card .qualification {
+    font-size: 12px !important;
+    line-height: 1.5;
+    font-weight: 700;
+    color: #0b4382;
+}
+
+/* =========================================================
+   FACULTY MEMBER IMAGE
+========================================================= */
+
+.faculty-image {
+    width: 92px;
+    height: 92px;
+
+    margin: 18px auto 10px;
+
+    border: 3px solid #ffb800;
+    border-radius: 50%;
+
+    padding: 3px;
+
+    background: #ffffff;
+
+    overflow: hidden;
+
+    flex-shrink: 0;
+
+    box-sizing: border-box;
+}
+
+.faculty-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 50%;
 }

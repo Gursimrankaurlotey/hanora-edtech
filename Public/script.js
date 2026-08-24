@@ -302,3 +302,141 @@ document
         );
 
     });
+
+    /* =========================================================
+   SMOOTH SCROLL
+========================================================= */
+
+document
+    .querySelectorAll('a[href^="#"]')
+    .forEach((link) => {
+
+        link.addEventListener(
+            "click",
+            (event) => {
+
+                const targetId =
+                    link.getAttribute("href");
+
+                if (
+                    !targetId ||
+                    targetId === "#"
+                ) {
+                    return;
+                }
+
+                const target =
+                    document.querySelector(targetId);
+
+                if (target) {
+
+                    event.preventDefault();
+
+                    target.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+
+                }
+
+            }
+        );
+
+    });
+
+
+/* =========================================================
+   FACULTY SLIDER
+========================================================= */
+
+const facultyTrack =
+    document.querySelector(".faculty-track");
+
+const facultyPrev =
+    document.querySelector(".faculty-prev");
+
+const facultyNext =
+    document.querySelector(".faculty-next");
+
+
+if (
+    facultyTrack &&
+    facultyPrev &&
+    facultyNext
+) {
+
+    let currentFacultySlide = 0;
+
+    const totalFacultySlides = 3;
+
+
+    function updateFacultySlider() {
+
+        const slideWidth =
+            100 / totalFacultySlides;
+
+        facultyTrack.style.transform =
+            `translateX(-${currentFacultySlide * slideWidth}%)`;
+
+
+        /* Disable Previous button on first slide */
+
+        facultyPrev.disabled =
+            currentFacultySlide === 0;
+
+
+        /* Disable Next button on last slide */
+
+        facultyNext.disabled =
+            currentFacultySlide ===
+            totalFacultySlides - 1;
+
+    }
+
+
+    /* NEXT */
+
+    facultyNext.addEventListener(
+        "click",
+        () => {
+
+            if (
+                currentFacultySlide <
+                totalFacultySlides - 1
+            ) {
+
+                currentFacultySlide++;
+
+                updateFacultySlider();
+
+            }
+
+        }
+    );
+
+
+    /* PREVIOUS */
+
+    facultyPrev.addEventListener(
+        "click",
+        () => {
+
+            if (
+                currentFacultySlide > 0
+            ) {
+
+                currentFacultySlide--;
+
+                updateFacultySlider();
+
+            }
+
+        }
+    );
+
+
+    /* Initial state */
+
+    updateFacultySlider();
+
+}
