@@ -112,8 +112,8 @@ button {
 .site-header {
     background: #fff;
     border-bottom: 1px solid #e7edf5;
-    position: sticky;
-    top: 0;
+    position: relative;
+    top: auto;
     z-index: 100;
 }
 
@@ -6402,4 +6402,278 @@ body .floating-actions a:hover {
 
 .top-strip:hover .top-marquee-track {
     animation-play-state: paused;
+}
+
+/* =========================================================
+   THANK YOU POPUP
+========================================================= */
+
+.thank-you-overlay {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 999999;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    animation: thankYouFadeIn 0.25s ease;
+}
+
+
+.thank-you-modal {
+    position: relative;
+
+    width: 100%;
+    max-width: 400px;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    padding: 40px 35px;
+
+    text-align: center;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.25);
+
+    animation: thankYouScaleIn 0.25s ease;
+}
+
+
+/* ---------------------------------------------------------
+   GREEN CHECK
+--------------------------------------------------------- */
+
+.thank-you-icon {
+    width: 60px;
+    height: 60px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background: #4caf50;
+
+    color: #ffffff;
+
+    font-size: 42px;
+    font-weight: 700;
+
+    line-height: 60px;
+
+    text-align: center;
+}
+
+
+/* ---------------------------------------------------------
+   HEADING
+--------------------------------------------------------- */
+
+.thank-you-modal h2 {
+    margin: 0 0 12px;
+
+    color: #173f7a;
+
+    font-size: 26px;
+
+    font-weight: 700;
+}
+
+
+/* ---------------------------------------------------------
+   MESSAGE
+--------------------------------------------------------- */
+
+.thank-you-modal p {
+    margin: 0 auto 26px;
+
+    max-width: 330px;
+
+    color: #666666;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+}
+
+
+/* ---------------------------------------------------------
+   OK BUTTON
+--------------------------------------------------------- */
+
+.thank-you-ok {
+    border: none;
+
+    background: #173f7a;
+
+    color: #ffffff;
+
+    padding: 13px 32px;
+
+    min-width: 84px;
+
+    border-radius: 7px;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.thank-you-ok:hover {
+    background: #0d3268;
+
+    transform: translateY(-1px);
+}
+
+
+/* ---------------------------------------------------------
+   CLOSE BUTTON
+--------------------------------------------------------- */
+
+.thank-you-close {
+    position: absolute;
+
+    top: 12px;
+    right: 16px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #777777;
+
+    font-size: 28px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    padding: 5px;
+}
+
+
+.thank-you-close:hover {
+    color: #173f7a;
+}
+
+
+/* ---------------------------------------------------------
+   ANIMATIONS
+--------------------------------------------------------- */
+
+@keyframes thankYouFadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+@keyframes thankYouScaleIn {
+
+    from {
+        opacity: 0;
+
+        transform:
+            scale(0.9)
+            translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            scale(1)
+            translateY(0);
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   CLOSING
+--------------------------------------------------------- */
+
+.thank-you-overlay.closing {
+    opacity: 0;
+
+    transition:
+        opacity 0.2s ease;
+}
+
+
+.thank-you-overlay.closing
+.thank-you-modal {
+
+    transform: scale(0.95);
+
+    transition:
+        transform 0.2s ease;
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+--------------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+    .thank-you-modal {
+
+        max-width: 350px;
+
+        padding: 35px 25px;
+
+    }
+
+
+    .thank-you-icon {
+
+        width: 55px;
+        height: 55px;
+
+        line-height: 55px;
+
+        font-size: 38px;
+
+    }
+
+
+    .thank-you-modal h2 {
+
+        font-size: 24px;
+
+    }
+
+
+    .thank-you-modal p {
+
+        font-size: 15px;
+
+    }
+
 }
